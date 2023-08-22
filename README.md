@@ -8,8 +8,6 @@ This repository contains methods and approaches used for my 4th chapter of my ph
 
 ### Table of Contents
 
-**[0. Sample and Sequencing information](0_sample_data.md)**
+**[0. Sample, Sequencing information and QC](0_sample_data_qc.md)**
 
-**[1. Quality control](1_sample_qc.md)**
-
-**[2. Read-based analysis and Metagenomic Assembly](2_read_analysis_assembly.md)**
+**[1. Read-based analysis and Metagenomic Assembly](1_read_analysis_assembly.md)**
