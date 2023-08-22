@@ -1,4 +1,4 @@
-# Pre-filtering step for investigating hologenomic view of Acropora hyacinthus in the Great Barrier Reef using low-coverage whole genome sequencing 
+# Information for samples, sequencing, and quality control 
 
 ## Table of Contents
 0. [DATA TBA!](#data)
