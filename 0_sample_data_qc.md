@@ -14,7 +14,8 @@
 - Sample code
   -   Site_replicate#_SequenceSampleID
 
-- 27 Nanopore sequencing  
+- We are not doing co-assembly 
+-  27 Nanopore sequencing  
 - Illumina Novaseq sequencing
 - Sequenced at MICROBA, ACE, QUT
 - Focus on 27 samples with hybrid assembly (expecting 10-15 MAGs per sample, thus 250-300 MAGs in total)
