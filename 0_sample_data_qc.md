@@ -1,25 +1,33 @@
 # Information for samples, sequencing, and quality control 
 
 ## Table of Contents
-1. [Sample information](#sample_info)
+1. [Sample and Sequencing information](#sample_info)
 2. [Sequencing information](#seq_info)
 3. [QC information](#qc_info)
 
-## 1. Sample information <a name="sample_info"></a>
-- 48 samples of seawater and sediment were collected from 12 sites (4 technical replicates) across the GBR in 2019 and 2020
-- Of 4 replicates, 3 shallow sequencing (2-10 Gbp) and 1 deep sequencing (30-40 Gbp)
+## 1. Sample and Sequencing information <a name="sample_info"></a>
+- 192 sediment samples (48 sites * 4 technical replicates) were collected across the GBR in 2019 and 2020
+- Of 4 replicates, 3 shallow sequencing (2-10 Gbp) and 1 deep sequencing (30-70 Gbp)
 - If sponge microbiome, expect 80-100 HQ MAGs from ~40 Gbp sequencing
-- All sites associated with LTMP (long-term monitoring program, reef, algae cover etc)
+- All sites associated with LTMP (long-term monitoring program, reef, algae cover, nutrient etc)
+- Seidments were collected from the boat using GRAB-type approach
+- Sample code
+  -   Site_replicate#_SequenceSampleID
 
-- 27 nanopore samples 
-- 21 shallow Illumina Novaseq sequencing
-- 
+- 27 Nanopore sequencing  
+- Illumina Novaseq sequencing
+- Sequenced at MICROBA, ACE, QUT
+- Focus on 27 samples with hybrid assembly (expecting 10-15 MAGs per sample, thus 250-300 MAGs in total)
 
-## 2. Sequencing information <a name="seq_info"></a>
-## 3. QC information <a name="qc_info"></a>
+## 2. QC information <a name="qc_info"></a>
+- porechop for Nanopore 
+- trimmomatic for Illumina 
+- use seqkit-stat for read information 
 
-porechop for Nanopore 
-trimmomatic for Illumina 
+## 3. Initial diversity investigation using SingleM pipe <a name="qc_info"></a>
+- Search for GTDB OTU data in reads 
+
+## 4. Other reference database 
 
 ## Reef microbe? why bother
 - Microbe responds to environmental changes/disturbances rapidly
