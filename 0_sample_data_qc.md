@@ -15,13 +15,19 @@
   -   Site_replicate#_SequenceSampleID
 
 - We are not doing co-assembly 
--  27 Nanopore sequencing  
+-  27 Nanopore sequencing
 - Illumina Novaseq sequencing
 - Sequenced at MICROBA, ACE, QUT
 - Focus on 27 samples with hybrid assembly (expecting 10-15 MAGs per sample, thus 250-300 MAGs in total)
 
 ## 2. QC information <a name="qc_info"></a>
-- porechop for Nanopore 
+- porechop for Nanopore
+
+'''
+conda activate porechop_0.2.4
+porechop -t <threads> -i <input_file> -o <output_file>_porechopped.fastq.gz --discard_middle --min_split_read_size 250
+'''
+
 - trimmomatic for Illumina 
 - use seqkit-stat for read information 
 
