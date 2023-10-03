@@ -1,11 +1,12 @@
 # Information for samples, sequencing, and quality control 
 
 ## Table of Contents
-1. [Sample and Sequencing information](#sample_info)
+0. [Sample and Sequencing information all](#sample_info)
+1. [Sample and Sequencing information deep](#deep_info)
 2. [Sequencing information](#seq_info)
 3. [QC information](#qc_info)
 
-## 1. Sample and Sequencing information <a name="sample_info"></a>
+## 0. Sample and Sequencing information all samples <a name="sample_info"></a>
 - 192 sediment samples (48 sites * 4 technical replicates) were collected across the GBR in 2019 and 2020
 - Of 4 replicates, 3 shallow sequencing (2-10 Gbp) and 1 deep sequencing (30-70 Gbp)
 - If sponge microbiome, expect 80-100 HQ MAGs from ~40 Gbp sequencing
@@ -19,6 +20,8 @@
 - Illumina Novaseq sequencing
 - Sequenced at MICROBA, ACE, QUT
 - Focus on 27 samples with hybrid assembly (expecting 10-15 MAGs per sample, thus 250-300 MAGs in total)
+
+## 0. Sample and Sequencing information all samples <a name="sample_info"></a>
 
 ## 2. QC information <a name="qc_info"></a>
 - porechop for Nanopore
