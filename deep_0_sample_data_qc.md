@@ -4,7 +4,8 @@
 ## Table of Contents
 0. [Sample and Sequencing information all](#sample_info)
 1. [QC information](#qc_info)
-2. [Initial diversity investigation using SingleM](#div_classify)
+2. [Microbial Community Profiling](#div_classify)
+
 
 ## 0. Sample and Sequencing information all samples <a name="sample_info"></a>
 -  Illumina Novaseq (deep sequencing:30-70 Gbp)and Oxford Nanopore sequencing on 27 samples across the Great Barrier Reef in 2019 and 2020
