@@ -6,7 +6,7 @@
 1. [QC information](#qc_info)
 
 ## 0. Sample and Sequencing information all samples <a name="sample_info"></a>
--  Illumina Novaseq (deep sequencing:30-70 Gbp)and Oxford Nanopore sequencing on 27 samples across the Great Barrier Reef in 2019 and 2020
+- Illumina Novaseq (deep sequencing:30-110 Gbp)and Oxford Nanopore sequencing on 27 samples across the Great Barrier Reef in 2019 and 2020
 - If sponge microbiome, expect 80-100 HQ MAGs from ~40 Gbp sequencing
 - All sites associated with LTMP (long-term monitoring program, reef, algae cover, nutrient etc)
 - Surface seidments were collected from the boat using Grab-type approach
@@ -22,7 +22,7 @@ Nanopore
 
 Illumina 
 - fastqc 
-- We may consider downsampling to to 60 Gbp if above 60Gbp
+- We may consider downsampling to to 50 Gbp if above 50Gbp (R1 and R2 base number combined)
 
 Seqkit stats for both nanopore and illumina
 
