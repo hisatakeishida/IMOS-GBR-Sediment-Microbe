@@ -28,17 +28,51 @@ fastqc *.fastq.gz -o <output_file.gz> -t 24
 ```
 
 ## 2. Read pre-processing <a name="prepros"></a>
-
+- Check metadata for before and after quality control
+  
 ### 2a. Nanopore 
 - porechop
 ```
 conda activate porechop_0.2.4
 porechop -t <threads> -i <input_file> -o <output_file>_porechopped.fastq.gz --discard_middle --min_split_read_size 250
 ```
+- we will be comparing Illumina only vs Illumina+Nanopore with samples with large nanopore reads (11049_4__SE6286_Pr130_02_BC06, mcsweeny_4__SE6278_Pr105_2_BC02, mantis_4__SE6289_Pr109_BC11,22084_4__SE6293_Pr132_01_BC09,grub_4__SE6285_Pr130_01_BC05,11162_4__SE6287_Pr108_BC10,lagoon_4__SE6294_Pr132_02_BC10, broomfield_4__SE6292_Pr109_BC12)
 
 ### 2b. Illumina 
 - We downsampled reads to to 50 Gbp if above 50Gbp (R1 and R2 base number combined) for more manageable metagenomic assembly
+
+| Samples               | Downsample y_n |
+|-----------------------|----------------|
+| 11049_4__SE6259       | y              |
+| 11162_4__SE6260       | y              |
+| 13124_4__SE6261       | y              |
+| 21550_4__SE6270       | y              |
+| 21580_4__SE6274       | y              |
+| 22084_4__SE6266       | y              |
+| agincourt1_4__SE6271  | y              |
+| arlington_4__SE6272   | y              |
+| broomfield_4__SE6265  | y              |
+| chicken_4__SE6257     | n              |
+| chinaman_4__SE6250    | y              |
+| corbett_4__SE6253     | y              |
+| davie_4__SE6268       | y              |
+| erskine_4__SE6264     | y              |
+| grub_4__SE6258        | y              |
+| hoskyn_4__SE6269      | y              |
+| kelso_4__SE6255       | y              |
+| lagoon_4__SE6267      | y              |
+| mantis_4__SE6262      | y              |
+| masthead_4__SE6263    | y              |
+| mcsweeny_4__SE6251    | n              |
+| moonsoon_4__SE6252    | y              |
+| myrmidon_4__SE6256    | n              |
+| north_4__SE6276       | y              |
+| sandbank1_4__SE6254   | n              |
+| smallLagoon_4__SE6275 | y              |
+| taylor_4__SE6273      | y              |
+
 ```
 module load seqtk
 seqtk sample -s 11 <input_file>  <fraction0-1>  | gzip > <output_file.gz>
 ```
+Go to next analysis step [deep_1_read_analysis_assembly.md](deep_1_read_analysis_assembly.md)
