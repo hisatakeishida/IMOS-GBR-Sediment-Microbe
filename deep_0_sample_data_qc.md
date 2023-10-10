@@ -40,6 +40,10 @@ porechop -t <threads> -i <input_file> -o <output_file>_porechopped.fastq.gz --di
 
 ### 2b. Illumina 
 - We downsampled reads to to 50 Gbp if above 50Gbp (R1 and R2 base number combined) for more manageable metagenomic assembly
+```
+module load seqtk
+seqtk sample -s 11 <input_file>  <fraction0-1>  | gzip > <output_file.gz>
+```
 
 | Samples               | Downsample y_n |
 |-----------------------|----------------|
@@ -71,8 +75,5 @@ porechop -t <threads> -i <input_file> -o <output_file>_porechopped.fastq.gz --di
 | smallLagoon_4__SE6275 | y              |
 | taylor_4__SE6273      | y              |
 
-```
-module load seqtk
-seqtk sample -s 11 <input_file>  <fraction0-1>  | gzip > <output_file.gz>
-```
+
 Go to next analysis step [deep_1_read_analysis_assembly.md](deep_1_read_analysis_assembly.md)
