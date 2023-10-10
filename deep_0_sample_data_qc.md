@@ -4,6 +4,7 @@
 ## Table of Contents
 0. [Sample and Sequencing information all](#sample_info)
 1. [QC information](#qc_info)
+2. [Read pre-processing](#prepros)
 
 ## 0. Sample and Sequencing information all samples <a name="sample_info"></a>
 - Illumina Novaseq (deep sequencing:30-110 Gbp)and Oxford Nanopore sequencing on 27 samples across the Great Barrier Reef in 2019 and 2020
@@ -17,22 +18,27 @@
 - Expecting 10-15 MAGs per sample, thus 250-300 MAGs in total?
 
 ## 1. Quality-Check <a name="qc_info"></a>
-Nanopore 
-- porechop
-
-Illumina 
-- fastqc 
-- We may consider downsampling to to 50 Gbp if above 50Gbp (R1 and R2 base number combined)
-
 Seqkit stats for both nanopore and illumina
 
-'''
-conda activate porechop_0.2.4
-porechop -t <threads> -i <input_file> -o <output_file>_porechopped.fastq.gz --discard_middle --min_split_read_size 250
-
-conda activate seqkit_2.5.1
-seqkit stats -j 24 --all -T -o /scratch/project/ncmas_d85/ishida/IMOS/deep_samples/nanopore/seqkit_results_preporechop *.gz
+```conda activate seqkit_2.5.1
+seqkit stats -j 24 --all -T -o <output_file> *.gz
 
 conda activate qc 
-fastqc *.fastq.gz -o /scratch/project/ncmas_d85/ishida/IMOS/deep_samples/illumina/fastqc/ -t 24 
-'''
+fastqc *.fastq.gz -o <output_file.gz> -t 24 
+```
+
+## 2. Read pre-processing <a name="prepros"></a>
+
+### 2a. Nanopore 
+- porechop
+```
+conda activate porechop_0.2.4
+porechop -t <threads> -i <input_file> -o <output_file>_porechopped.fastq.gz --discard_middle --min_split_read_size 250
+```
+
+### 2b. Illumina 
+- We downsampled reads to to 50 Gbp if above 50Gbp (R1 and R2 base number combined) for more manageable metagenomic assembly
+```
+module load seqtk
+seqtk sample -s 11 <input_file>  <fraction0-1>  | gzip > <output_file.gz>
+```
