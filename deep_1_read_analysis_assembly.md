@@ -20,6 +20,10 @@ singlem pipe -1 {inr1} -2 {inr2} --threads NUM -p ${base}_prof.tsv --taxonomic-p
 ## 3. Metagenomic assembly and Binning of Bacterial and Archeal MAGs <a name="assembly_bining"></a>
 - 3.1 27 metagenome individually assembled using hybrid (nanopore + illumina) with Aviary
 ```
+cd /scratch/user/s4573340/working
+
+apptainer run --bind /QRISdata/Q6440/db/aviary/db:/db,/scratch/user/s4573340/working:/working /scratch/project/ncmas_d85/ishida/aviary/aviary_0.8.1.sif \
+aviary assemble -1 illumina_R1.fastq.gz -2 illumina_R2.fastq.gz --longreads nanopore.fastq.gz --max-threads 24 --n-cores 24 --max_memory 500 --output test_assembly
 
 ```
 
