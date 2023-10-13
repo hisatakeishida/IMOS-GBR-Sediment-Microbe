@@ -10,12 +10,13 @@
 - Illumina Novaseq (deep sequencing:30-110 Gbp)and PCR-coupled Oxford Nanopore sequencing on 27 samples across the Great Barrier Reef in 2019 and 2020
 - If sponge microbiome, expect 80-100 HQ MAGs from ~40 Gbp sequencing
 - All sites associated with LTMP (long-term monitoring program, reef, algae cover, nutrient etc)
-- Surface seidments were collected from the boat using Grab-type approach
+- Surface sediments were collected from the boat using Grab-type approach
 - Illumina sample code: Site_replicate#__SequenceSampleID_R1/2_allRunsCombined
 - Nanopore sample code: Site_replicate#__SequenceSampleID_NanoporeSampleNumber_barcode_allRunsCombined
 - We are not doing co-assembly
 - All sequenced at ACE
 - Expecting 10-15 MAGs per sample, thus 250-300 MAGs in total?
+- PCR information for Nanopore
 
 ## 1. Quality-Check <a name="qc_info"></a>
 Seqkit stats for both nanopore and illumina
