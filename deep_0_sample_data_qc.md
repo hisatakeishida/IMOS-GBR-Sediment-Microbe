@@ -5,6 +5,7 @@
 0. [Sample and Sequencing information all](#sample_info)
 1. [QC information](#qc_info)
 2. [Read pre-processing](#prepros)
+
 [Taxa of interest](#taxa)
 
 ## 0. Sample and Sequencing information all samples <a name="sample_info"></a>
@@ -81,10 +82,9 @@ seqtk sample -s 11 <input_file>  <fraction0-1>  | gzip > <output_file.gz>
 | smallLagoon_4__SE6275 | y              |
 | taylor_4__SE6273      | y              |
 
-
-Go to next analysis step [deep_1_read_analysis_assembly.md](deep_1_read_analysis_assembly.md)
-
 ## Taxa of interest <a name="taxa"></a>
 - 4484-113
 - UBP17
 - UBA9160
+
+Go to next analysis step [deep_1_read_analysis_assembly.md](deep_1_read_analysis_assembly.md)
