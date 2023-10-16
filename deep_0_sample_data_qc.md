@@ -5,6 +5,7 @@
 0. [Sample and Sequencing information all](#sample_info)
 1. [QC information](#qc_info)
 2. [Read pre-processing](#prepros)
+[Taxa of interest](#taxa)
 
 ## 0. Sample and Sequencing information all samples <a name="sample_info"></a>
 - Illumina Novaseq (deep sequencing:30-110 Gbp)and PCR-coupled Oxford Nanopore sequencing on 27 samples across the Great Barrier Reef in 2019 and 2020
@@ -78,3 +79,8 @@ seqtk sample -s 11 <input_file>  <fraction0-1>  | gzip > <output_file.gz>
 
 
 Go to next analysis step [deep_1_read_analysis_assembly.md](deep_1_read_analysis_assembly.md)
+
+## Taxa of interest <a name="taxa"></a>
+- 4484-113
+- UBP17
+- UBA9160
