@@ -27,6 +27,13 @@ aviary assemble -1 illumina_R1.fastq.gz -2 illumina_R2.fastq.gz --longreads nano
 
 ```
 
+Aviary issues 
+- aviary dies when no disjointigs or contigs are reconstructed from Flye
+- SPAdes most likely dying (does not say in the logs, talking only ~0.5 seconds to run SPAdes step)
+- 
+
+
+
 aviary recover --refinery-max-iterations 10? 
 
 - 3.2 Aggregate refined MAGs and dereplicated using dRep
