@@ -17,7 +17,11 @@
 - We are not doing co-assembly
 - All sequenced at ACE
 - Expecting 10-15 MAGs per sample, thus 250-300 MAGs in total?
-- PCR information for Nanopore
+- PCR information for Nanopore 
+  - Long range PCR bias
+  - Enzyme or transposn based
+  - Need microgram for allegation but only got ~10 nannograms from extraction
+  - Removed mid-strand adapters (since we used two flow cell) 
 
 ## 1. Quality-Check <a name="qc_info"></a>
 Seqkit stats for both nanopore and illumina
