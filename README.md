@@ -14,9 +14,9 @@ This repository contains methods and codes used for my 4th chapter of my phd.
 ### Table of Contents
 
 #### Deep Illumina and Nanopore samplpes
-**[0. Sample, Sequencing information and QC](deep_0_sample_data_qc.md)**
+**[0. Sample, Sequencing information and QC](0_sample_data_qc.md)**
 
-**[1. Read-based analysis and Metagenomic Assembly](deep_1_read_analysis_assembly.md)**
+**[1. Read-based analysis and Metagenomic Assembly](1_read_assembly.md)**
 
 #### Shallow Illumina samplpes
 
