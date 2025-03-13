@@ -1,6 +1,4 @@
-# IMOS-chapter
-
-## Metagenomics analysis of sediment microbes across the Great Barrier Reef
+# Metagenomics analysis of sediment microbes across the Great Barrier Reef
 
 This repository contains methods and codes used for my 4th chapter of my phd. 
 
