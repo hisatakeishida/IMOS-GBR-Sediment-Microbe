@@ -1,4 +1,4 @@
-# Information for samples, sequencing, and quality control 
+![image](https://github.com/user-attachments/assets/b1e5469b-ed9c-4ba9-8acd-e309d2dbae6d)# Information for samples, sequencing, and quality control 
 
 ## Table of Contents
 0. [Sample and Sequencing information all](#sample_info)
@@ -15,10 +15,14 @@
 - Sequenced at MICROBA, ACE, QUT
 
 ## 1. Adapter trimming <a name="Adapter_trimming"></a>
-- Fastp and Porechop were used for Illumina and Nanopore datasets, respectively
+- Fastp v.0.23.4 and Porechop v.0.2.4 were used for Illumina and Nanopore datasets, respectively
 
-- porechop for Nanopore
 '''
+#fastp for Illumina
+conda activate fastp_0.23.4
+fastp -Q --in1 /QRISdata/Q6440/imos_sediment_reads_illumina/lynchs_1__21S000275_R1_allRunsCombined.fastq.gz --in2 
+
+#porechop for Nanopore
 conda activate porechop_0.2.4
 porechop -t <threads> -i <input_file> -o <output_file>_porechopped.fastq.gz --discard_middle --min_split_read_size 250
 '''
