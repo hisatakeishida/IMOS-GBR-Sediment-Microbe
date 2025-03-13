@@ -23,3 +23,28 @@ This repository contains methods and codes used for my 4th chapter of my phd.
 **[0. Sample, Sequencing information and QC](all_0_sample_data_qc.md)**
 
 **[1. Read-based analysis and Metagenomic Assembly](all_1_read_analysis_assembly.md)**
+
+
+
+
+## Reef microbe? why bother
+- Microbe responds to environmental changes/disturbances rapidly
+- Can we use microbes as bioindicator of environmental stress
+  - Coral and sediment too variable
+  - Seawater consistent across time and space
+  - Sponge too consistent
+- Water MAG study presented functional(gene) more useful than taxonomic information as bioindicator
+  - Ammoniamonoxygenase increased when Nitrogen concentration increased
+- Database (Ocean Microbiome Database Pooli et al Nature 2022)
+- Seawater MAGs (Robbins et al XXXX)
+  -   GraftM showed Prochlorococcus, Synechococcus, Pelagibacterales abundant
+  -   High strain heterogeneity makes assembly challenging
+  -   SNP analysis in the future
+  -   Patin and Goodwin mSystems 2022
+  -   Illumina shows what is in every samples and Nanopore as a mean to get genomes
+  -   Taxonomic bias between platforms (Illumina vs Nanopore)
+  -   40% reads mapped to Prok MAGs, 10% to Viral MAGs, 15% to Euk MAGs
+  -   
+
+
+
