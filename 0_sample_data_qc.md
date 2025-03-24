@@ -17,7 +17,7 @@
 ## 1. Adapter trimming <a name="Adapter_trimming"></a>
 - Fastp v.0.23.4 and Porechop v.0.2.4 were used for Illumina and Nanopore datasets, respectively
 
-'''
+```
 #fastp for Illumina
 conda activate fastp_0.23.4
 fastp -Q --in1 /QRISdata/Q6440/imos_sediment_reads_illumina/lynchs_1__21S000275_R1_allRunsCombined.fastq.gz --in2 
@@ -25,4 +25,4 @@ fastp -Q --in1 /QRISdata/Q6440/imos_sediment_reads_illumina/lynchs_1__21S000275_
 #porechop for Nanopore
 conda activate porechop_0.2.4
 porechop -t <threads> -i <input_file> -o <output_file>_porechopped.fastq.gz --discard_middle --min_split_read_size 250
-'''
+```
