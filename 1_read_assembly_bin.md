@@ -4,7 +4,8 @@
 ## Table of Contents
 1. [Metagenome assembly](#ass)
 2. [Metagenome assembly stats](#ass_stat)
-3. [Metagenome binning](#ass_bin)
+3. [Metagenome SingleM for selecting binning samples](#singlem_readass)
+4. [Metagenome binning](#bin)
 
 ## 1. Metagenome assembly <a name="ass"></a>
 - Aviary was used to perform single-sample metagenome assembly 
@@ -219,5 +220,78 @@ aviary assemble -1 ${sample}_R1_allRunsCombined.fastq.gz -2 ${sample}_R2_allRuns
 |thetford_3 | 0.2224 | 0.2734 | 0.2763 | 0.2280 | 0.0000 | 0.0000 | 0.0000 | 0.5497 | 0.1156 | 2655428 | 685.104 | 1128424 | 245 | 22.807 | 8,980 | 9,201 | 16,754,080 | 16,731,980 |
 |thetford_4 | 0.2153 | 0.2814 | 0.2836 | 0.2197 | 0.0001 | 0.0000 | 0.0000 | 0.5650 | 0.1116 | 15494165 | 4383.156 | 6002201 | 260 | 53.337 | 92,418 | 96,083 | 181,307,249 | 181,137,939 |
 
-## 3. Metagenome binning <a name="ass_bin"></a>
-- Binng contigs> 1,500 bp
+## 3. Metagenome SingleM for selecting binning samples <a name="singlem_readass"></a>
+- Selecting samples for multi-sample binning
+- Using SingleM to identify samples with similar microbial community
+- Run SingleM on the assembled contigs and all of the metagenome Illumina reads
+- For each assembly, selecting 20 samples that had the highest proportion of shared single-copy markers
+
+```
+conda activate singlem 
+
+#SingleM on Illumina reads 
+for infile in ${reads}*_R1_allRunsCombined.fastq.gz ;do 
+  base=$(basename ${infile} _R1_allRunsCombined.fastq.gz)
+  singlem pipe --metapackage S4.3.0.GTDB_r220.metapackage_20240523.smpkg.zb -1 ${infile} -2 ${base}_R2_allRunsCombined.fastq.gz  --threads ${SLURM_CPUS_PER_TASK} \
+  -p ${reads_prof_outdir}/${base}_prof.tsv --otu-table ${reads_otu_outdir}/${base}_otu.tsv
+done
+
+#SingleM on assembled contigs
+for infile in /*/assembly/final_contigs.fasta ;do 
+    parent_dir=$(dirname "${infile}")
+    parent_dir_name=$(dirname "$parent_dir")
+    sample_name=$(basename "$parent_dir_name")
+
+    echo "$sample_name"
+
+    singlem pipe --genome-fasta-files ${infile} --metapackage S4.3.0.GTDB_r220.metapackage_20240523.smpkg.zb  --threads ${SLURM_CPUS_PER_TASK} \
+    -p ${assembly_prof_outdir}/${base}_prof.tsv --otu-table ${assembly_otu_outdir}/${base}_otu.tsv
+done
+
+#comparing SingleM output between each assembly and all the reads
+for infile in ${assembly_otu_outdir}/*_otu.tsv  ;do 
+    base=$(basename ${infile} _otu.tsv)
+    singlem appraise --metapackage S4.3.0.GTDB_r220.metapackage_20240523.smpkg.zb --imperfect --assembly-otu-tables ${infile} --metagenome-otu-tables  ${reads_otu_outdir}/* > ${assembly_read_appraise}/${base}.imperfect.txt
+done
+
+#selecting top 20 samples based on shared Bacterial proportion
+
+for infile in ${assembly_read_appraise}/*.imperfect.txt  ;do 
+   base=$(basename ${infile} .imperfect.txt)
+
+   # cat ${infile} | grep "d__Bacteria" | grep -v "total" | grep -v "average" | sort -k 3,3nr | head -n 20 > ${outdirsamp}/00_${base}.d__Bacteria.num_assembled.txt
+   cat ${infile} | grep "d__Bacteria" | grep -v "total" | grep -v "average" | sort -k 5,5nr | head -n 20 > ${outdirsamp}/01_${base}.d__Bacteria.percent_assembled.txt
+
+   # cat ${outdirsamp}/00_${base}.d__Bacteria.num_assembled.txt     | cut -f 1 | sort > ${outdirsamp}/04_${base}.d__Bacteria.num_assembled.20samples.txt
+   cat ${outdirsamp}/01_${base}.d__Bacteria.percent_assembled.txt | cut -f 1 | sort > ${outdirsamp}/02_${base}.d__Bacteria.percent_assembled.20samples.txt
+
+   # diff ${outdirsamp}/04_${base}.d__Bacteria.num_assembled.20samples.txt ${outdirsamp}/04_${base}.d__Bacteria.percent_assembled.20samples.txt
+done
+```
+
+## 4. Metagenome binning <a name="bin"></a>
+- using Aviary for binning with contigs> 1,500 bp
+
+```
+#hybrid
+for i in ${listsamplesIllumina}/*:
+  cp ${IlluminaReads}/${i}*.gz /scratch/temp/${SLURM_JOB_ID}/
+done
+
+cp ${NanoporeReads}/${sample}*.gz /scratch/temp/${SLURM_JOB_ID}/
+
+conda activate aviary 
+module load libnsl
+
+aviary recover --binning-only --assembly /scratch/temp/${SLURM_JOB_ID}/${sample}_final_contigs.fasta -1 /scratch/temp/${SLURM_JOB_ID}/*_R1_allRunsCombined.fastq.gz -2 /scratch/temp/${SLURM_JOB_ID}/*_R2_allRunsCombined.fastq.gz --longreads /scratch/temp/${SLURM_JOB_ID}/${sample}_porechopped.fastq.gz --long_read_type ont_hq --max-threads ${SLURM_CPUS_PER_TASK} --n-cores ${SLURM_CPUS_PER_TASK} --max_memory $((SLURM_MEM_PER_NODE/1024)) --conda-frontend conda --tmpdir /scratch/temp/${SLURM_JOB_ID} --output /scratch/temp/${SLURM_JOB_ID}/${sample}
+ 
+#Illumina
+for i in ${listsamplesIllumina}/*:
+  cp ${IlluminaReads}/${i}*.gz /scratch/temp/${SLURM_JOB_ID}/
+done
+
+conda activate aviary 
+module load libnsl
+
+aviary recover --binning-only --assembly /scratch/temp/${SLURM_JOB_ID}/${sample}_final_contigs.fasta -1 /scratch/temp/${SLURM_JOB_ID}/*_R1_allRunsCombined.fastq.gz -2 /scratch/temp/${SLURM_JOB_ID}/*_R2_allRunsCombined.fastq.gz --max-threads ${SLURM_CPUS_PER_TASK} --n-cores ${SLURM_CPUS_PER_TASK} --max_memory $((SLURM_MEM_PER_NODE/1024)) --conda-frontend conda --tmpdir /scratch/temp/${SLURM_JOB_ID} --output /scratch/temp/${SLURM_JOB_ID}/${sample} 
+```
