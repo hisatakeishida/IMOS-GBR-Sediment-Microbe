@@ -270,7 +270,7 @@ done
 ```
 
 ## 4. Metagenome binning <a name="bin"></a>
-- using Aviary for binning with contigs> 1,500 bp
+- using Aviary for binning with contigs> 1,500 bp (default)
 
 ```
 #hybrid
