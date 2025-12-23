@@ -8,10 +8,10 @@
 
 
 ## 1. Calculate MASH-distance <a name="dist_calc"></a>
-- Using (https://github.com/marbl/Mash) to calculate MASH distance between all pairs of samples 
+- Using MASH v2.3 (https://github.com/marbl/Mash) to calculate MASH distance between all pairs of samples 
 - Platform: Bash 
 - IN: Reads in fasta or fastq file (INDIR)
-- OUT: Distance in text file (mash_dist.txt)
+- OUT:  **[Distance matrix in text file](mash_dist.txt)**
 
 ```
 module load mash/2.3-gcc-10.3.0
@@ -30,4 +30,4 @@ mash triangle -r -p ${SLURM_CPUS_PER_TASK} ${INDIR}/*.msh > mash_dist.txt
 - Platform: R
 - IN:**[Distance matrix](mash_dist.txt)** (text file) and **[metadata](MASH_ENV.xlsx)**
 - OUT:plots in svg (NMDS1-NMDS2 or NMDS1-NMDS2-NMDS3), other stats (e.g. PERMANOVA, ANOSIM)
-- **[Script](/5_Rscripts/1_MASH.R)**
+- **[Scripts](/5_Rscripts/1_MASH.R)**
