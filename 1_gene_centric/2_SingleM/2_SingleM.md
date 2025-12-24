@@ -1,4 +1,4 @@
-# Alignment-free beta-diversity analyses with MASH (k-mer distance)
+# Community profiling with SingleM
 
 ## AIM: Investigate prokaryotic diversity using marker-derived operational taxonomic units (mOTU) with SingleM v1.18.0 
 
