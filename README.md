@@ -11,34 +11,33 @@ This project implemented gene-centric and genome-centric analyses to investigate
 #### Sample, Sequencing information, and QC
 - **[1. Sample, Sequencing information and QC](0_metadata/0_sample_data_qc.md)**
 
+#### Seawater samples analysed along sediment samples
+- **[1. Read and MAG information](4_seawater/4_seawater.md)**
+
 #### Gene centric analysis
-- **[1. k-mer analyses with MASH](1_gene_centric/1_MASH/1_MASH.md)**
+- **[1. mOTU-based analyses with SingleM](1_gene_centric/1_SingleM/1_SingleM.md)**
 
-- **[2. mOTU-based analyses with SingleM](1_gene_centric/2_SingleM/2_SingleM.md)**
+- **[2. non-redundant protein analyses](1_gene_centric/2_Protein/2_Protein.md)**
 
-- **[3. non-redundant protein analyses](1_gene_centric/3_Protein/3_Protein.md)**
+- **[3. k-mer-based analyses with Sylph](1_gene_centric/3_Sylph/3_Sylph.md)**
 
 #### Genome centric analysis
-- **[1. Assembly](2_genome_centric/1_Assembly/1_Assembly.md)**
+- **[1. MAG recovery, QC, Dereplication, Taxonomy, Novelty](2_genome_centric/1_genome_recovery/1_genome_recovery.md)**
 
-- **[2. Binning](2_genome_centric/2_Binning/2_Binning.md)**
+- **[2. MAG annotation](2_genome_centric/2_genome_annot/2_genome_annot.md)**
 
-- **[3. MAG QC, Dereplication, Taxonomy, Novelty](2_genome_centric/3_QC/3_QC.md)**
+- **[3. MAG abundance](2_genome_centric/3_genome_abundance/3_genome_abundance.md)**
 
-- **[4. MAG annotation](2_genome_centric/4_Annotation/4_Annotation.md)**
+- **[4. MAG Mixomics analysis](2_genome_centric/4_Mixomics/4_Mixomics.md)**
 
 #### Integration 
-- **[1. SingleM vs CoverM abudance comparison](3_integration/1_SingleM_CoverM/1_SingleM_CoverM.md)**
-
-#### Seawater
-- **[1. Read and MAG information](4_seawater/seawater.md)**
+- **[1. SingleM vs CoverM abudance comparison](3_SingleM_VS_CoverM/3_SingleM_VS_CoverM.md)**
 
 #### Rscripts
 **[MASH visualization](5_Rscripts/1_MASH.R)**
 **[SingleM visualization](5_Rscripts/2_SingleM.R)**
 **[RPKM_KO visualization](5_Rscripts/3_RPKM_calculation_KO.R)**
 **[RPKM_CAZyme visualization](5_Rscripts/4_RPKM_calculation_CAZyme.R)**
-
 
 ### Authors and Affiliations
 
