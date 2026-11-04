@@ -1,44 +1,96 @@
-# Information for samples, sequencing, and quality control 
+# Samples, sequencing, and quality control
 
-## Table of Contents
+## Table of contents
 1. [Sample information](#sample_info)
-2. [Sequencing information](#Seq)
-3. [Raw read processing](#Adapter_trimming)
+2. [Sequencing information](#seq)
+3. [Raw read processing](#read_processing)
 
 ## 1. Sample information <a name="sample_info"></a>
-- 192 sediment samples (48 sites * 4 replicates) were collected across the GBR in 2019 and 2020
-  - During the austral summer, covering 34 sites
-    - the northern GBR (Trip 1 in November-December 2019)
-    - the southern GBR (Trip 2 in January 2020)
-    - the central GBR (Trip 3 in February 2020). 
-  -  During austral winter, covering the remaining 14 sites 
-    - the central GBR (Trip 4 in July 2020)
-- All sites are associated with AIMS long-term monitoring program (LTMP)
-- Sample code: Site_replicate#_SequenceSampleID
+- 192 surface sediment samples (48 sites × 4 replicates) were collected across the GBR between November 2019 and July 2020, with the AIMS Long-Term Monitoring Program (LTMP)
+  - Austral summer (34 sites)
+    - Northern GBR: Trip 1 (November to December 2019)
+    - Southern GBR: Trip 2 (January 2020)
+    - Central GBR: Trip 3 (February 2020)
+  - Austral winter (14 sites)
+    - Central GBR: Trip 4 (July 2020)
+- Zoning status: 23 no-take marine reserves (NTMRs) and 25 fished reefs
+- 191 samples were sequenced; DNA from one sample (reef 11-162) did not meet sequencing requirements
+- Sample code: `Site_replicate#_SequenceSampleID`
+- Full metadata: Table S1
+- [`Field photos`](0_metadata/1_Sampling): photos provided by Sara Bell
 
-## 2. Sequencing information <a name="Seq"></a>
-- DNA extraction: Phenol:chloroform:isoamyl alcohol protocol 
-- For 27 sites (out of 48), quadruplicates were split into 3 replicates for shallow sequencing (2-10 Gbp) and 1 replicate for deep sequencing (30-70 Gbp)
-- For these 27 sites, same extracted genomic DNA from the deep sequencing, were used for ONT long-read sequencing
+## 2. Sequencing information <a name="seq"></a>
+- Cell separation: microbial cells were detached from sediment using a cell separation buffer, sonication, and low-speed centrifugation, prefiltered (8 µm and 5 µm), and collected on 0.22 µm Sterivex filters
+- DNA extraction: phenol:chloroform:isoamyl alcohol protocol
+- Sequencing design:
+  - For 27 of the 48 sites, three replicates were sequenced at standard depth (target 5 Gbp; achieved 2 to 10 Gbp) and one replicate at high depth (target 40 Gbp; achieved 30 to 70 Gbp)
+  - The same DNA extract used for deep sequencing was also used for ONT long-read sequencing; 17 of 27 samples yielded ONT data of sufficient quality
 
-- Illumina 
-  - Library prep: Nextera DNA Flex Library Preparation Kit (Illumina # 20018705)
-  - Sequencing platform: Illumina NovaSeq 6000 S4 2*150 bp flow cells at MICROBA and QUT 
-- ONT
-  - Circulomics SRE XS kit (PacBio, SKU 102-208-200) for removing short fragments
-  - Library prep: Ligation Sequencing kit (Oxford Nanopore, LSK-109) with PCR-Barcoding Expansion Kit (EXP-PBC001)
-  - Sequencing platform: ONT PromethION 24 using R9.4 flow cells for 72 hours with MinKNOW (v20.06.18) under default settings
-  - Guppy v5.0.16 for rebasecalling
+### Illumina
+- Library prep: Nextera DNA Flex Library Preparation Kit (Illumina #20018705)
+- Sequencing: Illumina NovaSeq 6000, S4 flow cells, 2 × 150 bp
+- Facilities: Microba Life Sciences and Centre for Microbiome Research (QUT) for standard-depth samples; Australian Centre for Ecogenomics (UQ) for deep samples
 
-## 2. Adapter trimming <a name="Adapter_trimming"></a>
-- Fastp v0.23.4 and Porechop v0.2.4 were used for Illumina and Nanopore datasets, respectively
+### ONT
+- Size selection: Circulomics SRE XS kit (PacBio, SKU 102-208-200) to remove fragments < 10 kb
+- Library prep: Ligation Sequencing Kit (Oxford Nanopore, LSK-109) with PCR-Barcoding Expansion Kit (EXP-PBC001); two samples per flow cell
+- Sequencing: ONT PromethION 24, R9.4 flow cells, 72 h, MinKNOW v20.06.18 (default settings), at the Australian Centre for Ecogenomics (UQ)
+- Basecalling: Guppy v5.0.16 (super-accuracy model)
 
-```
-#fastp for Illumina
+## 3. Raw read processing <a name="read_processing"></a>
+Adapters were removed with fastp v0.23.4 (Illumina) and Porechop v0.2.4 (ONT). 
+Read yields are summarised in Table S3.
+
+```bash
+
+# Raw stats 
+conda activate seqkit_2.5.1 
+
+seqkit stats -T <sample>_R1.fastq.gz <sample>_R2.fastq.gz \
+--threads <threads> > <sample>_Illumina_raw_seqkit.tsv
+
+seqkit stats -T <sample>.ONT.fastq.gz \
+--threads <threads> > <sample>_ONT_raw_seqkit.tsv
+
+# Illumina: adapter removal only (-Q disables quality filtering)
 conda activate fastp_0.23.4
-fastp -Q --in1 /QRISdata/Q6440/imos_sediment_reads_illumina/lynchs_1__21S000275_R1_allRunsCombined.fastq.gz --in2 
 
-#porechop for ONT data
+fastp -Q \
+  --in1 <sample>_R1.fastq.gz --in2 <sample>_R2.fastq.gz \
+  --out1 <sample>_R1.adprem.fastq.gz --out2 <sample>_R2.adprem.fastq.gz \
+  --detect_adapter_for_pe \
+  --thread <threads> \
+  --html <sample>.fastp.html --json <sample>.fastp.json
+
+# ONT: adapter removal and splitting of chimeric reads using Porechop 
+# https://github.com/rrwick/Porechop.git
+
 conda activate porechop_0.2.4
-porechop -t <threads> -i <input_file> -o <output_file>_porechopped.fastq.gz --discard_middle --min_split_read_size 250
+
+porechop -t <threads> \
+  -i <sample>.ONT.fastq.gz \
+  -o <sample>.ONT_porechopped.fastq.gz \
+  --discard_middle --min_split_read_size 250
+
+# Post QC stats 
+conda activate seqkit_2.5.1 
+
+seqkit stats -T <sample>_R1.adprem.fastq.gz <sample>_R2.adprem.fastq.gz \
+--threads <threads> > <sample>_Illumina_adprem_seqkit.tsv
+
+seqkit stats -T <sample>.ONT.fastq.gz \
+--threads <threads> > <sample>_ONT_adprem_seqkit.tsv
+
+# Printing
+for i in *_ONT_adprem_seqkit.tsv
+do
+    samp_name=$(basename "$i" _ONT_adprem_seqkit.tsv)
+    # sample=$(echo "$samp_name" | awk -F '__' '{print $1}')
+    numreads=$(tail -n1 $i | awk '{print $4}')
+    sumreads=$(tail -n1 $i | awk '{print $5}')
+
+    echo $samp_name $numreads $sumreads
+    # break
+done
+
 ```
