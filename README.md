@@ -22,9 +22,6 @@ Raw sequencing data will be available upon publication on the IMOS-AODN reposito
 - Illumina and ONT library preparation and sequencing yield
 - Adapter removal with fastp and porechop
 
-### [`4_seawater/`](4_seawater/): ([page](4_seawater/4_seawater.md))
-
-
 ### [`1_gene_centric/`](1_gene_centric/): read-based analyses
 
 #### [`1_SingleM/`](1_gene_centric/1_SingleM/): mOTU-based analyses ([page](1_gene_centric/1_SingleM/1_SingleM.md))
