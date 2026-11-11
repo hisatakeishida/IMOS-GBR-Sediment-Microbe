@@ -118,7 +118,7 @@ Directory: [`3_read_mapping_RPKM/`](3_read_mapping_RPKM/)
 - PCoA on Aitchison distances for KOs (each KO-annotated protein as a feature; Fig. 1e) and CAZymes (proteins summed by family; Fig. 1f)
 - Platform: R (phyloseq, microViz, data.table)
 - Input: long-format counts and lengths from section 3, annotation tables from section 2, sample metadata (xlsx)
-- Output: `ko.COUNT.rds`, `ko.RPKM.rds`, `ps_ko.RDS`, `ps_greening_hyddb.RDS`, `ps_dbcan.RDS`, mapped reads per sample, and Fig. 1e-f
+- Output: `dram_ko_e6.COUNT.rds`, `dram_ko_e6.RPKM.rds`, `ps_ko.RDS`, `ps_greening_hyddb.RDS`, `ps_dbcan.RDS`, mapped reads per sample, and Fig. 1e-f
 - Scripts: [`2.13_protein_RPKM.R`](scripts/2.13_protein_RPKM.R), [`2.14_protein_annotation_objects.R`](scripts/2.14_protein_annotation_objects.R), [`2.15_protein_ordination.R`](scripts/2.15_protein_ordination.R)
 
 ```bash

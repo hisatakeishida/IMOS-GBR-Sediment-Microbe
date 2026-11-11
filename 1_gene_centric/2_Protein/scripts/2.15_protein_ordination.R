@@ -16,6 +16,8 @@
 # 1. SETUP
 # ==============================================================================
 
+mem.maxVSize(64000); gc()
+
 suppressPackageStartupMessages({
   library(phyloseq)
   library(microViz)
@@ -69,6 +71,14 @@ ggsave(file.path(out_dir, "Fig1e_KO_pcoa.svg"), p_ko, width = 7.5, height = 7.5)
 p_cazy <- plot_pcoa(readRDS(file.path(rds_dir, "ps_dbcan.RDS")), rank = "Gene")
 p_cazy
 ggsave(file.path(out_dir, "Fig1f_CAZyme_pcoa.svg"), p_cazy, width = 7.5, height = 7.5)
+
+# ==============================================================================
+# 5. greening db and hydrogenase 
+# ==============================================================================
+
+p_greening_hyddb <- plot_pcoa(readRDS(file.path(rds_dir, "ps_greening_hyddb.RDS")), rank = "Gene")
+p_greening_hyddb
+ggsave(file.path(out_dir, "Fig_GreeningDb_hydrogenase_pcoa.svg"), p_greening_hyddb, width = 7.5, height = 7.5)
 
 
 # ==============================================================================

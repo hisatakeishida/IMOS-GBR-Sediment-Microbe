@@ -1,0 +1,216 @@
+2026-11-11 16:20:05.605311 INFO::Writing function arguments to log file
+2026-11-11 16:20:05.615298 DEBUG::Function arguments
+2026-11-11 16:20:05.615869 DEBUG::Output folder: /Users/s4573340/Library/CloudStorage/OneDrive-TheUniversityofQueensland/Documents/GitHub/IMOS-GBR-Sediment-Microbe/4_results/greeningDB_TSS_AST_Source_TripSeason_ReefasRandom
+2026-11-11 16:20:05.616311 DEBUG::Min Abundance: 0.000000
+2026-11-11 16:20:05.616735 DEBUG::Min Prevalence: 0.050000
+2026-11-11 16:20:05.61733 DEBUG::Normalization: TSS
+2026-11-11 16:20:05.617838 DEBUG::Transform: AST
+2026-11-11 16:20:05.618335 DEBUG::Analysis method: LM
+2026-11-11 16:20:05.618776 DEBUG::Max significance: 0.250000
+2026-11-11 16:20:05.619202 DEBUG::Random effects: Reef
+2026-11-11 16:20:05.619662 DEBUG::Fixed effects: Source,TripSeason
+2026-11-11 16:20:05.620082 DEBUG::Correction method: BH
+2026-11-11 16:20:05.62052 DEBUG::Standardize: TRUE
+2026-11-11 16:20:05.621719 DEBUG::Cores: 1
+2026-11-11 16:20:05.622239 INFO::Verifying options selected are valid
+2026-11-11 16:20:05.631053 INFO::Determining format of input files
+2026-11-11 16:20:05.633133 INFO::Input format is data samples as rows and metadata samples as rows
+2026-11-11 16:20:05.63612 DEBUG::A total of 362 samples were found in both the data and metadata
+2026-11-11 16:20:05.637282 DEBUG::Reordering data/metadata to use same sample ordering
+2026-11-11 16:20:05.64121 INFO::Formula for random effects: expr ~ (1 | Reef)
+2026-11-11 16:20:05.644282 INFO::Formula for fixed effects: expr ~  Source + TripSeason
+2026-11-11 16:20:05.646198 INFO::Factor detected for categorial metadata 'Source'. Provide a reference argument or manually set factor ordering to change reference level.
+2026-11-11 16:20:05.649545 INFO::Factor detected for categorial metadata 'TripSeason'. Provide a reference argument or manually set factor ordering to change reference level.
+2026-11-11 16:20:05.651086 INFO::Filter data based on min abundance and min prevalence
+2026-11-11 16:20:05.652307 INFO::Total samples in data: 362
+2026-11-11 16:20:05.653712 INFO::Min samples required with min abundance for a feature not to be filtered: 18.100000
+2026-11-11 16:20:05.662919 INFO::Total filtered features: 3
+2026-11-11 16:20:05.665246 INFO::Filtered feature names from abundance and prevalence filtering: X.NiFe._4c, X.NiFe._2d, hmoA
+2026-11-11 16:20:05.679281 INFO::Total filtered features with variance filtering: 0
+2026-11-11 16:20:05.682085 INFO::Filtered feature names from variance filtering:
+2026-11-11 16:20:05.684824 INFO::Running selected normalization method: TSS
+2026-11-11 16:20:05.695247 INFO::Applying z-score to standardize continuous metadata
+2026-11-11 16:20:05.713544 INFO::Running selected transform method: AST
+2026-11-11 16:20:05.729416 INFO::Running selected analysis method: LM
+2026-11-11 16:20:05.743663 INFO::Fitting model to feature number 1, coxA
+2026-11-11 16:20:08.440572 INFO::Fitting model to feature number 2, atpA
+2026-11-11 16:20:08.59313 INFO::Fitting model to feature number 3, sdhA
+2026-11-11 16:20:08.706828 INFO::Fitting model to feature number 4, fdhA
+2026-11-11 16:20:08.857286 INFO::Fitting model to feature number 5, nuoF
+2026-11-11 16:20:09.070221 INFO::Fitting model to feature number 6, arsC
+2026-11-11 16:20:09.204857 INFO::Fitting model to feature number 7, RHO
+2026-11-11 16:20:09.351148 INFO::Fitting model to feature number 8, coxL
+2026-11-11 16:20:09.496016 INFO::Fitting model to feature number 9, rdhA
+2026-11-11 16:20:09.629765 INFO::Fitting model to feature number 10, frdA
+2026-11-11 16:20:09.744441 INFO::Fitting model to feature number 11, sqr
+2026-11-11 16:20:09.820484 INFO::Fitting model to feature number 12, cydA
+2026-11-11 16:20:09.885713 INFO::Fitting model to feature number 13, soxB
+2026-11-11 16:20:09.9526 INFO::Fitting model to feature number 14, dsrA
+2026-11-11 16:20:10.016261 INFO::Fitting model to feature number 15, psbA
+2026-11-11 16:20:10.072196 INFO::Fitting model to feature number 16, cyc2
+2026-11-11 16:20:10.141945 INFO::Fitting model to feature number 17, ccoN
+2026-11-11 16:20:10.193992 INFO::Fitting model to feature number 18, psaA
+2026-11-11 16:20:10.244442 INFO::Fitting model to feature number 19, X.NiFe._4b
+2026-11-11 16:20:10.311351 INFO::Fitting model to feature number 20, rbcL
+2026-11-11 16:20:10.375846 INFO::Fitting model to feature number 21, norB
+2026-11-11 16:20:10.431156 INFO::Fitting model to feature number 22, cyoA
+2026-11-11 16:20:10.482427 INFO::Fitting model to feature number 23, nosZ
+2026-11-11 16:20:10.53461 INFO::Fitting model to feature number 24, FCC
+2026-11-11 16:20:10.583842 INFO::Fitting model to feature number 25, nirK
+2026-11-11 16:20:10.63723 INFO::Fitting model to feature number 26, mcr
+2026-11-11 16:20:10.706232 INFO::Fitting model to feature number 27, nifH
+2026-11-11 16:20:10.754815 INFO::Fitting model to feature number 28, napA
+2026-11-11 16:20:10.797904 INFO::Fitting model to feature number 29, amoA
+2026-11-11 16:20:11.038959 INFO::Fitting model to feature number 30, X.FeFe._A1
+2026-11-11 16:20:11.081881 INFO::Fitting model to feature number 31, X.NiFe._1e
+2026-11-11 16:20:11.128091 INFO::Fitting model to feature number 32, X.NiFe._1l
+2026-11-11 16:20:11.172431 INFO::Fitting model to feature number 33, X.NiFe._1d
+2026-11-11 16:20:11.212572 INFO::Fitting model to feature number 34, X.NiFe._3b
+2026-11-11 16:20:11.254036 INFO::Fitting model to feature number 35, narG
+2026-11-11 16:20:11.306523 INFO::Fitting model to feature number 36, hbsT
+2026-11-11 16:20:11.353676 INFO::Fitting model to feature number 37, smoX
+2026-11-11 16:20:11.395325 INFO::Fitting model to feature number 38, nirS
+2026-11-11 16:20:11.435558 INFO::Fitting model to feature number 39, X.NiFe._2a
+2026-11-11 16:20:11.484481 INFO::Fitting model to feature number 40, X.NiFe._4e
+2026-11-11 16:20:11.536424 INFO::Fitting model to feature number 41, X.FeFe._B
+2026-11-11 16:20:11.584263 INFO::Fitting model to feature number 42, ARO
+2026-11-11 16:20:11.633007 INFO::Fitting model to feature number 43, X.FeFe._C1
+2026-11-11 16:20:11.676867 INFO::Fitting model to feature number 44, aclB
+2026-11-11 16:20:11.726418 INFO::Fitting model to feature number 45, X.NiFe._4g
+2026-11-11 16:20:11.766601 INFO::Fitting model to feature number 46, X.NiFe._4f
+2026-11-11 16:20:11.812858 INFO::Fitting model to feature number 47, X.NiFe._1c
+2026-11-11 16:20:11.857176 INFO::Fitting model to feature number 48, X.NiFe._1b
+2026-11-11 16:20:11.906208 INFO::Fitting model to feature number 49, X.NiFe._3d
+2026-11-11 16:20:11.949698 INFO::Fitting model to feature number 50, X.NiFe._4d
+2026-11-11 16:20:12.021626 INFO::Fitting model to feature number 51, X.NiFe._4a
+2026-11-11 16:20:12.067737 INFO::Fitting model to feature number 52, cooS
+2026-11-11 16:20:12.127185 INFO::Fitting model to feature number 53, X.NiFe._3c
+2026-11-11 16:20:12.172232 INFO::Fitting model to feature number 54, mtrB
+2026-11-11 16:20:12.213066 INFO::Fitting model to feature number 55, sor
+2026-11-11 16:20:12.263033 INFO::Fitting model to feature number 56, nrfA
+2026-11-11 16:20:12.513167 INFO::Fitting model to feature number 57, ygfK
+2026-11-11 16:20:12.552865 INFO::Fitting model to feature number 58, X.NiFe._1a
+2026-11-11 16:20:12.599547 INFO::Fitting model to feature number 59, X.NiFe._2b
+2026-11-11 16:20:12.643238 INFO::Fitting model to feature number 60, X.FeFe._A3
+2026-11-11 16:20:12.688981 INFO::Fitting model to feature number 61, X.FeFe._C3
+2026-11-11 16:20:12.740102 INFO::Fitting model to feature number 62, X.NiFe._2c
+2026-11-11 16:20:12.780969 INFO::Fitting model to feature number 63, X.NiFe._1h
+2026-11-11 16:20:12.826125 INFO::Fitting model to feature number 64, X.FeFe._A2
+2026-11-11 16:20:12.868271 INFO::Fitting model to feature number 65, X.NiFe._1f
+2026-11-11 16:20:12.921772 INFO::Fitting model to feature number 66, nxrA
+2026-11-11 16:20:12.988189 INFO::Counting total values for each feature
+2026-11-11 16:20:12.996532 INFO::Writing filtered data to file /Users/s4573340/Library/CloudStorage/OneDrive-TheUniversityofQueensland/Documents/GitHub/IMOS-GBR-Sediment-Microbe/4_results/greeningDB_TSS_AST_Source_TripSeason_ReefasRandom/features/filtered_data.tsv
+2026-11-11 16:20:13.017052 INFO::Writing filtered, normalized data to file /Users/s4573340/Library/CloudStorage/OneDrive-TheUniversityofQueensland/Documents/GitHub/IMOS-GBR-Sediment-Microbe/4_results/greeningDB_TSS_AST_Source_TripSeason_ReefasRandom/features/filtered_data_norm.tsv
+2026-11-11 16:20:13.036383 INFO::Writing filtered, normalized, transformed data to file /Users/s4573340/Library/CloudStorage/OneDrive-TheUniversityofQueensland/Documents/GitHub/IMOS-GBR-Sediment-Microbe/4_results/greeningDB_TSS_AST_Source_TripSeason_ReefasRandom/features/filtered_data_norm_transformed.tsv
+2026-11-11 16:20:13.054467 INFO::Writing residuals to file /Users/s4573340/Library/CloudStorage/OneDrive-TheUniversityofQueensland/Documents/GitHub/IMOS-GBR-Sediment-Microbe/4_results/greeningDB_TSS_AST_Source_TripSeason_ReefasRandom/fits/residuals.rds
+2026-11-11 16:20:13.064105 INFO::Writing fitted values to file /Users/s4573340/Library/CloudStorage/OneDrive-TheUniversityofQueensland/Documents/GitHub/IMOS-GBR-Sediment-Microbe/4_results/greeningDB_TSS_AST_Source_TripSeason_ReefasRandom/fits/fitted.rds
+2026-11-11 16:20:13.068184 INFO::Writing extracted random effects to file /Users/s4573340/Library/CloudStorage/OneDrive-TheUniversityofQueensland/Documents/GitHub/IMOS-GBR-Sediment-Microbe/4_results/greeningDB_TSS_AST_Source_TripSeason_ReefasRandom/fits/ranef.rds
+2026-11-11 16:20:13.070062 INFO::Writing all results to file (ordered by increasing q-values): /Users/s4573340/Library/CloudStorage/OneDrive-TheUniversityofQueensland/Documents/GitHub/IMOS-GBR-Sediment-Microbe/4_results/greeningDB_TSS_AST_Source_TripSeason_ReefasRandom/all_results.tsv
+2026-11-11 16:20:13.073248 INFO::Writing the significant results (those which are less than or equal to the threshold of 0.250000 ) to file (ordered by increasing q-values): /Users/s4573340/Library/CloudStorage/OneDrive-TheUniversityofQueensland/Documents/GitHub/IMOS-GBR-Sediment-Microbe/4_results/greeningDB_TSS_AST_Source_TripSeason_ReefasRandom/significant_results.tsv
+2026-11-11 16:20:13.075581 INFO::Writing heatmap of significant results to file: /Users/s4573340/Library/CloudStorage/OneDrive-TheUniversityofQueensland/Documents/GitHub/IMOS-GBR-Sediment-Microbe/4_results/greeningDB_TSS_AST_Source_TripSeason_ReefasRandom/heatmap.pdf
+2026-11-11 16:20:13.217153 INFO::Writing association plots (one for each significant association) to output folder: /Users/s4573340/Library/CloudStorage/OneDrive-TheUniversityofQueensland/Documents/GitHub/IMOS-GBR-Sediment-Microbe/4_results/greeningDB_TSS_AST_Source_TripSeason_ReefasRandom
+2026-11-11 16:20:13.22119 INFO::Plotting associations from most to least significant, grouped by metadata
+2026-11-11 16:20:13.222967 INFO::Plotting data for metadata number 1, Source
+2026-11-11 16:20:13.227299 INFO::Creating boxplot for categorical data, Source vs ccoN
+2026-11-11 16:20:13.480989 INFO::Creating boxplot for categorical data, Source vs napA
+2026-11-11 16:20:13.722658 INFO::Creating boxplot for categorical data, Source vs nrfA
+2026-11-11 16:20:13.876113 INFO::Creating boxplot for categorical data, Source vs X.NiFe._3d
+2026-11-11 16:20:14.109074 INFO::Creating boxplot for categorical data, Source vs nosZ
+2026-11-11 16:20:14.533828 INFO::Creating boxplot for categorical data, Source vs X.NiFe._3b
+2026-11-11 16:20:14.650166 INFO::Creating boxplot for categorical data, Source vs narG
+2026-11-11 16:20:14.769553 INFO::Creating boxplot for categorical data, Source vs sqr
+2026-11-11 16:20:14.891256 INFO::Creating boxplot for categorical data, Source vs X.NiFe._4b
+2026-11-11 16:20:15.010089 INFO::Creating boxplot for categorical data, Source vs psaA
+2026-11-11 16:20:15.13058 INFO::Creating boxplot for categorical data, Source vs norB
+2026-11-11 16:20:15.251561 INFO::Creating boxplot for categorical data, Source vs ARO
+2026-11-11 16:20:15.40963 INFO::Creating boxplot for categorical data, Source vs nirS
+2026-11-11 16:20:15.744125 INFO::Creating boxplot for categorical data, Source vs cydA
+2026-11-11 16:20:15.86019 INFO::Creating boxplot for categorical data, Source vs dsrA
+2026-11-11 16:20:15.979197 INFO::Creating boxplot for categorical data, Source vs coxA
+2026-11-11 16:20:16.097123 INFO::Creating boxplot for categorical data, Source vs X.NiFe._1d
+2026-11-11 16:20:16.217397 INFO::Creating boxplot for categorical data, Source vs X.NiFe._1c
+2026-11-11 16:20:16.339185 INFO::Creating boxplot for categorical data, Source vs atpA
+2026-11-11 16:20:16.458273 INFO::Creating boxplot for categorical data, Source vs X.NiFe._3c
+2026-11-11 16:20:16.573602 INFO::Creating boxplot for categorical data, Source vs RHO
+2026-11-11 16:20:16.899616 INFO::Creating boxplot for categorical data, Source vs smoX
+2026-11-11 16:20:17.02048 INFO::Creating boxplot for categorical data, Source vs X.NiFe._1e
+2026-11-11 16:20:17.138979 INFO::Creating boxplot for categorical data, Source vs rbcL
+2026-11-11 16:20:17.259107 INFO::Creating boxplot for categorical data, Source vs cooS
+2026-11-11 16:20:17.376102 INFO::Creating boxplot for categorical data, Source vs X.FeFe._A3
+2026-11-11 16:20:17.492833 INFO::Creating boxplot for categorical data, Source vs X.NiFe._4g
+2026-11-11 16:20:17.608183 INFO::Creating boxplot for categorical data, Source vs rdhA
+2026-11-11 16:20:17.728913 INFO::Creating boxplot for categorical data, Source vs X.NiFe._2a
+2026-11-11 16:20:18.047745 INFO::Creating boxplot for categorical data, Source vs X.NiFe._1b
+2026-11-11 16:20:18.181347 INFO::Creating boxplot for categorical data, Source vs X.NiFe._1f
+2026-11-11 16:20:18.45256 INFO::Creating boxplot for categorical data, Source vs X.NiFe._1a
+2026-11-11 16:20:18.608605 INFO::Creating boxplot for categorical data, Source vs X.NiFe._1l
+2026-11-11 16:20:18.735498 INFO::Creating boxplot for categorical data, Source vs psbA
+2026-11-11 16:20:18.854845 INFO::Creating boxplot for categorical data, Source vs X.NiFe._1h
+2026-11-11 16:20:18.977899 INFO::Creating boxplot for categorical data, Source vs X.NiFe._2b
+2026-11-11 16:20:19.095895 INFO::Creating boxplot for categorical data, Source vs ygfK
+2026-11-11 16:20:19.212452 INFO::Creating boxplot for categorical data, Source vs mcr
+2026-11-11 16:20:19.544148 INFO::Creating boxplot for categorical data, Source vs X.FeFe._A2
+2026-11-11 16:20:19.657813 INFO::Creating boxplot for categorical data, Source vs X.FeFe._C3
+2026-11-11 16:20:19.780327 INFO::Creating boxplot for categorical data, Source vs mtrB
+2026-11-11 16:20:19.895556 INFO::Creating boxplot for categorical data, Source vs coxL
+2026-11-11 16:20:20.018286 INFO::Creating boxplot for categorical data, Source vs nxrA
+2026-11-11 16:20:20.136731 INFO::Creating boxplot for categorical data, Source vs X.FeFe._A1
+2026-11-11 16:20:20.251607 INFO::Creating boxplot for categorical data, Source vs X.NiFe._2c
+2026-11-11 16:20:20.406064 INFO::Creating boxplot for categorical data, Source vs nirK
+2026-11-11 16:20:20.717144 INFO::Creating boxplot for categorical data, Source vs frdA
+2026-11-11 16:20:20.84187 INFO::Creating boxplot for categorical data, Source vs sor
+2026-11-11 16:20:20.958982 INFO::Creating boxplot for categorical data, Source vs hbsT
+2026-11-11 16:20:21.074325 INFO::Creating boxplot for categorical data, Source vs nuoF
+2026-11-11 16:20:21.188802 INFO::Creating boxplot for categorical data, Source vs arsC
+2026-11-11 16:20:21.323441 INFO::Creating boxplot for categorical data, Source vs X.NiFe._4a
+2026-11-11 16:20:21.448552 INFO::Creating boxplot for categorical data, Source vs amoA
+2026-11-11 16:20:21.563324 INFO::Creating boxplot for categorical data, Source vs X.FeFe._C1
+2026-11-11 16:20:21.859098 INFO::Creating boxplot for categorical data, Source vs FCC
+2026-11-11 16:20:22.020614 INFO::Creating boxplot for categorical data, Source vs X.NiFe._4d
+2026-11-11 16:20:22.139034 INFO::Creating boxplot for categorical data, Source vs sdhA
+2026-11-11 16:20:22.257186 INFO::Creating boxplot for categorical data, Source vs aclB
+2026-11-11 16:20:22.376162 INFO::Creating boxplot for categorical data, Source vs X.NiFe._4e
+2026-11-11 16:20:22.496654 INFO::Creating boxplot for categorical data, Source vs soxB
+2026-11-11 16:20:22.616069 INFO::Creating boxplot for categorical data, Source vs X.FeFe._B
+2026-11-11 16:20:22.736136 INFO::Creating boxplot for categorical data, Source vs cyoA
+2026-11-11 16:20:23.072752 INFO::Creating boxplot for categorical data, Source vs cyc2
+2026-11-11 16:20:23.198918 INFO::Creating boxplot for categorical data, Source vs fdhA
+2026-11-11 16:20:25.025901 INFO::Plotting data for metadata number 2, TripSeason
+2026-11-11 16:20:25.027877 INFO::Creating boxplot for categorical data, TripSeason vs psaA
+2026-11-11 16:20:25.16145 INFO::Creating boxplot for categorical data, TripSeason vs X.NiFe._4f
+2026-11-11 16:20:25.32335 INFO::Creating boxplot for categorical data, TripSeason vs arsC
+2026-11-11 16:20:25.466245 INFO::Creating boxplot for categorical data, TripSeason vs sdhA
+2026-11-11 16:20:25.595233 INFO::Creating boxplot for categorical data, TripSeason vs soxB
+2026-11-11 16:20:25.944165 INFO::Creating boxplot for categorical data, TripSeason vs X.FeFe._B
+2026-11-11 16:20:26.094067 INFO::Creating boxplot for categorical data, TripSeason vs rbcL
+2026-11-11 16:20:26.209174 INFO::Creating boxplot for categorical data, TripSeason vs coxL
+2026-11-11 16:20:26.342314 INFO::Creating boxplot for categorical data, TripSeason vs mcr
+2026-11-11 16:20:26.472953 INFO::Creating boxplot for categorical data, TripSeason vs mtrB
+2026-11-11 16:20:26.599545 INFO::Creating boxplot for categorical data, TripSeason vs FCC
+2026-11-11 16:20:26.717945 INFO::Creating boxplot for categorical data, TripSeason vs psbA
+2026-11-11 16:20:26.867678 INFO::Creating boxplot for categorical data, TripSeason vs cyoA
+2026-11-11 16:20:27.197717 INFO::Creating boxplot for categorical data, TripSeason vs fdhA
+2026-11-11 16:20:27.31624 INFO::Creating boxplot for categorical data, TripSeason vs X.NiFe._4b
+2026-11-11 16:20:27.52992 INFO::Creating boxplot for categorical data, TripSeason vs smoX
+2026-11-11 16:20:27.71011 INFO::Creating boxplot for categorical data, TripSeason vs X.NiFe._1f
+2026-11-11 16:20:27.860351 INFO::Creating boxplot for categorical data, TripSeason vs RHO
+2026-11-11 16:20:28.011761 INFO::Creating boxplot for categorical data, TripSeason vs X.FeFe._C1
+2026-11-11 16:20:28.156408 INFO::Creating boxplot for categorical data, TripSeason vs sqr
+2026-11-11 16:20:28.304864 INFO::Creating boxplot for categorical data, TripSeason vs ccoN
+2026-11-11 16:20:28.67326 INFO::Creating boxplot for categorical data, TripSeason vs X.NiFe._1c
+2026-11-11 16:20:28.814082 INFO::Creating boxplot for categorical data, TripSeason vs rdhA
+2026-11-11 16:20:28.932596 INFO::Creating boxplot for categorical data, TripSeason vs norB
+2026-11-11 16:20:29.080728 INFO::Creating boxplot for categorical data, TripSeason vs X.NiFe._2a
+2026-11-11 16:20:29.387714 INFO::Creating boxplot for categorical data, TripSeason vs X.FeFe._C3
+2026-11-11 16:20:29.599947 INFO::Creating boxplot for categorical data, TripSeason vs X.FeFe._A1
+2026-11-11 16:20:29.737189 INFO::Creating boxplot for categorical data, TripSeason vs X.NiFe._4g
+2026-11-11 16:20:29.874711 INFO::Creating boxplot for categorical data, TripSeason vs napA
+2026-11-11 16:20:30.242669 INFO::Creating boxplot for categorical data, TripSeason vs frdA
+2026-11-11 16:20:30.376845 INFO::Creating boxplot for categorical data, TripSeason vs X.FeFe._A3
+2026-11-11 16:20:30.513233 INFO::Creating boxplot for categorical data, TripSeason vs sor
+2026-11-11 16:20:30.65021 INFO::Creating boxplot for categorical data, TripSeason vs X.NiFe._1e
+2026-11-11 16:20:30.788044 INFO::Creating boxplot for categorical data, TripSeason vs nuoF
+2026-11-11 16:20:30.912313 INFO::Creating boxplot for categorical data, TripSeason vs nifH
+2026-11-11 16:20:31.037441 INFO::Creating boxplot for categorical data, TripSeason vs X.NiFe._1a
+2026-11-11 16:20:31.167428 INFO::Creating boxplot for categorical data, TripSeason vs aclB
+2026-11-11 16:20:31.51008 INFO::Creating boxplot for categorical data, TripSeason vs ARO
