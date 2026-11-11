@@ -16,6 +16,7 @@ suppressPackageStartupMessages({
 
 summary_path <- "<path/to/4_MAG_recovery/9_novelty>/sed_sea_public_ANI95_AF15.cluster_summary.tsv"
 out_file     <- "<path/to/4_MAG_recovery/9_novelty>/Fig2d_novelty_upset.svg"
+out_file2    <- "<path/to/4_MAG_recovery/9_novelty>/Fig2d_novelty_upset.all.svg"
 
 # Presence (1) or absence (0) of each collection in each cluster
 df_binary <- read_tsv(summary_path, show_col_types = FALSE) %>%
@@ -47,5 +48,11 @@ p_upset <- upset(df_binary, colnames(df_binary),
 p_upset
 
 ggsave(out_file, p_upset, width = 7.5, height = 7.5)
+
+p_upset_all <- upset(df_binary, colnames(df_binary),width_ratio=0.1,
+intersections='all',    min_size=1
+)
+
+ggsave(out_file2, p_upset_all, width = 7.5, height = 7.5)
 
 sessionInfo()

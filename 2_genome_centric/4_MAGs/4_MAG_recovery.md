@@ -1,6 +1,6 @@
 # MAG recovery
 
-**Aim:** recover prokaryotic MAGs from sediment metagenomes by single-sample assembly and co-assembly with multi-sample binning, then assess their quality, dereplicate them to species level, assign taxonomy, infer phylogenies, and assess their novelty against GTDB and public genome collections. Reads are mapped back to the MAGs and to unbinned contigs to assess how much of each community the MAGs represent.
+**Aim:** recover prokaryotic MAGs from sediment metagenomes by single-sample assembly and co-assembly with multi-sample binning, then assess their quality, dereplicate them to species level, assign taxonomy, infer phylogenies, and assess their novelty against GTDB and public genome collections. Reads are mapped back to the MAGs to assess how much of each community they represent, and all assembled contigs are classified with MMseqs2 to describe community composition beyond the MAGs.
 
 Related manuscript content: Fig. 1b, Fig. 2a-d, Fig. S1; Table 1, Tables S2, S7, and S8.
 
@@ -20,8 +20,8 @@ Scripts for this analysis are in the [`scripts/`](scripts/) folder (`4.01` to `4
 | 4.10 | [`scripts/4.10_novelty_cluster.sh`](scripts/4.10_novelty_cluster.sh) | Clustering with public genome collections at 95% ANI, and genomes per collection in each cluster |
 | 4.11 | [`scripts/4.11_novelty_upset.R`](scripts/4.11_novelty_upset.R) | UpSet plot of clusters shared between collections (Fig. 2d) |
 | 4.12 | [`scripts/4.12_coverm_mags_array.sh`](scripts/4.12_coverm_mags_array.sh) | Read mapping to MAGs with CoverM genome |
-| 4.13 | [`scripts/4.13_unmapped_reads_array.sh`](scripts/4.13_unmapped_reads_array.sh) | Reads not mapped to sediment MAGs |
-| 4.14 | [`scripts/4.14_unbinned_contigs_array.sh`](scripts/4.14_unbinned_contigs_array.sh) | Unbinned contigs: MMseqs2 taxonomy and reads per domain |
+| 4.13 | [`scripts/4.13_all_contig_taxonomy_array.sh`](scripts/4.13_all_contig_taxonomy_array.sh) | Taxonomy of all contigs with MMseqs2 easy-taxonomy |
+| 4.14 | [`scripts/4.14a_unmapped_reads_array.sh`](scripts/4.14a_unmapped_reads_array.sh), [`scripts/4.14b_unbinned_contigs_array.sh`](scripts/4.14b_unbinned_contigs_array.sh) | Exploratory: reads not mapped to sediment MAGs, and MMseqs2 taxonomy and reads per domain of unbinned contigs |
 | 4.15 | [`scripts/4.15_genome_features.R`](scripts/4.15_genome_features.R) | Genome size, GC content, and predicted genes of sediment and seawater MAGs (Fig. 2e-g) |
 | 4.16 | [`scripts/4.16_phylum_counts.R`](scripts/4.16_phylum_counts.R) | Number of sediment and seawater MAGs per phylum (Fig. 2b) |
 
@@ -35,7 +35,8 @@ Scripts for this analysis are in the [`scripts/`](scripts/) folder (`4.01` to `4
 7. [Taxonomy and phylogeny](#taxonomy)
 8. [Novelty](#novelty)
 9. [Read mapping to MAGs](#mapping)
-10. [Unbinned contigs](#unbinned)
+10. [All contig taxonomy](#contigs)
+11. [Exploratory: unbinned contigs](#unbinned)
 
 ## 1. Single-sample assembly <a name="assembly"></a>
 Directory: [`1_assembly_recovery/`](1_assembly_recovery/)
@@ -134,12 +135,23 @@ Directory: [`4_read_mapping/`](4_read_mapping/)
 sbatch --export=ALL,HABITAT=sed,MODE=count --array=1-191 2_genome_centric/4_MAGs/scripts/4.12_coverm_mags_array.sh
 ```
 
-## 10. Unbinned contigs <a name="unbinned"></a>
+## 10. All contig taxonomy <a name="contigs"></a>
 Directory: [`5_unbinned_contigs/`](5_unbinned_contigs/)
 
+- All assembled contigs, binned and unbinned, are classified with MMseqs2 v15.6f452 `easy-taxonomy` against a custom database of RefSeq, EukProt, PLSDB, IMG/VR, and proteins predicted from GTDB R08-RS214 genomes (Robbins et al., 2026)
+- Platform: Bash (SLURM array, one task per assembly)
+- Input: all contigs of the 191 single-sample assemblies (section 1) and 71 co-assemblies (section 4)
+- Output: <output, e.g. percentage of contigs or reads per domain; manuscript figure or table>
+- Script: [`4.13_all_contig_taxonomy_array.sh`](scripts/4.13_all_contig_taxonomy_array.sh)
+
+## 11. Exploratory: unbinned contigs <a name="unbinned"></a>
+Directory: [`5_unbinned_contigs/`](5_unbinned_contigs/)
+
+This exploratory analysis is not reported in the manuscript.
+
 - Reads not mapped to sediment MAGs (≥ 95% identity over ≥ 75% of the read) are extracted for each sample
-- Unbinned contigs of each single-sample assembly are classified with MMseqs2 v15.6f452 `easy-taxonomy` against a custom database of RefSeq, EukProt, PLSDB, IMG/VR, and proteins predicted from GTDB R08-RS214 genomes (Robbins et al., 2026)
+- Unbinned contigs of each single-sample assembly are classified with MMseqs2 `easy-taxonomy` against the database in section 10
 - MAG-unmapped reads from all samples of the same reef are mapped to the unbinned contigs (CoverM contig), and mapped reads are summed per domain
 - Platform: Bash (SLURM array)
 - Output: reads per domain for unbinned contigs (mean 91.54% Bacteria, 0.53% Archaea, 1.06% viruses, 0.26% eukaryotes)
-- Scripts: [`4.13_unmapped_reads_array.sh`](scripts/4.13_unmapped_reads_array.sh), [`4.14_unbinned_contigs_array.sh`](scripts/4.14_unbinned_contigs_array.sh)
+- Scripts: [`4.14a_unmapped_reads_array.sh`](scripts/4.14a_unmapped_reads_array.sh), [`4.14b_unbinned_contigs_array.sh`](scripts/4.14b_unbinned_contigs_array.sh)
