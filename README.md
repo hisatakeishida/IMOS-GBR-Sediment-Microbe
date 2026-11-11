@@ -9,77 +9,74 @@ This project implemented gene-centric and genome-centric analyses to investigate
 
 This project is part of the Great Barrier Reef Microbial Genomes Database sub-Facility within the Marine Microbiome Initiative Facility of Australia's Integrated Marine Observing System (IMOS). More details are available on the [IMOS GBR Microbial Genomic Database page](https://imos.org.au/facilities/marinemicrobiomeinitiative/gbr-microbial-genomic-database).
 
-More details for the seawater data analysed alongside sediments (MGD-seawater) are available on Dr Marko Terzin's github pages and Zendo https://zenodo.org/records/20503966.
-- [Gene-centric analyses](https://github.com/mterzin/IMOS_GBR_MGD_read-centric_analysis)  associated with  [Terzin et al., 2025](https://doi.org/10.1038/s41586-026-10778-z)
+More details for the seawater data analysed alongside sediments (MGD-seawater) are available on Dr Marko Terzin's GitHub pages and on [Zenodo](https://zenodo.org/records/20503966):
+- [Gene-centric analyses](https://github.com/mterzin/IMOS_GBR_MGD_read-centric_analysis) associated with [Terzin et al., 2025](https://doi.org/10.1038/s41586-026-10778-z)
 - [Genome-centric analyses](https://github.com/mterzin/fishy_microbes) associated with [Terzin et al., 2026](https://doi.org/10.1038/s41586-026-10778-z) and [Robbins et al., 2026](https://doi.org/10.1038/s41586-026-10778-z)
 
-## Data availability
-Raw sequencing data will be available upon publication on the IMOS-AODN repository (XXXXXX) and ENA under project number (XXXXXX). Sediment MAGs generated from this study will be archived on Zenodo (XXXXXX) upon publication. 
-
 ## Repository structure
+Each analysis folder has its own page describing the methods, and its scripts are in a `scripts/` subfolder, numbered by analysis (e.g. `4.01` is the first step of `4_MAGs`).
+
 ### [`0_metadata/`](0_metadata/): samples, sequencing, and QC ([page](0_metadata/0_sample_data_qc.md))
 - 192 sediment samples, 48 reefs, zoning status, and sampling trips
 - Illumina and ONT library preparation and sequencing yield
 - Adapter removal with fastp and porechop
+- [`1_Sampling/`](0_metadata/1_Sampling/): field photographs
 
 ### [`1_gene_centric/`](1_gene_centric/): read-based analyses
 
-#### [`1_SingleM/`](1_gene_centric/1_SingleM/): mOTU-based analyses ([page](1_gene_centric/1_SingleM/1_SingleM.md))
-- [`1_community_profiles/`](1_gene_centric/1_SingleM/1_community_profiles/): SingleM pipe on reads subsampled to 10 M read pairs (Fig. 1c)
-- [`2_ordination_PERMANOVA/`](1_gene_centric/1_SingleM/2_ordination_PERMANOVA/): PCA and sequential PERMANOVA (Fig. 1d, 1g-h)
-- [`3_differential_abundance/`](1_gene_centric/1_SingleM/3_differential_abundance/): MaAsLin2 and LinDA, sediment vs seawater (Table S4)
-- [`4_abundance_prevalence/`](1_gene_centric/1_SingleM/4_abundance_prevalence/): family-level abundance and prevalence (Tables S5 and S6)
-- [`5_appraise_novelty/`](1_gene_centric/1_SingleM/5_appraise_novelty/): SingleM appraise against assemblies, MAGs, and GTDB R10-RS226; microbial_fraction
+#### [`1_SingleM/`](1_gene_centric/1_SingleM/): mOTU-based analyses ([page](1_gene_centric/1_SingleM/1_SingleM.md); scripts `1.01` to `1.07`)
+- [`1_community_profiles/`](1_gene_centric/1_SingleM/1_community_profiles/): SingleM pipe on reads subsampled to 10 M read pairs, phyloseq objects, habitat PCA and Shannon diversity (Fig. 1d)
+- [`2_ordination_PERMANOVA/`](1_gene_centric/1_SingleM/2_ordination_PERMANOVA/): PCA by trip and sequential and reef-level PERMANOVA (Fig. 1g-h)
+- [`3_abundance_DA/`](1_gene_centric/1_SingleM/3_abundance_DA/): community composition (Fig. 1c), MaAsLin2 and LinDA, sediment vs seawater (Table S4), and family-level abundance and prevalence (Tables S5 and S6)
+- [`4_appraise_novelty/`](1_gene_centric/1_SingleM/4_appraise_novelty/): SingleM appraise against assemblies, MAGs, and GTDB R10-RS226
 
-#### [`2_Protein/`](1_gene_centric/2_Protein/): non-redundant protein analyses ([page](1_gene_centric/2_Protein/2_Protein.md))
+#### [`2_Protein/`](1_gene_centric/2_Protein/): non-redundant protein analyses ([page](1_gene_centric/2_Protein/2_Protein.md); scripts `2.01` to `2.16`)
 - [`1_gene_catalogue/`](1_gene_centric/2_Protein/1_gene_catalogue/): Prodigal ORFs clustered with MMseqs2 easy-linclust (39.2 M non-redundant proteins)
 - [`2_annotation/`](1_gene_centric/2_Protein/2_annotation/): KOfam (DRAM), CAZymes (run_dbcan), hydrogenases (HydDB), 44 marker genes, and *amoA* (GraftM; Table S17)
 - [`3_read_mapping_RPKM/`](1_gene_centric/2_Protein/3_read_mapping_RPKM/): DIAMOND blastx, RPKM normalised to SingleM marker genes, and PCoA (Fig. 1e-f)
 - [`4_differential_abundance/`](1_gene_centric/2_Protein/4_differential_abundance/): MaAsLin2 and LinDA on functional profiles (Fig. 3c)
 
-#### [`3_Sylph/`](1_gene_centric/3_Sylph/): k-mer-based analyses ([page](1_gene_centric/3_Sylph/3_Sylph.md))
+#### [`3_Sylph/`](1_gene_centric/3_Sylph/): k-mer-based analyses ([page](1_gene_centric/3_Sylph/3_Sylph.md); scripts `3.01` to `3.03`)
 - Supporting analysis; not reported in the manuscript
+- [`1_summary/`](1_gene_centric/3_Sylph/1_summary/): sylph profiles against GTDB R10-RS226, with PCA, Shannon diversity, and composition plots
 
 ### [`2_genome_centric/`](2_genome_centric/): MAG-based analyses
 
-#### [`1_genome_recovery/`](2_genome_centric/1_genome_recovery/): MAG recovery, QC, dereplication, taxonomy, and novelty ([page](1_gene_centric/1_SingleM/1_SingleM.md))
-- [`1_assembly/`](2_genome_centric/1_genome_recovery/1_assembly/): Aviary assemble, 17 hybrid and 174 Illumina-only assemblies (Table S2)
-- [`2_coassembly/`](2_genome_centric/1_genome_recovery/2_coassembly/): BinChicken coassemble, 71 co-assemblies (Table S2)
-- [`3_binning/`](2_genome_centric/1_genome_recovery/3_binning/): Aviary recover multi-sample binning
-- [`4_MAG_QC/`](2_genome_centric/1_genome_recovery/4_MAG_QC/): CheckM and CheckM2, quality score ≥ 50% (2,698 MAGs; Table S7)
-- [`5_dereplication/`](2_genome_centric/1_genome_recovery/5_dereplication/): CoverM cluster at 95% ANI (1,201 MAGs; Table S8)
-- [`6_taxonomy/`](2_genome_centric/1_genome_recovery/6_taxonomy/): GTDB-Tk R10-RS226 and PhyloRank curation (Fig. S1)
-- [`7_phylogeny/`](2_genome_centric/1_genome_recovery/7_phylogeny/): IQ-TREE bacterial and archaeal trees, and genome features (Fig. 2a-b, 2e-g)
-- [`8_novelty/`](2_genome_centric/1_genome_recovery/8_novelty/): comparison with GTDB and public genome collections (Table 1, Fig. 2c-d)
+#### [`4_MAGs/`](2_genome_centric/4_MAGs/): MAG recovery, QC, dereplication, taxonomy, novelty, and read mapping ([page](2_genome_centric/4_MAGs/4_MAG_recovery.md); scripts `4.01` to `4.16`)
+- [`1_assembly_recovery/`](2_genome_centric/4_MAGs/1_assembly_recovery/): Aviary assemble (17 hybrid and 174 Illumina-only assemblies), selection of binning datasets with SingleM appraise, Aviary recover multi-sample binning, and BinChicken co-assembly (71 co-assemblies) (Table S2, Fig. 1b)
+- [`2_MAG_QC_Dereplication/`](2_genome_centric/4_MAGs/2_MAG_QC_Dereplication/): CheckM and CheckM2, quality score ≥ 50% (2,698 MAGs; Table S7), CoverM cluster at 95% ANI (1,201 MAGs; Table S8), and genome features (Fig. 2e-g)
+- [`3_taxonomy_novelty/`](2_genome_centric/4_MAGs/3_taxonomy_novelty/): GTDB-Tk R10-RS226 and PhyloRank curation (Fig. S1), IQ-TREE bacterial and archaeal trees (Fig. 2a-b), MAGs per phylum (Fig. 2b), and comparison with GTDB and public genome collections (Table 1, Fig. 2c-d)
+- [`4_read_mapping/`](2_genome_centric/4_MAGs/4_read_mapping/): CoverM read mapping of each habitat to its own MAGs (MAG-based community profiles)
+- [`5_unbinned_contigs/`](2_genome_centric/4_MAGs/5_unbinned_contigs/): MMseqs2 taxonomy of all assembled contigs, and an exploratory analysis of unbinned contigs (not reported in the manuscript)
 
-#### [`2_genome_annot/`](2_genome_centric/2_genome_annot/): MAG annotation ([page](1_gene_centric/2_Protein/2_Protein.md))
-- [`1_DRAM/`](2_genome_centric/2_genome_annot/1_DRAM/): KOfam, Pfam, and MEROPS annotation
-- [`2_CAZymes_CGCs/`](2_genome_centric/2_genome_annot/2_CAZymes_CGCs/): run_dbcan CAZymes, CGCs, and dbCAN-PUL substrates (Fig. 4, Table S20)
-- [`3_sulphatases/`](2_genome_centric/2_genome_annot/3_sulphatases/): SulfAtlas
-- [`4_hydrogenases_marker_genes/`](2_genome_centric/2_genome_annot/4_hydrogenases_marker_genes/): HydDB and 44 metabolic marker genes (Fig. 3a-b, 3d; Table S16)
-- [`5_amoA/`](2_genome_centric/2_genome_annot/5_amoA/): GraftM *amoA* detection and clade assignment (Table S18)
-- [`6_enrichment_tests/`](2_genome_centric/2_genome_annot/6_enrichment_tests/): Mann-Whitney U tests on 796 MAGs (Tables S10 to S15, S19)
-- [`7_BGCs/`](2_genome_centric/2_genome_annot/7_BGCs/): antiSMASH, clust-o-matic GCFs, and MIBiG and BiG-FAM novelty (Fig. 5, Tables S21 and S22)
+#### [`5_MAGsAnnot/`](2_genome_centric/5_MAGsAnnot/): MAG annotation ([page](2_genome_centric/5_MAGsAnnot/5_MAG_annotate.md); scripts `5.01` to `5.14`)
+- [`1_DRAM/`](2_genome_centric/5_MAGsAnnot/1_DRAM/): KOfam, Pfam, and MEROPS annotation
+- [`2_CAZymes_CGCs/`](2_genome_centric/5_MAGsAnnot/2_CAZymes_CGCs/): run_dbcan CAZymes, CGCs, and dbCAN-PUL substrates (Fig. 4, Table S20)
+- [`3_sulphatases/`](2_genome_centric/5_MAGsAnnot/3_sulphatases/): SulfAtlas
+- [`4_hydrogenases_marker_genes/`](2_genome_centric/5_MAGsAnnot/4_hydrogenases_marker_genes/): HydDB and 44 metabolic marker genes (Fig. 3a-b, 3d; Table S16)
+- [`5_amoA/`](2_genome_centric/5_MAGsAnnot/5_amoA/): GraftM *amoA* detection and clade assignment (Table S18)
+- [`6_enrichment_tests/`](2_genome_centric/5_MAGsAnnot/6_enrichment_tests/): Mann-Whitney U tests on 796 MAGs (Tables S10 to S15, S19), and marker gene enrichment between sediment and seawater MAGs
+- [`7_BGCs/`](2_genome_centric/5_MAGsAnnot/7_BGCs/): antiSMASH, clust-o-matic GCFs, and MIBiG and BiG-FAM novelty (Fig. 5, Tables S21 and S22)
 
-#### [`3_genome_abundance/`](2_genome_centric/3_genome_abundance/): MAG abundance ([page](1_gene_centric/3_Sylph/3_Sylph.md))
-- [`1_CoverM_mapping/`](2_genome_centric/3_genome_abundance/1_CoverM_mapping/): read mapping of each habitat to its own MAGs (MAG-based community profiles)
-- [`2_unbinned_contigs/`](2_genome_centric/3_genome_abundance/2_unbinned_contigs/): MMseqs2 taxonomy of unbinned contigs
+### [`3_combine/`](3_combine/): combined gene- and genome-centric analyses
 
-#### [`4_Mixomics/`](2_genome_centric/4_Mixomics/): reef zoning status analyses ([page](2_genome_centric/4_MAGs/4_MAG_recovery.md))
-- [`1_PERMANOVA/`](2_genome_centric/4_Mixomics/1_PERMANOVA/): sequential PERMANOVA on MAG-based profiles (Fig. S3a)
-- [`2_MINT_sPLSDA/`](2_genome_centric/4_Mixomics/2_MINT_sPLSDA/): tuning, final models, and indicator MAGs (Fig. S3b)
-- [`3_permutation_tests/`](2_genome_centric/4_Mixomics/3_permutation_tests/): reef-level permutation nulls for MAG and mOTU profiles (Fig. S3c-d)
+#### [`6_Mixomics/`](3_combine/6_Mixomics/): reef zoning status analyses ([page](3_combine/6_Mixomics/6_Mixomics.md); scripts `6.01` to `6.10`)
+- Sequential PERMANOVA on MAG-based profiles (Fig. S3a)
+- MINT sPLS-DA tuning, final models, and indicator MAGs (Fig. S3b)
+- Reef-level permutation nulls for MAG and mOTU profiles (Fig. S3c-d)
 
-### [`3_SingleM_VS_CoverM/`](3_SingleM_VS_CoverM/): gene- vs genome-centric abundance ([page](1_gene_centric/3_Sylph/3_Sylph.md))
+#### [`7_Gene_Genome_analysis/`](3_combine/7_Gene_Genome_analysis/): gene- vs genome-centric comparison ([page](3_combine/7_Gene_Genome_analysis/7_Gene_Genome_analysis.md); scripts `7.01` and `7.02`)
 - Relative abundance compared across taxonomic ranks and sampling trips (Fig. S2, Tables S5 and S9)
+- Heatmap of metabolic marker genes from gene- and genome-centric profiles
 
-### [`5_Rscripts/`](5_Rscripts/): statistics and visualisation
-- [`1_MASH.R`](5_Rscripts/1_MASH.R): MASH visualisation
-- [`2_SingleM.R`](5_Rscripts/2_SingleM.R): SingleM visualisation
-- [`3_RPKM_calculation_KO.R`](5_Rscripts/3_RPKM_calculation_KO.R): RPKM calculation and visualisation (KO)
-- [`4_RPKM_calculation_CAZyme.R`](5_Rscripts/4_RPKM_calculation_CAZyme.R): RPKM calculation and visualisation (CAZyme)
+### Other folders
+- [`4_results/`](4_results/): final figures and tables
+- [`scripts/`](scripts/): shared helpers (`PATH.R`, `reorganise_scripts.py`)
+- [`archive/`](archive/): earlier versions of this repository; not maintained
 
 ## Data availability
+
+Raw sequencing data and sediment MAGs will be released upon publication.
 
 | Data | Location |
 |---|---|
