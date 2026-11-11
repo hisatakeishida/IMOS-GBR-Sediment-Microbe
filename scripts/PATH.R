@@ -23,3 +23,11 @@ setwd(out_dir)
 habitat_cols <- c(Sediment = "#33a02c", Seawater = "#1f78b4")
 
 
+suppressPackageStartupMessages({
+  library(ComplexUpset)
+  library(tidyverse)
+})
+dereplication_95_ANI <- read.xlsx("~/Library/CloudStorage/OneDrive-TheUniversityofQueensland/1_IMOS/3_MAG_GTDB/dereplication_95_ANI.xlsx", sheet="Summary_ANI95_AF15_OMD_RMD_GEMs")
+summary_path <- "<path/to/4_MAG_recovery/9_novelty>/sed_sea_public_ANI95_AF15.cluster_summary.tsv"
+out_file     <- "<path/to/4_MAG_recovery/9_novelty>/Fig2d_novelty_upset.svg"
+
