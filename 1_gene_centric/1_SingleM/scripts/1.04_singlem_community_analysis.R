@@ -277,6 +277,7 @@ singlem_sea  <- ps_filter(singlem_prok, Source == "Seawater")
 
 message("Samples: ", nsamples(singlem_sed), " sediment, ", nsamples(singlem_sea), " seawater")
 
+saveRDS(singlem_prok, file.path(out_dir, "singlem_prok_SEASED.rds"))
 saveRDS(singlem_sed, file.path(out_dir, "singlem_prok_SED.rds"))
 saveRDS(singlem_sea, file.path(out_dir, "singlem_prok_SEA.rds"))
 

@@ -92,3 +92,44 @@ Directory: [`4_appraise_novelty/`](4_appraise_novelty/)
 - Output: proportion of read mOTUs that match GTDB genomes at species level (sediment: 1.4% bacterial, 0.1% archaeal; seawater: 35.7% bacterial, 26.7% archaeal)
 - Script: [`scripts/1.06_singlem_appraise.sh`](scripts/1.06_singlem_appraise.sh)
 
+### Against GTDB R10-RS226 MAGs
+| Reads | Habitat | Domain | Value | Species (%) | Genus (%) |
+|---|---|---|---|---|---|
+| All reads | Sediment | Archaea | Total | 0.1 | 19.6 |
+| All reads | Sediment | Archaea | Average | 0.0 | 19.3 |
+| All reads | Sediment | Bacteria | Total | 1.4 | 63.7 |
+| All reads | Sediment | Bacteria | Average | 1.4 | 59.5 |
+| All reads | Seawater | Archaea | Total | 26.7 | 87.6 |
+| All reads | Seawater | Archaea | Average | 25.0 | 82.0 |
+| All reads | Seawater | Bacteria | Total | 35.7 | 92.8 |
+| All reads | Seawater | Bacteria | Average | 35.4 | 92.3 |
+| 10 M read pairs | Sediment | Archaea | Total | 0.0 | 18.9 |
+| 10 M read pairs | Sediment | Archaea | Average | 0.0 | 16.2 |
+| 10 M read pairs | Sediment | Bacteria | Total | 1.4 | 60.3 |
+| 10 M read pairs | Sediment | Bacteria | Average | 1.3 | 59.4 |
+| 10 M read pairs | Seawater | Archaea | Total | 25.3 | 85.2 |
+| 10 M read pairs | Seawater | Archaea | Average | 23.6 | 79.8 |
+| 10 M read pairs | Seawater | Bacteria | Total | 35.5 | 92.7 |
+| 10 M read pairs | Seawater | Bacteria | Average | 35.4 | 92.2 |
+
+
+### Against MAGs
+
+| Reads | Habitat | Domain | Value | Species (%) | Genus (%) |
+|---|---|---|---|---|---|
+| All reads | Sediment | Archaea | Total | 1.4 | 9.8 |
+| All reads | Sediment | Archaea | Average | 1.0 | 9.4 |
+| All reads | Sediment | Bacteria | Total | 6.0 | 41.7 |
+| All reads | Sediment | Bacteria | Average | 5.3 | 37.1 |
+| All reads | Seawater | Archaea | Total | 63.7 | 92.7 |
+| All reads | Seawater | Archaea | Average | 57.3 | 87.8 |
+| All reads | Seawater | Bacteria | Total | 42.7 | 90.8 |
+| All reads | Seawater | Bacteria | Average | 42.2 | 90.2 |
+| 10 M read pairs | Sediment | Archaea | Total | 0.1 | 7.3 |
+| 10 M read pairs | Sediment | Archaea | Average | 0.1 | 6.7 |
+| 10 M read pairs | Sediment | Bacteria | Total | 5.7 | 38.8 |
+| 10 M read pairs | Sediment | Bacteria | Average | 5.3 | 37.1 |
+| 10 M read pairs | Seawater | Archaea | Total | 60.4 | 90.8 |
+| 10 M read pairs | Seawater | Archaea | Average | 56.1 | 86.3 |
+| 10 M read pairs | Seawater | Bacteria | Total | 42.5 | 90.7 |
+| 10 M read pairs | Seawater | Bacteria | Average | 42.2 | 90.2 |

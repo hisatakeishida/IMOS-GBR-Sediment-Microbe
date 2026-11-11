@@ -119,4 +119,4 @@ singlem appraise --metapackage ${METAP} \
     --imperfect --sequence-identity ${GENUS_ID} \
     --output-unaccounted-for-otu-table ${OUTDIR}/unaccounted/${HABITAT}_gtdb_r226_unaccounted.genus.csv \
     > ${OUTDIR}/appraise/${HABITAT}_reads_vs_gtdb_r226.genus.tsv
-    
+

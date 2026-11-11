@@ -102,19 +102,29 @@ message("Seawater: ", sum(abund_sea$Prevalent_80pct), " families in > 80% of sam
 # ==============================================================================
 # Samples ordered by habitat and sampling trip
 
-p_class <- ps %>%
-  ps_arrange(.data[[habitat_col]], .data[[trip_col]]) %>%
-  comp_barplot(tax_level = "Class", n_taxa = n_top_class, merge_other = FALSE,
-               sample_order = "asis", label = NULL, bar_width = 1) +
-  facet_grid(rows = vars(.data[[habitat_col]], .data[[trip_col]]),
-             scales = "free", space = "free") +
-  coord_flip() +
-  theme(axis.ticks.y = element_blank(),
-        strip.text.y = element_text(angle = 0))
-p_class
+ranks <- c("Phylum", "Class", "Order", "Family", "Genus")   # edit as needed
 
-ggsave(file.path(out_dir, "Fig1c_class_composition.pdf"), p_class, width = 8, height = 12)
+p_list <- list()
 
+for (rank in ranks) {
+  p <- ps %>%
+    ps_arrange(.data[[habitat_col]], .data[[trip_col]]) %>%
+    comp_barplot(tax_level = rank, n_taxa = n_top_class, merge_other = FALSE,
+                 sample_order = "asis", label = NULL, bar_width = 1) +
+    facet_grid(rows = vars(.data[[habitat_col]], .data[[trip_col]]),
+               scales = "free", space = "free") +
+    coord_flip() +
+    theme(axis.ticks.y = element_blank(),
+          strip.text.y = element_text(angle = 0))
+
+  print(p)
+  p_list[[rank]] <- p
+
+  ggsave(file.path(out_dir, paste0("Fig1c_",
+                                   tolower(rank), "_composition.pdf")),
+         p, width = 8, height = 12)
+  dev.off()
+}
 
 # ==============================================================================
 # 5. DIFFERENTIAL ABUNDANCE: MaAsLin2
@@ -234,3 +244,45 @@ ggsave(file.path(out_dir, "DA_consensus_families.pdf"), p_da, width = 12, height
 
 # ==============================================================================
 sessionInfo()
+# R version 4.3.1 (2023-06-16)
+# Platform: x86_64-apple-darwin20 (64-bit)
+# Running under: macOS 15.7.9
+
+# Matrix products: default
+# BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib 
+# LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0
+
+# locale:
+# [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+# time zone: Australia/Brisbane
+# tzcode source: internal
+
+# attached base packages:
+# [1] stats     graphics  grDevices utils     datasets  methods   base     
+
+# other attached packages:
+#  [1] MicrobiomeStat_1.2 Maaslin2_1.16.0    patchwork_1.3.1    lubridate_1.9.4    forcats_1.0.0      stringr_1.5.1      dplyr_1.1.4       
+#  [8] purrr_1.1.0        readr_2.1.5        tidyr_1.3.1        tibble_3.3.0       ggplot2_3.5.2      tidyverse_2.0.0    openxlsx_4.2.8    
+# [15] vegan_2.7-1        permute_0.9-8      microViz_0.12.7    phyloseq_1.46.0    data.table_1.17.8 
+
+# loaded via a namespace (and not attached):
+#   [1] RColorBrewer_1.1-3      rstudioapi_0.17.1       jsonlite_2.0.0          magrittr_2.0.3          farver_2.1.2            nloptr_2.2.1           
+#   [7] zlibbioc_1.48.2         ragg_1.4.0              vctrs_0.6.5             multtest_2.58.0         minqa_1.2.8             RCurl_1.98-1.17        
+#  [13] Rhdf5lib_1.24.2         rhdf5_2.46.1            plyr_1.8.9              commonmark_2.0.0        igraph_2.1.4            lifecycle_1.0.4        
+#  [19] iterators_1.0.14        pkgconfig_2.0.3         Matrix_1.6-5            R6_2.6.1                GenomeInfoDbData_1.2.11 rbibutils_2.3          
+#  [25] clue_0.3-66             digest_0.6.37           numDeriv_2016.8-1.1     colorspace_2.1-1        spatial_7.3-16          S4Vectors_0.40.2       
+#  [31] textshaping_1.0.1       labeling_0.4.3          timechange_0.3.0        mgcv_1.8-42             compiler_4.3.1          withr_3.0.2            
+#  [37] DBI_1.2.3               biglm_0.9-3             MASS_7.3-60             biomformat_1.30.0       fBasics_4041.97         optparse_1.7.5         
+#  [43] tools_4.3.1             ape_5.8-1               zip_2.3.3               glue_1.8.0              stabledist_0.7-2        nlme_3.1-162           
+#  [49] rhdf5filters_1.14.1     gridtext_0.1.5          grid_4.3.1              Rtsne_0.17              cluster_2.1.8.1         reshape2_1.4.4         
+#  [55] ade4_1.7-23             generics_0.1.4          gtable_0.3.6            microbiome_1.24.0       tzdb_0.5.0              hms_1.1.3              
+#  [61] xml2_1.3.8              utf8_1.2.6              XVector_0.42.0          rmutil_1.1.10           BiocGenerics_0.48.1     ggrepel_0.9.6          
+#  [67] foreach_1.5.2           pillar_1.11.0           markdown_2.0            logging_0.10-108        robustbase_0.99-4-1     splines_4.3.1          
+#  [73] getopt_1.20.4           ggtext_0.1.2            lattice_0.22-7          survival_3.5-5          tidyselect_1.2.1        pbapply_1.7-4          
+#  [79] Biostrings_2.70.3       reformulas_0.4.1        litedown_0.7            IRanges_2.36.0          stats4_4.3.1            xfun_0.52              
+#  [85] Biobase_2.62.0          statmod_1.5.0           timeDate_4041.110       matrixStats_1.5.0       DEoptimR_1.1-4          stringi_1.8.7          
+#  [91] boot_1.3-28.1           codetools_0.2-19        timeSeries_4041.111     hash_2.2.6.3            cli_3.6.5               rpart_4.1.19           
+#  [97] systemfonts_1.2.3       Rdpack_2.6.4            dichromat_2.0-0.1       Rcpp_1.1.0              GenomeInfoDb_1.38.8     stable_1.1.6           
+# [103] parallel_4.3.1          modeest_2.4.0           bitops_1.0-9            lme4_1.1-37             mvtnorm_1.3-3           lmerTest_3.1-3         
+# [109] scales_1.4.0            statip_0.2.3            pcaPP_2.0-5             crayon_1.5.3            rlang_1.1.6            
