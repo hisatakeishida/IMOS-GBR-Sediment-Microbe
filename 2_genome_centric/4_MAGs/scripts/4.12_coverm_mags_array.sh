@@ -17,7 +17,7 @@
 # length. Gives MAG-based community profiles and the proportion of reads
 # mapped to MAGs (reported in the log).
 #
-#   sbatch --export=ALL,HABITAT=sed,MODE=count --array=1-191 scripts/4.12_coverm_mags_array.sh
+#   sbatch --export=ALL,HABITAT=sed,MODE=count --array=1-191 2_genome_centric/4_MAGs/scripts/4.12_coverm_mags_array.sh
 #   MODE: count or relative_abundance
 
 set -euo pipefail

@@ -23,7 +23,7 @@
 
 set -euo pipefail
 
-SED_MAGS="<path/to/4_MAG_recovery/6_dereplication/representatives>"   # output of 4.8
+SED_MAGS="<path/to/4_MAG_recovery/6_dereplication/representatives>"   # output of 4.08
 SEA_MAGS="<path/to/seawater_MAGs>"                                      # 876 MGD-seawater MAGs (Robbins et al., 2026)
 OUTDIR="<path/to/4_MAG_recovery/7_taxonomy>"
 

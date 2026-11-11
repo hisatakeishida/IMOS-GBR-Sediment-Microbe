@@ -1,0 +1,762 @@
+IQ-TREE 2.2.2.3 COVID-edition built May 16 2023
+
+Input file name: /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 155443
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 120 sequences with 1571 amino-acid sites
+Number of constant sites: 357 (= 22.7244% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 357 (= 22.7244% of all sites)
+Number of parsimony informative sites: 995
+Number of distinct site patterns: 1436
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: WAG+F+I+R5
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+WAG+F+I+R5       -56449.829  113429.658 +    0.968  113537.689 +    0.951  114849.917 +    0.675
+WAG+F+R5         -56454.242  113436.483 -   0.0319  113543.620 -    0.049  114851.383 +    0.325
+VT+F+I+R5        -56496.770  113523.539 - 3.98e-21  113631.570 - 3.91e-21  114943.798 - 2.78e-21
+VT+F+R5          -56501.799  113531.599 - 7.08e-23  113638.735 - 1.09e-22  114946.498 -  7.2e-22
+PMB+F+I+R5       -56568.557  113667.115 - 2.65e-52  113775.145 -  2.6e-52  115087.373 - 1.85e-52
+PMB+F+R5         -56573.490  113674.980 - 5.19e-54  113782.116 - 7.97e-54  115089.879 - 5.28e-53
+Blosum62+F+I+R5  -56596.193  113722.385 - 2.64e-64  113830.416 - 2.59e-64  115142.644 - 1.84e-64
+Blosum62+F+R5    -56601.029  113730.058 - 5.69e-66  113837.194 - 8.74e-66  115144.958 - 5.79e-65
+Q.pfam+F+I+R5    -56629.621  113789.242 -    8e-79  113897.272 - 7.86e-79  115209.501 - 5.58e-79
+Q.pfam+I+R5      -56701.898  113895.795 - 5.83e-102  113987.581 - 1.93e-98  115214.224 - 5.26e-80
+Q.pfam+F+R5      -56639.708  113807.416 - 9.05e-83  113914.552 - 1.39e-82  115222.315 - 9.21e-82
+LG+F+I+R5        -56638.003  113806.006 - 1.83e-82  113914.037 -  1.8e-82  115226.265 - 1.28e-82
+Q.pfam+R5        -56713.073  113916.147 - 2.22e-106  114007.120 - 1.1e-102  115229.216 - 2.92e-83
+LG+F+R5          -56644.831  113817.662 - 5.39e-85  113924.798 - 8.29e-85  115232.561 - 5.49e-84
+WAG+I+R5         -56715.480  113922.961 - 7.35e-108  114014.746 - 2.43e-104  115241.390 - 6.64e-86
+WAG+R5           -56720.371  113930.741 - 1.5e-109  114021.715 - 7.47e-106  115243.811 - 1.98e-86
+VT+I+R5          -56734.672  113961.345 - 3.4e-116  114053.130 - 1.13e-112  115279.774 - 3.07e-94
+VT+R5            -56740.355  113970.710 - 3.15e-118  114061.684 - 1.56e-114  115283.780 - 4.14e-95
+LG+I+R5          -56841.360  114174.721 - 1.58e-162  114266.506 - 5.22e-159  115493.150 - 1.42e-140
+LG+R5            -56849.324  114188.649 - 1.49e-165  114279.622 - 7.4e-162  115501.718 - 1.96e-142
+LG+I+R6          -56839.984  114175.968 - 8.45e-163  114269.390 - 1.23e-159  115505.116 - 3.59e-143
+LG+I+R4          -56857.931  114203.861 - 7.41e-169  114294.027 - 5.51e-165  115511.571 - 1.42e-144
+LG+R6            -56847.435  114188.871 - 1.33e-165  114281.472 - 2.93e-162  115512.659 - 8.26e-145
+LG+I+G4          -56881.791  114241.581 - 4.78e-177  114327.772 - 2.59e-172  115522.494 - 6.04e-147
+LG+R4            -56867.145  114220.290 - 2.01e-172  114309.652 - 2.23e-168  115522.641 - 5.62e-147
+PMB+I+R5         -56868.066  114228.132 - 3.98e-174  114319.917 - 1.32e-170  115546.561 - 3.59e-152
+PMB+R5           -56873.775  114237.549 - 3.59e-176  114328.523 - 1.78e-172  115550.619 - 4.72e-153
+LG+G4            -56908.536  114293.071 - 3.15e-188  114378.480 - 2.53e-183  115568.624 - 5.81e-157
+LG+I+R3          -56896.185  114276.369 - 1.33e-184  114364.932 - 2.21e-180  115573.360 - 5.44e-158
+LG+R3            -56923.955  114329.909 - 3.15e-196  114417.678 - 7.78e-192  115621.541 - 1.88e-168
+Blosum62+I+R5    -56926.592  114345.185 - 1.52e-199  114436.970 - 5.03e-196  115663.614 - 1.37e-177
+Blosum62+R5      -56932.337  114354.674 - 1.32e-201  114445.648 - 6.57e-198  115667.744 - 1.74e-178
+rtREV+F+I+R5     -56870.614  114271.228 - 1.74e-183  114379.259 - 1.71e-183  115691.487 - 1.22e-183
+rtREV+F+R5       -56879.551  114287.102 - 6.23e-187  114394.239 - 9.57e-187  115702.002 - 6.33e-186
+LG+I+R2          -57059.603  114599.207 - 1.05e-254  114686.184 - 3.85e-250  115885.479 - 9.12e-226
+Q.yeast+F+I+R5   -56996.861  114523.722 - 2.59e-238  114631.752 - 2.54e-238  115943.980 - 1.81e-238
+Q.yeast+F+R5     -57004.964  114537.927 - 2.13e-241  114645.064 - 3.27e-241  115952.827 - 2.17e-240
+Q.insect+F+I+R5  -57010.632  114551.264 - 2.71e-244  114659.294 - 2.66e-244  115971.522 - 1.89e-244
+LG+R2            -57108.072  114694.145 - 2.55e-275  114780.336 - 1.38e-270  115975.057 - 3.22e-245
+Q.insect+F+R5    -57016.747  114561.494 - 1.63e-246  114668.630 - 2.5e-246  115976.393 - 1.65e-245
+JTTDCMut+F+I+R5  -57032.941  114595.882 - 5.54e-254  114703.913 - 5.44e-254  116016.141 - 3.87e-254
+JTTDCMut+F+R5    -57037.148  114602.296 - 2.24e-255  114709.432 - 3.45e-255  116017.195 - 2.28e-254
+JTT+F+I+R5       -57044.459  114618.918 - 5.51e-259  114726.948 - 5.42e-259  116039.177 - 3.85e-259
+JTT+F+R5         -57048.810  114625.621 - 1.93e-260  114732.757 - 2.97e-260  116040.520 - 1.97e-259
+JTT+I+R5         -57167.326  114826.651 - 4.29e-304  114918.437 - 1.42e-300  116145.080 - 3.88e-282
+JTTDCMut+I+R5    -57167.713  114827.426 - 2.91e-304  114919.212 - 9.64e-301  116145.855 - 2.63e-282
+JTT+R5           -57172.446  114834.892 - 6.97e-306  114925.865 - 3.46e-302  116147.961 - 9.18e-283
+JTTDCMut+R5      -57172.631  114835.261 - 5.79e-306  114926.235 - 2.88e-302  116148.331 - 7.63e-283
+cpREV+F+R5       -57109.521  114747.042 - 8.31e-287  114854.178 - 1.28e-286  116161.941 - 8.46e-286
+cpREV+F+I+R5     -57106.537  114743.075 - 6.04e-286  114851.105 - 5.93e-286  116163.333 - 4.22e-286
+rtREV+I+R5       -57459.312  115410.624 -        0  115502.409 -        0  116729.053 -        0
+rtREV+R5         -57469.308  115428.617 -        0  115519.590 -        0  116741.686 -        0
+cpREV+I+R5       -57490.908  115473.815 -        0  115565.601 -        0  116792.244 -        0
+cpREV+R5         -57495.871  115481.742 -        0  115572.715 -        0  116794.811 -        0
+Dayhoff+F+I+R5   -57434.125  115398.249 -        0  115506.280 -        0  116818.508 -        0
+DCMut+F+I+R5     -57434.143  115398.286 -        0  115506.316 -        0  116818.545 -        0
+Dayhoff+F+R5     -57438.300  115404.601 -        0  115511.737 -        0  116819.500 -        0
+DCMut+F+R5       -57438.408  115404.817 -        0  115511.953 -        0  116819.716 -        0
+Q.insect+I+R5    -57532.363  115556.727 -        0  115648.512 -        0  116875.156 -        0
+Q.insect+R5      -57540.870  115571.741 -        0  115662.715 -        0  116884.811 -        0
+Q.yeast+I+R5     -57708.382  115908.764 -        0  116000.549 -        0  117227.193 -        0
+Q.yeast+R5       -57718.178  115926.356 -        0  116017.329 -        0  117239.425 -        0
+Dayhoff+I+R5     -57781.458  116054.916 -        0  116146.702 -        0  117373.345 -        0
+DCMut+I+R5       -57781.950  116055.900 -        0  116147.685 -        0  117374.329 -        0
+Dayhoff+R5       -57786.014  116062.028 -        0  116153.002 -        0  117375.098 -        0
+DCMut+R5         -57786.588  116063.176 -        0  116154.149 -        0  117376.245 -        0
+Q.plant+F+I+R5   -57797.999  116125.997 -        0  116234.028 -        0  117546.256 -        0
+Q.plant+F+R5     -57807.135  116142.269 -        0  116249.406 -        0  117557.169 -        0
+FLU+F+I+R5       -57860.116  116250.232 -        0  116358.263 -        0  117670.491 -        0
+FLU+F+R5         -57867.166  116262.332 -        0  116369.468 -        0  117677.231 -        0
+mtInv+F+I+R5     -57896.691  116323.381 -        0  116431.412 -        0  117743.640 -        0
+mtInv+F+R5       -57902.813  116333.625 -        0  116440.762 -        0  117748.525 -        0
+Q.plant+I+R5     -58046.356  116584.711 -        0  116676.497 -        0  117903.140 -        0
+Q.plant+R5       -58057.829  116605.659 -        0  116696.632 -        0  117918.728 -        0
+Q.mammal+F+I+R5  -58008.895  116547.791 -        0  116655.822 -        0  117968.050 -        0
+Q.mammal+F+R5    -58017.154  116562.307 -        0  116669.443 -        0  117977.207 -        0
+LG+I             -58121.504  116719.009 -        0  116804.417 -        0  117994.562 -        0
+Q.mammal+I+R5    -58111.240  116714.480 -        0  116806.265 -        0  118032.909 -        0
+Q.mammal+R5      -58120.296  116730.591 -        0  116821.565 -        0  118043.661 -        0
+mtREV+F+I+R5     -58104.501  116739.003 -        0  116847.033 -        0  118159.262 -        0
+mtREV+F+R5       -58117.571  116763.142 -        0  116870.279 -        0  118178.042 -        0
+LG               -58245.596  116965.193 -        0  117049.823 -        0  118235.387 -        0
+mtMet+F+I+R5     -58449.959  117429.918 -        0  117537.948 -        0  118850.177 -        0
+mtMet+F+R5       -58456.997  117441.995 -        0  117549.131 -        0  118856.894 -        0
+HIVb+F+I+R5      -58532.861  117595.722 -        0  117703.753 -        0  119015.981 -        0
+HIVb+F+R5        -58539.431  117606.861 -        0  117713.998 -        0  119021.761 -        0
+Q.bird+I+R5      -58677.031  117846.062 -        0  117937.847 -        0  119164.491 -        0
+Q.bird+R5        -58686.853  117863.706 -        0  117954.680 -        0  119176.776 -        0
+Q.bird+F+I+R5    -58621.370  117772.741 -        0  117880.771 -        0  119193.000 -        0
+Q.bird+F+R5      -58630.200  117788.399 -        0  117895.535 -        0  119203.298 -        0
+mtZOA+F+I+R5     -58629.972  117789.944 -        0  117897.974 -        0  119210.203 -        0
+mtZOA+F+R5       -58633.907  117795.814 -        0  117902.950 -        0  119210.713 -        0
+FLU+I+R5         -58771.091  118034.182 -        0  118125.968 -        0  119352.611 -        0
+FLU+R5           -58779.114  118048.228 -        0  118139.202 -        0  119361.298 -        0
+HIVb+I+R5        -58867.459  118226.918 -        0  118318.703 -        0  119545.347 -        0
+HIVb+R5          -58875.070  118240.140 -        0  118331.113 -        0  119553.209 -        0
+mtVer+F+I+R5     -59123.515  118777.030 -        0  118885.061 -        0  120197.289 -        0
+mtVer+F+R5       -59132.484  118792.968 -        0  118900.105 -        0  120207.868 -        0
+FLAVI+F+I+R5     -59781.587  120093.174 -        0  120201.205 -        0  121513.433 -        0
+FLAVI+F+R5       -59788.430  120104.860 -        0  120211.996 -        0  121519.759 -        0
+mtART+F+I+R5     -59897.395  120324.790 -        0  120432.821 -        0  121745.049 -        0
+mtART+F+R5       -59904.481  120336.963 -        0  120444.099 -        0  121751.862 -        0
+mtMAM+F+I+R5     -59933.782  120397.563 -        0  120505.594 -        0  121817.822 -        0
+mtMAM+F+R5       -59952.157  120432.313 -        0  120539.450 -        0  121847.213 -        0
+HIVw+F+I+R5      -60034.054  120598.107 -        0  120706.138 -        0  122018.366 -        0
+HIVw+F+R5        -60038.527  120605.055 -        0  120712.191 -        0  122019.954 -        0
+FLAVI+I+R5       -60324.842  121141.683 -        0  121233.469 -        0  122460.112 -        0
+FLAVI+R5         -60334.433  121158.865 -        0  121249.839 -        0  122471.935 -        0
+mtZOA+I+R5       -61047.347  122586.694 -        0  122678.479 -        0  123905.123 -        0
+mtZOA+R5         -61059.506  122609.012 -        0  122699.986 -        0  123922.082 -        0
+mtREV+I+R5       -61454.507  123401.015 -        0  123492.800 -        0  124719.444 -        0
+mtREV+R5         -61465.179  123420.359 -        0  123511.332 -        0  124733.428 -        0
+HIVw+I+R5        -61490.114  123472.229 -        0  123564.014 -        0  124790.658 -        0
+HIVw+R5          -61495.344  123480.689 -        0  123571.662 -        0  124793.758 -        0
+mtMet+I+R5       -62155.672  124803.344 -        0  124895.129 -        0  126121.773 -        0
+mtMet+R5         -62173.019  124836.038 -        0  124927.012 -        0  126149.108 -        0
+mtVer+I+R5       -62408.405  125308.811 -        0  125400.596 -        0  126627.240 -        0
+mtVer+R5         -62423.288  125336.577 -        0  125427.550 -        0  126649.646 -        0
+mtInv+I+R5       -62446.229  125384.457 -        0  125476.243 -        0  126702.886 -        0
+mtInv+R5         -62457.650  125405.300 -        0  125496.273 -        0  126718.369 -        0
+mtART+I+R5       -63393.667  127279.335 -        0  127371.120 -        0  128597.764 -        0
+mtART+R5         -63421.745  127333.491 -        0  127424.464 -        0  128646.560 -        0
+mtMAM+I+R5       -63432.631  127357.262 -        0  127449.047 -        0  128675.691 -        0
+mtMAM+R5         -63451.146  127392.293 -        0  127483.266 -        0  128705.362 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: WAG+F+I+R5
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.0998
+  pi(R) = 0.0696
+  pi(N) = 0.0287
+  pi(D) = 0.0565
+  pi(C) = 0.0335
+  pi(Q) = 0.0316
+  pi(E) = 0.0705
+  pi(G) = 0.0818
+  pi(H) = 0.0248
+  pi(I) = 0.0449
+  pi(L) = 0.0791
+  pi(K) = 0.0468
+  pi(M) = 0.0264
+  pi(F) = 0.0332
+  pi(P) = 0.0541
+  pi(S) = 0.0561
+  pi(T) = 0.0553
+  pi(W) = 0.0094
+  pi(Y) = 0.0220
+  pi(V) = 0.0759
+
+Model of rate heterogeneity: Invar+FreeRate with 5 categories
+Proportion of invariable sites: 0.0052
+Site proportion and rates:  (0.0711,0.1611) (0.1702,0.4120) (0.2619,0.7496) (0.3353,1.2109) (0.1562,2.0234)
+
+ Category  Relative_rate  Proportion
+  0         0              0.0052
+  1         0.1611         0.0711
+  2         0.4120         0.1702
+  3         0.7496         0.2619
+  4         1.2109         0.3353
+  5         2.0234         0.1562
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -56401.7226 (s.e. 1504.4314)
+Unconstrained log-likelihood (without tree): -11315.5132
+Number of free parameters (#branches + #model parameters): 265
+Akaike information criterion (AIC) score: 113333.4452
+Corrected Akaike information criterion (AICc) score: 113441.4758
+Bayesian information criterion (BIC) score: 114753.7041
+
+Total tree length (sum of branch lengths): 47.6099
+Sum of internal branch lengths: 19.6289 (41.2285% of tree length)
+
+WARNING: 2 near-zero internal branches (<0.0006) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'SED___FeFe__Group_C3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_2' is drawn at root
+Numbers in parentheses are SH-aLRT support (%) / ultrafast bootstrap support (%)
+
++**SED___FeFe__Group_C3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_2
+|
+|                                                        +**SED___FeFe__Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_3
+|                                                     +--| (100/100)
+|                                                     |  +**sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_3
+|                                                  +--| (94.6/98)
+|                                                  |  |     +--SED___FeFe__Group_A3__coassembly_9___semibin_refined_bins.tsv.072_k127_21794123_2
+|                                                  |  |  +--| (100/100)
+|                                                  |  |  |  |  +**SED___FeFe__Group_A3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_5
+|                                                  |  |  |  +--| (97.8/100)
+|                                                  |  |  |     +**sediment_geneDB___FeFe__Group_A3__sediment_taylor_4_NODE_6247_length_6286_cov_11.030493_5
+|                                                  |  +--| (78.9/99)
+|                                                  |     |  +**SED___FeFe__Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_7
+|                                                  |     +--| (100/100)
+|                                                  |        +**sediment_geneDB___FeFe__Group_A3__sediment_feather_3_NODE_7865_length_12510_cov_6.509354_7
+|                                               +--| (92.6/97)
+|                                               |  |      +**SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_222_length_49099_cov_16.962523_31
+|                                               |  |  +---| (100/100)
+|                                               |  |  |   +**sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_222_length_49099_cov_16.962523_31
+|                                               |  +--| (94.8/98)
+|                                               |     |  +--SED___FeFe__Group_A3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_2
+|                                               |     +--| (14.1/70)
+|                                               |        |     +**SED___FeFe__Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_11151_length_3610_cov_17.220253_2
+|                                               |        |  +--| (96/100)
+|                                               |        |  |  +**sediment_geneDB___FeFe__Group_A3__sediment_mantis_4_NODE_11151_length_3610_cov_17.220253_2
+|                                               |        +--| (100/100)
+|                                               |           +--sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_25281_length_5269_cov_7.011507_2
+|                                            +--| (99/100)
+|                                            |  |   +**SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.166_NODE_12401_length_7538_cov_3.691434_6
+|                                            |  +---| (100/100)
+|                                            |      +**sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_12401_length_7538_cov_3.691434_6
+|                                         +--| (92.6/99)
+|                                         |  |                 +**SED___FeFe__Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_36358_length_4369_cov_4.681038_3
+|                                         |  |              +--| (100/100)
+|                                         |  |              |  +**sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_36358_length_4369_cov_4.681038_3
+|                                         |  |           +--| (87.7/100)
+|                                         |  |           |  |  +--SED___FeFe__Group_A3__coassembly_1___semibin_refined_bins.tsv.276_sub_k127_8434485_2
+|                                         |  |           |  +--| (100/100)
+|                                         |  |           |     +--sediment_geneDB___FeFe__Group_A3__sediment_21550_4_NODE_11725_length_4933_cov_12.293973_4
+|                                         |  |        +--| (92.8/100)
+|                                         |  |        |  +----sediment_geneDB___FeFe__Group_A3__sediment_22084_4_contig_5062_pilon_1
+|                                         |  |     +--| (100/100)
+|                                         |  |     |  +---SED___FeFe__Group_A3__coassembly_14___vamb_bins.tsv.002_sub_k127_5058404_84
+|                                         |  |  +--| (91.6/89)
+|                                         |  |  |  +------SED___FeFe__Group_A1__coassembly_14___metabat2_refined_bins.tsv.009_k127_85363_2
+|                                         |  +--| (96.7/99)
+|                                         |     |                    +**SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_961_length_27426_cov_12.322750_12
+|                                         |     |                 +--| (99.7/100)
+|                                         |     |                 |  +**sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_961_length_27426_cov_12.322750_12
+|                                         |     |              +--| (100/100)
+|                                         |     |              |  |        +**SED___FeFe__Group_A3__coassembly_12___vamb_bins.tsv.056_sub_k127_2889805_1
+|                                         |     |              |  |     +--| (0/98)
+|                                         |     |              |  |     |  +**sediment_geneDB___FeFe__Group_A3__sediment_mantis_4_NODE_3679_length_6000_cov_9.266442_5
+|                                         |     |              |  |  +**| (0/80)
+|                                         |     |              |  |  |  +--sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_19028_length_6077_cov_5.929591_5
+|                                         |     |              |  +--| (99.7/100)
+|                                         |     |              |     +**SED___FeFe__Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_884_length_12578_cov_8.169049_8
+|                                         |     |           +--| (100/100)
+|                                         |     |           |  +--SED___FeFe__Group_A3__coassembly_12___semibin_refined_bins.tsv.041_k127_17069174_3
+|                                         |     |        +--| (98.6/100)
+|                                         |     |        |  |   +--SED___FeFe__Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_12601_length_9931_cov_7.174058_5
+|                                         |     |        |  +---| (100/100)
+|                                         |     |        |      +--sediment_geneDB___FeFe__Group_A3__sediment_moonsoon_4_NODE_49836_length_3066_cov_4.173364_2
+|                                         |     |     +--| (2.5/31)
+|                                         |     |     |  +----sediment_geneDB___FeFe__Group_A3__sediment_21550_4_NODE_85534_length_2015_cov_6.242347_2
+|                                         |     |  +--| (97.1/90)
+|                                         |     |  |  |           +**SED___FeFe__Group_A3__coassembly_22___metabat2_refined_bins.tsv.006_k127_1300170_3
+|                                         |     |  |  |        +--| (99.8/100)
+|                                         |     |  |  |        |  +**sediment_geneDB___FeFe__Group_A3__sediment_thetford_4_NODE_1895_length_7428_cov_5.062525_6
+|                                         |     |  |  |     +--| (99.1/100)
+|                                         |     |  |  |     |  +--sediment_geneDB___FeFe__Group_A3__sediment_feather_3_NODE_19875_length_7815_cov_5.958376_3
+|                                         |     |  |  |  +--| (98.5/100)
+|                                         |     |  |  |  |  +--sediment_geneDB___FeFe__Group_A3__sediment_11162_4_NODE_39759_length_2942_cov_3.123311_2
+|                                         |     |  |  +--| (99.4/100)
+|                                         |     |  |     +--sediment_geneDB___FeFe__Group_A3__sediment_davie_4_NODE_161874_length_1645_cov_2.557862_2
+|                                         |     +--| (81.6/64)
+|                                         |        |         +--SED___FeFe__Group_A3__coassembly_0___metabat2_refined_bins.tsv.374_sub_k127_2554933_3
+|                                         |        |     +---| (100/100)
+|                                         |        |     |   +--sediment_geneDB___FeFe__Group_A3__sediment_taylor_4_NODE_22966_length_3478_cov_6.881098_1
+|                                         |        |  +--| (99/98)
+|                                         |        |  |  +---sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_59733_length_3402_cov_6.459217_2
+|                                         |        +--| (71.1/66)
+|                                         |           +---sediment_geneDB___FeFe__Group_A3__sediment_grub_4_NODE_101092_length_2100_cov_5.982396_2
+|                                      +--| (11.3/63)
+|                                      |  |           +--SED___FeFe__Group_A2__coassembly_0___semibin_refined_bins.tsv.405_sub_k127_12062158_3
+|                                      |  |        +--| (84.3/99)
+|                                      |  |        |  +--sediment_geneDB___FeFe__Group_A2__sediment_feather_4_NODE_683_length_9114_cov_3.967546_9
+|                                      |  |     +--| (89/99)
+|                                      |  |     |  |        +**SED___FeFe__Group_A2__coassembly_13___metabat_sspec_bins.tsv.016_k127_847913_6
+|                                      |  |     |  |     +--| (100/100)
+|                                      |  |     |  |     |  +**sediment_geneDB___FeFe__Group_A2__sediment_feather_4_NODE_2781_length_4536_cov_12.653649_2
+|                                      |  |     |  |  +--| (99.4/100)
+|                                      |  |     |  |  |  |  +--SED___FeFe__Group_A2__coassembly_1___metabat2_refined_bins.tsv.104_k127_24621625_12
+|                                      |  |     |  |  |  +--| (31.8/92)
+|                                      |  |     |  |  |     +--SED___FeFe__Group_A2__coassembly_1___semibin_refined_bins.tsv.387_sub_k127_11661808_7
+|                                      |  |     |  +--| (87.3/95)
+|                                      |  |     |     |  +**SED___FeFe__Group_A2__sandbank1_1_metabat_spec_bins.tsv.003_sub_NODE_1182_length_4061_cov_21.154518_1
+|                                      |  |     |     +--| (99.8/100)
+|                                      |  |     |        +**sediment_geneDB___FeFe__Group_A2__sediment_sandbank1_1_NODE_1182_length_4061_cov_21.154518_1
+|                                      |  |  +--| (100/100)
+|                                      |  |  |  |     +--SED___FeFe__Group_A2__coassembly_0___semibin_refined_bins.tsv.405_sub_k127_15211256_4
+|                                      |  |  |  |  +--| (48.4/88)
+|                                      |  |  |  |  |  +--SED___FeFe__Group_A2__coassembly_1___semibin_refined_bins.tsv.082_k127_22866290_2
+|                                      |  |  |  +--| (79.7/98)
+|                                      |  |  |     +--SED___FeFe__Group_A2__coassembly_16___semibin_refined_bins.tsv.300_sub_k127_411658_1
+|                                      |  +--| (100/100)
+|                                      |     +--sediment_geneDB___FeFe__Group_A2__sediment_boult_4_NODE_4862_length_10097_cov_7.108843_3
+|                                   +--| (90.4/96)
+|                                   |  +--------sediment_geneDB___FeFe__Group_A1__sediment_22084_4_contig_150_pilon_2
+|                                +--| (38.8/82)
+|                                |  |    +--seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_29615_pilon_294
+|                                |  +----| (100/100)
+|                                |       |     +**seawater_geneDB___FeFe__Group_A1__seawater_agincourt1_1__contig_4892_pilon_757
+|                                |       |  +--| (85.8/100)
+|                                |       |  |  +---------------seawater_geneDB___FeFe__Group_A2__seawater_agincourt1_1__NODE_5277_length_11766_cov_1.023397_7
+|                                |       +--| (99.5/100)
+|                                |          |  +---seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__NODE_6886_length_9182_cov_0.416347_2
+|                                |          +--| (15.3/81)
+|                                |             +--seawater_geneDB___FeFe__Group_A1__seawater_taylor_4__contig_18881_pilon_26
+|                             +--| (33/68)
+|                             |  +------------------------------sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_707977_length_1007_cov_1.728992_1
+|                          +--| (78.7/84)
+|                          |  |                           +--seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_5331_pilon_164
+|                          |  |                        +--| (32/93)
+|                          |  |                        |  |        +--seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_34226_pilon_210
+|                          |  |                        |  |     +--| (0/76)
+|                          |  |                        |  |     |  +--seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_16172_pilon_1102
+|                          |  |                        |  |  +**| (0/71)
+|                          |  |                        |  |  |  +--seawater_geneDB___FeFe__Group_A1__seawater_north_1__NODE_46762_length_2987_cov_5.528990_2
+|                          |  |                        |  +--| (77.7/82)
+|                          |  |                        |     +--seawater_geneDB___FeFe__Group_A1__seawater_mcSweeney_3__NODE_15884_length_5716_cov_1.280869_3
+|                          |  |                     +--| (100/100)
+|                          |  |                     |  +--seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_16172_pilon_1101
+|                          |  |                  +--| (70.2/93)
+|                          |  |                  |  |           +--seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_18750_pilon_233
+|                          |  |                  |  |        +--| (22.9/86)
+|                          |  |                  |  |        |  +--seawater_geneDB___FeFe__Group_A1__seawater_smallLagoon_4__NODE_5474_length_15383_cov_2.086313_9
+|                          |  |                  |  |     +--| (0/75)
+|                          |  |                  |  |     |  +--seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_19717_pilon_246
+|                          |  |                  |  |  +--| (45.5/96)
+|                          |  |                  |  |  |  |     +--seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_18750_pilon_234
+|                          |  |                  |  |  |  |  +--| (89.6/99)
+|                          |  |                  |  |  |  |  |  +--seawater_geneDB___FeFe__Group_A1__seawater_davie_1__contig_32027_pilon_253
+|                          |  |                  |  |  |  +--| (92.8/100)
+|                          |  |                  |  |  |     +--seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_23686_pilon_161
+|                          |  |                  |  +--| (100/100)
+|                          |  |                  |     |  +**seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__contig_12406_pilon_294
+|                          |  |                  |     +--| (68/98)
+|                          |  |                  |        +--seawater_geneDB___FeFe__Group_A1__seawater_taylor_4__contig_20231_pilon_98
+|                          |  |               +--| (97.8/99)
+|                          |  |               |  |     +**seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_6402_pilon_161
+|                          |  |               |  |  +--| (74.3/97)
+|                          |  |               |  |  |  |        +--seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_6402_pilon_162
+|                          |  |               |  |  |  |     +--| (54.3/98)
+|                          |  |               |  |  |  |     |  +--seawater_geneDB___FeFe__Group_A1__seawater_north_1__NODE_31035_length_4112_cov_8.824994_2
+|                          |  |               |  |  |  |  +--| (100/100)
+|                          |  |               |  |  |  |  |  |        +--seawater_geneDB___FeFe__Group_A1__seawater_broomfield_1__contig_28727_pilon_62
+|                          |  |               |  |  |  |  |  |     +--| (96.5/100)
+|                          |  |               |  |  |  |  |  |     |  +--seawater_geneDB___FeFe__Group_A1__seawater_masthead_4__contig_23660_pilon_272
+|                          |  |               |  |  |  |  |  |  +--| (100/100)
+|                          |  |               |  |  |  |  |  |  |  +--seawater_geneDB___FeFe__Group_A1__seawater_davie_1__NODE_5627_length_11998_cov_1.908231_2
+|                          |  |               |  |  |  |  |  +--| (38.9/95)
+|                          |  |               |  |  |  |  |     +--seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_16730_pilon_67
+|                          |  |               |  |  |  +--| (98.5/100)
+|                          |  |               |  |  |     +--seawater_geneDB___FeFe__Group_A1__seawater_broomfield_1__contig_28727_pilon_61
+|                          |  |               |  +--| (100/100)
+|                          |  |               |     |           +--seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_29971_pilon_80
+|                          |  |               |     |        +--| (10.6/69)
+|                          |  |               |     |        |  +--seawater_geneDB___FeFe__Group_A1__seawater_lagoon_1__contig_20988_pilon_192
+|                          |  |               |     |     +--| (99/100)
+|                          |  |               |     |     |  +--seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_19196_pilon_43
+|                          |  |               |     |  +--| (79.9/69)
+|                          |  |               |     |  |  +--seawater_geneDB___FeFe__Group_A1__seawater_21550_4__NODE_19220_length_3438_cov_0.468519_2
+|                          |  |               |     +--| (81.8/67)
+|                          |  |               |        +--seawater_geneDB___FeFe__Group_A1__seawater_boult_4__NODE_14036_length_7813_cov_5.121681_3
+|                          |  |            +--| (65/88)
+|                          |  |            |  |     +--seawater_geneDB___FeFe__Group_A1__seawater_sanbank1_1__contig_22888_pilon_458
+|                          |  |            |  +-----| (100/100)
+|                          |  |            |        +--seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_16151_pilon_567
+|                          |  |         +--| (74.3/77)
+|                          |  |         |  |     +-----seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_24139_pilon_34
+|                          |  |         |  |  +--| (29.7/81)
+|                          |  |         |  |  |  +----------seawater_geneDB___FeFe__Group_A1__seawater_chicken_3__NODE_18112_length_7555_cov_0.534000_4
+|                          |  |         |  +--| (76/81)
+|                          |  |         |     +------------seawater_geneDB___FeFe__Group_A1__seawater_davie_1__contig_19061_pilon_21
+|                          |  |      +--| (75.6/84)
+|                          |  |      |  |     +--seawater_geneDB___FeFe__Group_A1__seawater_sanbank1_1__NODE_68351_length_2775_cov_3.110294_3
+|                          |  |      |  |  +--| (99.9/100)
+|                          |  |      |  |  |  +--seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__NODE_4641_length_11073_cov_2.108277_6
+|                          |  |      |  +--| (99.8/100)
+|                          |  |      |     |      +--seawater_geneDB___FeFe__Group_A1__seawater_kelso_4__NODE_2602_length_18260_cov_8.285087_2
+|                          |  |      |     |   +--| (90.8/100)
+|                          |  |      |     |   |  +--seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__NODE_9371_length_10529_cov_0.894596_4
+|                          |  |      |     +---| (100/100)
+|                          |  |      |         +--seawater_geneDB___FeFe__Group_A1__seawater_hoskyn_2__contig_12622_pilon_49
+|                          |  +------| (100/99)
+|                          |         |  +--------seawater_geneDB___FeFe__Group_A3__seawater_erskine_4__contig_27823_pilon_90
+|                          |         +--| (68/94)
+|                          |            |         +--seawater_geneDB___FeFe__Group_A3__seawater_smallLagoon_4__NODE_50971_length_4466_cov_1.181138_4
+|                          |            |      +--| (50.6/99)
+|                          |            |      |  +--seawater_geneDB___FeFe__Group_A1__seawater_lagoon_1__contig_21776_pilon_10
+|                          |            +------| (100/100)
+|                          |                   +--seawater_geneDB___FeFe__Group_A3__seawater_sanbank1_1__contig_29508_pilon_8
+|                       +--| (86.5/91)
+|                       |  |                           +**SEA___FeFe__Group_B__north_1__metabat2_refined_238_IMOS__P__north_1__contig_36110_pilon_p_221
+|                       |  +---------------------------| (100/100)
+|                       |                              +**seawater_geneDB___FeFe__Group_B__seawater_broomfield_1__contig_12850_pilon_174
+|                    +--| (87.1/98)
+|                    |  |                          +**SED___FeFe__Group_C1__kelso_4_semibin_refined_bins.tsv.020_NODE_7975_length_6007_cov_10.905578_6
+|                    |  |                       +--| (75.6/100)
+|                    |  |                       |  +**sediment_geneDB___FeFe__Group_C1__sediment_21580_4_NODE_212046_length_1815_cov_6.813636_2
+|                    |  |  +--------------------| (99.9/100)
+|                    |  |  |                    +--sediment_geneDB___FeFe__Group_C1__sediment_masthead_3_NODE_16441_length_1088_cov_1.617619_2
+|                    |  +--| (61.2/91)
+|                    |     +------------seawater_geneDB___FeFe__Group_A3__seawater_lagoon_1__NODE_857_length_28513_cov_0.460609_33
+|                +---| (98.8/100)
+|                |   |           +-----sediment_geneDB___FeFe__Group_B__sediment_mantis_4_NODE_19520_length_2817_cov_2.951846_2
+|                |   |        +--| (77.5/100)
+|                |   |        |  +---sediment_geneDB___FeFe__Group_B__sediment_boult_4_NODE_100466_length_2322_cov_4.423467_2
+|                |   +--------| (100/100)
+|                |            +--sediment_geneDB___FeFe__Group_B__sediment_feather_3_NODE_249520_length_1862_cov_3.014388_2
+|         +------| (100/100)
+|         |      +---------sediment_geneDB___FeFe__Group_C3__sediment_boult_4_NODE_24563_length_4640_cov_3.962050_4
+|      +--| (50.4/87)
+|      |  |  +**SED___FeFe__Group_C3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_8
+|      |  +--| (100/100)
+|      |     +--sediment_geneDB___FeFe__Group_C3__sediment_arlington_4_NODE_1087_length_15548_cov_6.084877_10
+|   +--| (59.7/88)
+|   |  |     +**SED___FeFe__Group_C3__coassembly_9___semibin_refined_bins.tsv.072_k127_21794123_3
+|   |  |  +--| (84.6/96)
+|   |  |  |  +**sediment_geneDB___FeFe__Group_C3__sediment_davie_4_NODE_10196_length_5628_cov_5.681321_4
+|   |  +--| (100/100)
+|   |     +--SED___FeFe__Group_C3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_6
++---| (100/100)
+|   |     +**SED___FeFe__Group_C3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_3
+|   +-----| (100/100)
+|         +**sediment_geneDB___FeFe__Group_C3__sediment_mantis_4_NODE_439_length_18272_cov_11.224351_20
+|
++**sediment_geneDB___FeFe__Group_C3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_2
+
+Tree in newick format:
+
+(SED___FeFe__Group_C3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_2:0.0000010209,(((((((((((((((((SED___FeFe__Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_3:0.0000010209,sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_3:0.0000010209)100/100:0.3038125410,((SED___FeFe__Group_A3__coassembly_9___semibin_refined_bins.tsv.072_k127_21794123_2:0.0583143380,(SED___FeFe__Group_A3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_5:0.0000010209,sediment_geneDB___FeFe__Group_A3__sediment_taylor_4_NODE_6247_length_6286_cov_11.030493_5:0.0000010209)97.8/100:0.0498145832)100/100:0.2061992619,(SED___FeFe__Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_7:0.0000010209,sediment_geneDB___FeFe__Group_A3__sediment_feather_3_NODE_7865_length_12510_cov_6.509354_7:0.0000010209)100/100:0.3533404121)78.9/99:0.0576513212)94.6/98:0.0848793780,((SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_222_length_49099_cov_16.962523_31:0.0000010209,sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_222_length_49099_cov_16.962523_31:0.0000010209)100/100:0.4336517071,(SED___FeFe__Group_A3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_2:0.2012550954,((SED___FeFe__Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_11151_length_3610_cov_17.220253_2:0.0000010209,sediment_geneDB___FeFe__Group_A3__sediment_mantis_4_NODE_11151_length_3610_cov_17.220253_2:0.0000010209)96/100:0.0293667082,sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_25281_length_5269_cov_7.011507_2:0.0110914161)100/100:0.1979895206)14.1/70:0.0544716344)94.8/98:0.1228956764)92.6/97:0.0954352216,(SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.166_NODE_12401_length_7538_cov_3.691434_6:0.0000010209,sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_12401_length_7538_cov_3.691434_6:0.0000010209)100/100:0.4188281374)99/100:0.1746817099,((((((SED___FeFe__Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_36358_length_4369_cov_4.681038_3:0.0000010209,sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_36358_length_4369_cov_4.681038_3:0.0000010209)100/100:0.2932304866,(SED___FeFe__Group_A3__coassembly_1___semibin_refined_bins.tsv.276_sub_k127_8434485_2:0.1079962329,sediment_geneDB___FeFe__Group_A3__sediment_21550_4_NODE_11725_length_4933_cov_12.293973_4:0.1160053772)100/100:0.2181284048)87.7/100:0.0857757238,sediment_geneDB___FeFe__Group_A3__sediment_22084_4_contig_5062_pilon_1:0.5778327065)92.8/100:0.0902781748,SED___FeFe__Group_A3__coassembly_14___vamb_bins.tsv.002_sub_k127_5058404_84:0.3999191684)100/100:0.2456779389,SED___FeFe__Group_A1__coassembly_14___metabat2_refined_bins.tsv.009_k127_85363_2:0.7400322065)91.6/89:0.0910741611,(((((((SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_961_length_27426_cov_12.322750_12:0.0000010209,sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_961_length_27426_cov_12.322750_12:0.0000010209)99.7/100:0.0641663184,(((SED___FeFe__Group_A3__coassembly_12___vamb_bins.tsv.056_sub_k127_2889805_1:0.0000010209,sediment_geneDB___FeFe__Group_A3__sediment_mantis_4_NODE_3679_length_6000_cov_9.266442_5:0.0000010209)0/98:0.0089747194,sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_19028_length_6077_cov_5.929591_5:0.0586121547)0/80:0.0000022988,SED___FeFe__Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_884_length_12578_cov_8.169049_8:0.0000021027)99.7/100:0.0714341455)100/100:0.1413908256,SED___FeFe__Group_A3__coassembly_12___semibin_refined_bins.tsv.041_k127_17069174_3:0.1521402570)100/100:0.2474110029,(SED___FeFe__Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_12601_length_9931_cov_7.174058_5:0.0415920889,sediment_geneDB___FeFe__Group_A3__sediment_moonsoon_4_NODE_49836_length_3066_cov_4.173364_2:0.0222842789)100/100:0.4259815731)98.6/100:0.1455607825,sediment_geneDB___FeFe__Group_A3__sediment_21550_4_NODE_85534_length_2015_cov_6.242347_2:0.5349002220)2.5/31:0.0452847091,((((SED___FeFe__Group_A3__coassembly_22___metabat2_refined_bins.tsv.006_k127_1300170_3:0.0000010209,sediment_geneDB___FeFe__Group_A3__sediment_thetford_4_NODE_1895_length_7428_cov_5.062525_6:0.0000010209)99.8/100:0.0721291162,sediment_geneDB___FeFe__Group_A3__sediment_feather_3_NODE_19875_length_7815_cov_5.958376_3:0.0562939531)99.1/100:0.1256559129,sediment_geneDB___FeFe__Group_A3__sediment_11162_4_NODE_39759_length_2942_cov_3.123311_2:0.2996321408)98.5/100:0.1938044770,sediment_geneDB___FeFe__Group_A3__sediment_davie_4_NODE_161874_length_1645_cov_2.557862_2:0.3112732969)99.4/100:0.1773412887)97.1/90:0.0864628590,(((SED___FeFe__Group_A3__coassembly_0___metabat2_refined_bins.tsv.374_sub_k127_2554933_3:0.0128379570,sediment_geneDB___FeFe__Group_A3__sediment_taylor_4_NODE_22966_length_3478_cov_6.881098_1:0.0023256757)100/100:0.4164030336,sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_59733_length_3402_cov_6.459217_2:0.4591541109)99/98:0.1239708834,sediment_geneDB___FeFe__Group_A3__sediment_grub_4_NODE_101092_length_2100_cov_5.982396_2:0.4753279902)71.1/66:0.0447518571)81.6/64:0.0571603901)96.7/99:0.0856775369)92.6/99:0.0825241591,((((SED___FeFe__Group_A2__coassembly_0___semibin_refined_bins.tsv.405_sub_k127_12062158_3:0.0497135922,sediment_geneDB___FeFe__Group_A2__sediment_feather_4_NODE_683_length_9114_cov_3.967546_9:0.0445729952)84.3/99:0.0092855118,(((SED___FeFe__Group_A2__coassembly_13___metabat_sspec_bins.tsv.016_k127_847913_6:0.0000010209,sediment_geneDB___FeFe__Group_A2__sediment_feather_4_NODE_2781_length_4536_cov_12.653649_2:0.0000010209)100/100:0.0492178434,(SED___FeFe__Group_A2__coassembly_1___metabat2_refined_bins.tsv.104_k127_24621625_12:0.0373447976,SED___FeFe__Group_A2__coassembly_1___semibin_refined_bins.tsv.387_sub_k127_11661808_7:0.0390318535)31.8/92:0.0190006754)99.4/100:0.0294290306,(SED___FeFe__Group_A2__sandbank1_1_metabat_spec_bins.tsv.003_sub_NODE_1182_length_4061_cov_21.154518_1:0.0000010209,sediment_geneDB___FeFe__Group_A2__sediment_sandbank1_1_NODE_1182_length_4061_cov_21.154518_1:0.0000010209)99.8/100:0.0370460870)87.3/95:0.0166087770)89/99:0.0240156476,((SED___FeFe__Group_A2__coassembly_0___semibin_refined_bins.tsv.405_sub_k127_15211256_4:0.0346352820,SED___FeFe__Group_A2__coassembly_1___semibin_refined_bins.tsv.082_k127_22866290_2:0.0372565860)48.4/88:0.0091906495,SED___FeFe__Group_A2__coassembly_16___semibin_refined_bins.tsv.300_sub_k127_411658_1:0.0064243535)79.7/98:0.0101440120)100/100:0.3305835141,sediment_geneDB___FeFe__Group_A2__sediment_boult_4_NODE_4862_length_10097_cov_7.108843_3:0.3583053863)100/100:0.3558106538)11.3/63:0.0743618347,sediment_geneDB___FeFe__Group_A1__sediment_22084_4_contig_150_pilon_2:0.9386452368)90.4/96:0.1755205271,(seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_29615_pilon_294:0.2494916544,((seawater_geneDB___FeFe__Group_A1__seawater_agincourt1_1__contig_4892_pilon_757:0.0000028331,seawater_geneDB___FeFe__Group_A2__seawater_agincourt1_1__NODE_5277_length_11766_cov_1.023397_7:1.6016073518)85.8/100:0.0591005873,(seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__NODE_6886_length_9182_cov_0.416347_2:0.3979213828,seawater_geneDB___FeFe__Group_A1__seawater_taylor_4__contig_18881_pilon_26:0.1675261229)15.3/81:0.0127407958)99.5/100:0.2660812943)100/100:0.5934619119)38.8/82:0.0877085061,sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_707977_length_1007_cov_1.728992_1:3.1443197802)33/68:0.1003619516,((((((((seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_5331_pilon_164:0.0918720204,(((seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_34226_pilon_210:0.0729600452,seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_16172_pilon_1102:0.0713631033)0/76:0.0031950905,seawater_geneDB___FeFe__Group_A1__seawater_north_1__NODE_46762_length_2987_cov_5.528990_2:0.0037560362)0/71:0.0003239655,seawater_geneDB___FeFe__Group_A1__seawater_mcSweeney_3__NODE_15884_length_5716_cov_1.280869_3:0.0766559110)77.7/82:0.0229137100)32/93:0.0147177990,seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_16172_pilon_1101:0.0397891905)100/100:0.3819511199,((((seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_18750_pilon_233:0.0906256620,seawater_geneDB___FeFe__Group_A1__seawater_smallLagoon_4__NODE_5474_length_15383_cov_2.086313_9:0.0743446531)22.9/86:0.0256171342,seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_19717_pilon_246:0.0558984326)0/75:0.0011193820,((seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_18750_pilon_234:0.1615847476,seawater_geneDB___FeFe__Group_A1__seawater_davie_1__contig_32027_pilon_253:0.2354595256)89.6/99:0.0388419717,seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_23686_pilon_161:0.0251037375)92.8/100:0.0301763761)45.5/96:0.0052295300,(seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__contig_12406_pilon_294:0.0000025371,seawater_geneDB___FeFe__Group_A1__seawater_taylor_4__contig_20231_pilon_98:0.0031217233)68/98:0.0051454235)100/100:0.3350015795)70.2/93:0.0979350414,((seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_6402_pilon_161:0.0000028923,(((seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_6402_pilon_162:0.0126130837,seawater_geneDB___FeFe__Group_A1__seawater_north_1__NODE_31035_length_4112_cov_8.824994_2:0.0142978058)54.3/98:0.0219547630,(((seawater_geneDB___FeFe__Group_A1__seawater_broomfield_1__contig_28727_pilon_62:0.0174174274,seawater_geneDB___FeFe__Group_A1__seawater_masthead_4__contig_23660_pilon_272:0.0029968337)96.5/100:0.0743435991,seawater_geneDB___FeFe__Group_A1__seawater_davie_1__NODE_5627_length_11998_cov_1.908231_2:0.0053859207)100/100:0.0822249485,seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_16730_pilon_67:0.1465854978)38.9/95:0.0257654913)100/100:0.1856053277,seawater_geneDB___FeFe__Group_A1__seawater_broomfield_1__contig_28727_pilon_61:0.0873779352)98.5/100:0.1147338680)74.3/97:0.0106618849,((((seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_29971_pilon_80:0.3776467653,seawater_geneDB___FeFe__Group_A1__seawater_lagoon_1__contig_20988_pilon_192:0.0198409865)10.6/69:0.0280792767,seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_19196_pilon_43:0.1378076966)99/100:0.1014679563,seawater_geneDB___FeFe__Group_A1__seawater_21550_4__NODE_19220_length_3438_cov_0.468519_2:0.0708104513)79.9/69:0.0152929024,seawater_geneDB___FeFe__Group_A1__seawater_boult_4__NODE_14036_length_7813_cov_5.121681_3:0.0091012382)81.8/67:0.0164215049)100/100:0.2296259092)97.8/99:0.1849086531,(seawater_geneDB___FeFe__Group_A1__seawater_sanbank1_1__contig_22888_pilon_458:0.1974214039,seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_16151_pilon_567:0.0201342155)100/100:0.6611367492)65/88:0.1836631742,((seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_24139_pilon_34:0.6196438020,seawater_geneDB___FeFe__Group_A1__seawater_chicken_3__NODE_18112_length_7555_cov_0.534000_4:1.1118898768)29.7/81:0.0921793556,seawater_geneDB___FeFe__Group_A1__seawater_davie_1__contig_19061_pilon_21:1.3184617764)76/81:0.1341803038)74.3/77:0.1339427531,((seawater_geneDB___FeFe__Group_A1__seawater_sanbank1_1__NODE_68351_length_2775_cov_3.110294_3:0.0008443351,seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__NODE_4641_length_11073_cov_2.108277_6:0.0621861777)99.9/100:0.2963904506,((seawater_geneDB___FeFe__Group_A1__seawater_kelso_4__NODE_2602_length_18260_cov_8.285087_2:0.0345754476,seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__NODE_9371_length_10529_cov_0.894596_4:0.1886007885)90.8/100:0.0950803162,seawater_geneDB___FeFe__Group_A1__seawater_hoskyn_2__contig_12622_pilon_49:0.0162431971)100/100:0.4817091197)99.8/100:0.3545370506)75.6/84:0.2121707999,(seawater_geneDB___FeFe__Group_A3__seawater_erskine_4__contig_27823_pilon_90:0.8984848691,((seawater_geneDB___FeFe__Group_A3__seawater_smallLagoon_4__NODE_50971_length_4466_cov_1.181138_4:0.0191718584,seawater_geneDB___FeFe__Group_A1__seawater_lagoon_1__contig_21776_pilon_10:0.0210252003)50.6/99:0.0504571263,seawater_geneDB___FeFe__Group_A3__seawater_sanbank1_1__contig_29508_pilon_8:0.1311509832)100/100:0.7098380104)68/94:0.1699008021)100/99:0.7695055293)78.7/84:0.3631795034,(SEA___FeFe__Group_B__north_1__metabat2_refined_238_IMOS__P__north_1__contig_36110_pilon_p_221:0.0000010209,seawater_geneDB___FeFe__Group_B__seawater_broomfield_1__contig_12850_pilon_174:0.0000010209)100/100:2.8212434060)86.5/91:0.2920645217,(((SED___FeFe__Group_C1__kelso_4_semibin_refined_bins.tsv.020_NODE_7975_length_6007_cov_10.905578_6:0.0000010209,sediment_geneDB___FeFe__Group_C1__sediment_21580_4_NODE_212046_length_1815_cov_6.813636_2:0.0000010209)75.6/100:0.0230505737,sediment_geneDB___FeFe__Group_C1__sediment_masthead_3_NODE_16441_length_1088_cov_1.617619_2:0.0549129032)99.9/100:2.0850576920,seawater_geneDB___FeFe__Group_A3__seawater_lagoon_1__NODE_857_length_28513_cov_0.460609_33:1.3632249997)61.2/91:0.2529489194)87.1/98:0.2907442663,((sediment_geneDB___FeFe__Group_B__sediment_mantis_4_NODE_19520_length_2817_cov_2.951846_2:0.6518999944,sediment_geneDB___FeFe__Group_B__sediment_boult_4_NODE_100466_length_2322_cov_4.423467_2:0.4876947148)77.5/100:0.1419471754,sediment_geneDB___FeFe__Group_B__sediment_feather_3_NODE_249520_length_1862_cov_3.014388_2:0.3584065612)100/100:0.8977693309)98.8/100:0.4679160099,sediment_geneDB___FeFe__Group_C3__sediment_boult_4_NODE_24563_length_4640_cov_3.962050_4:1.0607297653)100/100:0.7054924428,(SED___FeFe__Group_C3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_8:0.0000023536,sediment_geneDB___FeFe__Group_C3__sediment_arlington_4_NODE_1087_length_15548_cov_6.084877_10:0.0168486650)100/100:0.3881526276)50.4/87:0.0685053975,((SED___FeFe__Group_C3__coassembly_9___semibin_refined_bins.tsv.072_k127_21794123_3:0.0000010209,sediment_geneDB___FeFe__Group_C3__sediment_davie_4_NODE_10196_length_5628_cov_5.681321_4:0.0000010209)84.6/96:0.0267051933,SED___FeFe__Group_C3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_6:0.0716688830)100/100:0.3866120994)59.7/88:0.1009304429,(SED___FeFe__Group_C3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_3:0.0000010209,sediment_geneDB___FeFe__Group_C3__sediment_mantis_4_NODE_439_length_18272_cov_11.224351_20:0.0000010209)100/100:0.6412024272)100/100:0.4202340578,sediment_geneDB___FeFe__Group_C3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_2:0.0000010209);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -56401.906886
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--SED___FeFe__Group_C3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_2
+|
+|                                                        +--SED___FeFe__Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_3
+|                                                     +--| (100)
+|                                                     |  +--sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_3
+|                                                  +--| (98)
+|                                                  |  |     +--SED___FeFe__Group_A3__coassembly_9___semibin_refined_bins.tsv.072_k127_21794123_2
+|                                                  |  |  +--| (100)
+|                                                  |  |  |  |  +--SED___FeFe__Group_A3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_5
+|                                                  |  |  |  +--| (100)
+|                                                  |  |  |     +--sediment_geneDB___FeFe__Group_A3__sediment_taylor_4_NODE_6247_length_6286_cov_11.030493_5
+|                                                  |  +--| (99)
+|                                                  |     |  +--SED___FeFe__Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_7
+|                                                  |     +--| (100)
+|                                                  |        +--sediment_geneDB___FeFe__Group_A3__sediment_feather_3_NODE_7865_length_12510_cov_6.509354_7
+|                                               +--| (97)
+|                                               |  |      +--SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_222_length_49099_cov_16.962523_31
+|                                               |  |  +---| (100)
+|                                               |  |  |   +--sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_222_length_49099_cov_16.962523_31
+|                                               |  +--| (98)
+|                                               |     |  +--SED___FeFe__Group_A3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_2
+|                                               |     +--| (70)
+|                                               |        |     +--SED___FeFe__Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_11151_length_3610_cov_17.220253_2
+|                                               |        |  +--| (100)
+|                                               |        |  |  +--sediment_geneDB___FeFe__Group_A3__sediment_mantis_4_NODE_11151_length_3610_cov_17.220253_2
+|                                               |        +--| (100)
+|                                               |           +--sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_25281_length_5269_cov_7.011507_2
+|                                            +--| (100)
+|                                            |  |   +--SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.166_NODE_12401_length_7538_cov_3.691434_6
+|                                            |  +---| (100)
+|                                            |      +--sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_12401_length_7538_cov_3.691434_6
+|                                         +--| (99)
+|                                         |  |                 +--SED___FeFe__Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_36358_length_4369_cov_4.681038_3
+|                                         |  |              +--| (100)
+|                                         |  |              |  +--sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_36358_length_4369_cov_4.681038_3
+|                                         |  |           +--| (100)
+|                                         |  |           |  |  +--SED___FeFe__Group_A3__coassembly_1___semibin_refined_bins.tsv.276_sub_k127_8434485_2
+|                                         |  |           |  +--| (100)
+|                                         |  |           |     +--sediment_geneDB___FeFe__Group_A3__sediment_21550_4_NODE_11725_length_4933_cov_12.293973_4
+|                                         |  |        +--| (100)
+|                                         |  |        |  +----sediment_geneDB___FeFe__Group_A3__sediment_22084_4_contig_5062_pilon_1
+|                                         |  |     +--| (100)
+|                                         |  |     |  +---SED___FeFe__Group_A3__coassembly_14___vamb_bins.tsv.002_sub_k127_5058404_84
+|                                         |  |  +--| (89)
+|                                         |  |  |  +------SED___FeFe__Group_A1__coassembly_14___metabat2_refined_bins.tsv.009_k127_85363_2
+|                                         |  +--| (99)
+|                                         |     |                 +--SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_961_length_27426_cov_12.322750_12
+|                                         |     |              +--| (100)
+|                                         |     |              |  +--sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_961_length_27426_cov_12.322750_12
+|                                         |     |           +--| (100)
+|                                         |     |           |  |        +--SED___FeFe__Group_A3__coassembly_12___vamb_bins.tsv.056_sub_k127_2889805_1
+|                                         |     |           |  |     +--| (98)
+|                                         |     |           |  |     |  +--sediment_geneDB___FeFe__Group_A3__sediment_mantis_4_NODE_3679_length_6000_cov_9.266442_5
+|                                         |     |           |  |  +--| (80)
+|                                         |     |           |  |  |  +--sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_19028_length_6077_cov_5.929591_5
+|                                         |     |           |  +--| (100)
+|                                         |     |           |     +--SED___FeFe__Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_884_length_12578_cov_8.169049_8
+|                                         |     |        +--| (100)
+|                                         |     |        |  +--SED___FeFe__Group_A3__coassembly_12___semibin_refined_bins.tsv.041_k127_17069174_3
+|                                         |     |     +--| (100)
+|                                         |     |     |  |   +--SED___FeFe__Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_12601_length_9931_cov_7.174058_5
+|                                         |     |     |  +---| (100)
+|                                         |     |     |      +--sediment_geneDB___FeFe__Group_A3__sediment_moonsoon_4_NODE_49836_length_3066_cov_4.173364_2
+|                                         |     |  +--| (90)
+|                                         |     |  |  |              +--SED___FeFe__Group_A3__coassembly_22___metabat2_refined_bins.tsv.006_k127_1300170_3
+|                                         |     |  |  |           +--| (100)
+|                                         |     |  |  |           |  +--sediment_geneDB___FeFe__Group_A3__sediment_thetford_4_NODE_1895_length_7428_cov_5.062525_6
+|                                         |     |  |  |        +--| (100)
+|                                         |     |  |  |        |  +--sediment_geneDB___FeFe__Group_A3__sediment_feather_3_NODE_19875_length_7815_cov_5.958376_3
+|                                         |     |  |  |     +--| (100)
+|                                         |     |  |  |     |  +--sediment_geneDB___FeFe__Group_A3__sediment_11162_4_NODE_39759_length_2942_cov_3.123311_2
+|                                         |     |  |  |  +--| (100)
+|                                         |     |  |  |  |  +--sediment_geneDB___FeFe__Group_A3__sediment_davie_4_NODE_161874_length_1645_cov_2.557862_2
+|                                         |     |  |  +--| (39)
+|                                         |     |  |     +----sediment_geneDB___FeFe__Group_A3__sediment_21550_4_NODE_85534_length_2015_cov_6.242347_2
+|                                         |     +--| (64)
+|                                         |        |         +--SED___FeFe__Group_A3__coassembly_0___metabat2_refined_bins.tsv.374_sub_k127_2554933_3
+|                                         |        |     +---| (100)
+|                                         |        |     |   +--sediment_geneDB___FeFe__Group_A3__sediment_taylor_4_NODE_22966_length_3478_cov_6.881098_1
+|                                         |        |  +--| (98)
+|                                         |        |  |  +---sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_59733_length_3402_cov_6.459217_2
+|                                         |        +--| (66)
+|                                         |           +---sediment_geneDB___FeFe__Group_A3__sediment_grub_4_NODE_101092_length_2100_cov_5.982396_2
+|                                      +--| (63)
+|                                      |  |           +--SED___FeFe__Group_A2__coassembly_0___semibin_refined_bins.tsv.405_sub_k127_12062158_3
+|                                      |  |        +--| (99)
+|                                      |  |        |  +--sediment_geneDB___FeFe__Group_A2__sediment_feather_4_NODE_683_length_9114_cov_3.967546_9
+|                                      |  |     +--| (99)
+|                                      |  |     |  |        +--SED___FeFe__Group_A2__coassembly_13___metabat_sspec_bins.tsv.016_k127_847913_6
+|                                      |  |     |  |     +--| (100)
+|                                      |  |     |  |     |  +--sediment_geneDB___FeFe__Group_A2__sediment_feather_4_NODE_2781_length_4536_cov_12.653649_2
+|                                      |  |     |  |  +--| (100)
+|                                      |  |     |  |  |  |  +--SED___FeFe__Group_A2__coassembly_1___metabat2_refined_bins.tsv.104_k127_24621625_12
+|                                      |  |     |  |  |  +--| (92)
+|                                      |  |     |  |  |     +--SED___FeFe__Group_A2__coassembly_1___semibin_refined_bins.tsv.387_sub_k127_11661808_7
+|                                      |  |     |  +--| (95)
+|                                      |  |     |     |  +--SED___FeFe__Group_A2__sandbank1_1_metabat_spec_bins.tsv.003_sub_NODE_1182_length_4061_cov_21.154518_1
+|                                      |  |     |     +--| (100)
+|                                      |  |     |        +--sediment_geneDB___FeFe__Group_A2__sediment_sandbank1_1_NODE_1182_length_4061_cov_21.154518_1
+|                                      |  |  +--| (100)
+|                                      |  |  |  |     +--SED___FeFe__Group_A2__coassembly_0___semibin_refined_bins.tsv.405_sub_k127_15211256_4
+|                                      |  |  |  |  +--| (88)
+|                                      |  |  |  |  |  +--SED___FeFe__Group_A2__coassembly_1___semibin_refined_bins.tsv.082_k127_22866290_2
+|                                      |  |  |  +--| (98)
+|                                      |  |  |     +--SED___FeFe__Group_A2__coassembly_16___semibin_refined_bins.tsv.300_sub_k127_411658_1
+|                                      |  +--| (100)
+|                                      |     +--sediment_geneDB___FeFe__Group_A2__sediment_boult_4_NODE_4862_length_10097_cov_7.108843_3
+|                                   +--| (96)
+|                                   |  +--------sediment_geneDB___FeFe__Group_A1__sediment_22084_4_contig_150_pilon_2
+|                                +--| (82)
+|                                |  |    +--seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_29615_pilon_294
+|                                |  +----| (100)
+|                                |       |     +--seawater_geneDB___FeFe__Group_A1__seawater_agincourt1_1__contig_4892_pilon_757
+|                                |       |  +--| (100)
+|                                |       |  |  +---------------seawater_geneDB___FeFe__Group_A2__seawater_agincourt1_1__NODE_5277_length_11766_cov_1.023397_7
+|                                |       +--| (100)
+|                                |          |  +---seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__NODE_6886_length_9182_cov_0.416347_2
+|                                |          +--| (81)
+|                                |             +--seawater_geneDB___FeFe__Group_A1__seawater_taylor_4__contig_18881_pilon_26
+|                             +--| (68)
+|                             |  +------------------------------sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_707977_length_1007_cov_1.728992_1
+|                          +--| (84)
+|                          |  |                           +--seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_5331_pilon_164
+|                          |  |                        +--| (93)
+|                          |  |                        |  |        +--seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_34226_pilon_210
+|                          |  |                        |  |     +--| (76)
+|                          |  |                        |  |     |  +--seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_16172_pilon_1102
+|                          |  |                        |  |  +--| (71)
+|                          |  |                        |  |  |  +--seawater_geneDB___FeFe__Group_A1__seawater_north_1__NODE_46762_length_2987_cov_5.528990_2
+|                          |  |                        |  +--| (82)
+|                          |  |                        |     +--seawater_geneDB___FeFe__Group_A1__seawater_mcSweeney_3__NODE_15884_length_5716_cov_1.280869_3
+|                          |  |                     +--| (100)
+|                          |  |                     |  +--seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_16172_pilon_1101
+|                          |  |                  +--| (93)
+|                          |  |                  |  |           +--seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_18750_pilon_233
+|                          |  |                  |  |        +--| (86)
+|                          |  |                  |  |        |  +--seawater_geneDB___FeFe__Group_A1__seawater_smallLagoon_4__NODE_5474_length_15383_cov_2.086313_9
+|                          |  |                  |  |     +--| (75)
+|                          |  |                  |  |     |  +--seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_19717_pilon_246
+|                          |  |                  |  |  +--| (96)
+|                          |  |                  |  |  |  |     +--seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_18750_pilon_234
+|                          |  |                  |  |  |  |  +--| (99)
+|                          |  |                  |  |  |  |  |  +--seawater_geneDB___FeFe__Group_A1__seawater_davie_1__contig_32027_pilon_253
+|                          |  |                  |  |  |  +--| (100)
+|                          |  |                  |  |  |     +--seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_23686_pilon_161
+|                          |  |                  |  +--| (100)
+|                          |  |                  |     |  +--seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__contig_12406_pilon_294
+|                          |  |                  |     +--| (98)
+|                          |  |                  |        +--seawater_geneDB___FeFe__Group_A1__seawater_taylor_4__contig_20231_pilon_98
+|                          |  |               +--| (99)
+|                          |  |               |  |     +--seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_6402_pilon_161
+|                          |  |               |  |  +--| (97)
+|                          |  |               |  |  |  |        +--seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_6402_pilon_162
+|                          |  |               |  |  |  |     +--| (98)
+|                          |  |               |  |  |  |     |  +--seawater_geneDB___FeFe__Group_A1__seawater_north_1__NODE_31035_length_4112_cov_8.824994_2
+|                          |  |               |  |  |  |  +--| (100)
+|                          |  |               |  |  |  |  |  |        +--seawater_geneDB___FeFe__Group_A1__seawater_broomfield_1__contig_28727_pilon_62
+|                          |  |               |  |  |  |  |  |     +--| (100)
+|                          |  |               |  |  |  |  |  |     |  +--seawater_geneDB___FeFe__Group_A1__seawater_masthead_4__contig_23660_pilon_272
+|                          |  |               |  |  |  |  |  |  +--| (100)
+|                          |  |               |  |  |  |  |  |  |  +--seawater_geneDB___FeFe__Group_A1__seawater_davie_1__NODE_5627_length_11998_cov_1.908231_2
+|                          |  |               |  |  |  |  |  +--| (95)
+|                          |  |               |  |  |  |  |     +--seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_16730_pilon_67
+|                          |  |               |  |  |  +--| (100)
+|                          |  |               |  |  |     +--seawater_geneDB___FeFe__Group_A1__seawater_broomfield_1__contig_28727_pilon_61
+|                          |  |               |  +--| (100)
+|                          |  |               |     |           +--seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_29971_pilon_80
+|                          |  |               |     |        +--| (69)
+|                          |  |               |     |        |  +--seawater_geneDB___FeFe__Group_A1__seawater_lagoon_1__contig_20988_pilon_192
+|                          |  |               |     |     +--| (100)
+|                          |  |               |     |     |  +--seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_19196_pilon_43
+|                          |  |               |     |  +--| (69)
+|                          |  |               |     |  |  +--seawater_geneDB___FeFe__Group_A1__seawater_21550_4__NODE_19220_length_3438_cov_0.468519_2
+|                          |  |               |     +--| (67)
+|                          |  |               |        +--seawater_geneDB___FeFe__Group_A1__seawater_boult_4__NODE_14036_length_7813_cov_5.121681_3
+|                          |  |            +--| (88)
+|                          |  |            |  |     +--seawater_geneDB___FeFe__Group_A1__seawater_sanbank1_1__contig_22888_pilon_458
+|                          |  |            |  +-----| (100)
+|                          |  |            |        +--seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_16151_pilon_567
+|                          |  |         +--| (77)
+|                          |  |         |  |     +-----seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_24139_pilon_34
+|                          |  |         |  |  +--| (81)
+|                          |  |         |  |  |  +----------seawater_geneDB___FeFe__Group_A1__seawater_chicken_3__NODE_18112_length_7555_cov_0.534000_4
+|                          |  |         |  +--| (81)
+|                          |  |         |     +------------seawater_geneDB___FeFe__Group_A1__seawater_davie_1__contig_19061_pilon_21
+|                          |  |      +--| (84)
+|                          |  |      |  |     +--seawater_geneDB___FeFe__Group_A1__seawater_sanbank1_1__NODE_68351_length_2775_cov_3.110294_3
+|                          |  |      |  |  +--| (100)
+|                          |  |      |  |  |  +--seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__NODE_4641_length_11073_cov_2.108277_6
+|                          |  |      |  +--| (100)
+|                          |  |      |     |      +--seawater_geneDB___FeFe__Group_A1__seawater_kelso_4__NODE_2602_length_18260_cov_8.285087_2
+|                          |  |      |     |   +--| (100)
+|                          |  |      |     |   |  +--seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__NODE_9371_length_10529_cov_0.894596_4
+|                          |  |      |     +---| (100)
+|                          |  |      |         +--seawater_geneDB___FeFe__Group_A1__seawater_hoskyn_2__contig_12622_pilon_49
+|                          |  +------| (99)
+|                          |         |  +--------seawater_geneDB___FeFe__Group_A3__seawater_erskine_4__contig_27823_pilon_90
+|                          |         +--| (94)
+|                          |            |         +--seawater_geneDB___FeFe__Group_A3__seawater_smallLagoon_4__NODE_50971_length_4466_cov_1.181138_4
+|                          |            |      +--| (99)
+|                          |            |      |  +--seawater_geneDB___FeFe__Group_A1__seawater_lagoon_1__contig_21776_pilon_10
+|                          |            +------| (100)
+|                          |                   +--seawater_geneDB___FeFe__Group_A3__seawater_sanbank1_1__contig_29508_pilon_8
+|                       +--| (91)
+|                       |  |                           +--SEA___FeFe__Group_B__north_1__metabat2_refined_238_IMOS__P__north_1__contig_36110_pilon_p_221
+|                       |  +---------------------------| (100)
+|                       |                              +--seawater_geneDB___FeFe__Group_B__seawater_broomfield_1__contig_12850_pilon_174
+|                    +--| (98)
+|                    |  |                         +--SED___FeFe__Group_C1__kelso_4_semibin_refined_bins.tsv.020_NODE_7975_length_6007_cov_10.905578_6
+|                    |  |                      +--| (100)
+|                    |  |                      |  +--sediment_geneDB___FeFe__Group_C1__sediment_21580_4_NODE_212046_length_1815_cov_6.813636_2
+|                    |  |  +-------------------| (100)
+|                    |  |  |                   +--sediment_geneDB___FeFe__Group_C1__sediment_masthead_3_NODE_16441_length_1088_cov_1.617619_2
+|                    |  +--| (91)
+|                    |     +------------seawater_geneDB___FeFe__Group_A3__seawater_lagoon_1__NODE_857_length_28513_cov_0.460609_33
+|                +---| (100)
+|                |   |           +-----sediment_geneDB___FeFe__Group_B__sediment_mantis_4_NODE_19520_length_2817_cov_2.951846_2
+|                |   |        +--| (100)
+|                |   |        |  +---sediment_geneDB___FeFe__Group_B__sediment_boult_4_NODE_100466_length_2322_cov_4.423467_2
+|                |   +--------| (100)
+|                |            +--sediment_geneDB___FeFe__Group_B__sediment_feather_3_NODE_249520_length_1862_cov_3.014388_2
+|         +------| (100)
+|         |      +---------sediment_geneDB___FeFe__Group_C3__sediment_boult_4_NODE_24563_length_4640_cov_3.962050_4
+|      +--| (87)
+|      |  |  +--SED___FeFe__Group_C3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_8
+|      |  +--| (100)
+|      |     +--sediment_geneDB___FeFe__Group_C3__sediment_arlington_4_NODE_1087_length_15548_cov_6.084877_10
+|   +--| (88)
+|   |  |     +--SED___FeFe__Group_C3__coassembly_9___semibin_refined_bins.tsv.072_k127_21794123_3
+|   |  |  +--| (96)
+|   |  |  |  +--sediment_geneDB___FeFe__Group_C3__sediment_davie_4_NODE_10196_length_5628_cov_5.681321_4
+|   |  +--| (100)
+|   |     +--SED___FeFe__Group_C3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_6
++---| (100)
+|   |     +--SED___FeFe__Group_C3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_3
+|   +-----| (100)
+|         +--sediment_geneDB___FeFe__Group_C3__sediment_mantis_4_NODE_439_length_18272_cov_11.224351_20
+|
++--sediment_geneDB___FeFe__Group_C3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_2
+
+
+Consensus tree in newick format: 
+
+(SED___FeFe__Group_C3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_2:0.0000022421,(((((((((((((((((SED___FeFe__Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_3:0.0000022421,sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_3:0.0000022421)100:0.3037767813,((SED___FeFe__Group_A3__coassembly_9___semibin_refined_bins.tsv.072_k127_21794123_2:0.0583532721,(SED___FeFe__Group_A3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_5:0.0000022421,sediment_geneDB___FeFe__Group_A3__sediment_taylor_4_NODE_6247_length_6286_cov_11.030493_5:0.0000022421)100:0.0497302573)100:0.2059608390,(SED___FeFe__Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_7:0.0000022421,sediment_geneDB___FeFe__Group_A3__sediment_feather_3_NODE_7865_length_12510_cov_6.509354_7:0.0000022421)100:0.3536051092)99:0.0573580282)98:0.0840480179,((SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_222_length_49099_cov_16.962523_31:0.0000022421,sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_222_length_49099_cov_16.962523_31:0.0000022421)100:0.4334585626,(SED___FeFe__Group_A3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_2:0.2011679462,((SED___FeFe__Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_11151_length_3610_cov_17.220253_2:0.0000022421,sediment_geneDB___FeFe__Group_A3__sediment_mantis_4_NODE_11151_length_3610_cov_17.220253_2:0.0000022421)100:0.0293384830,sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_25281_length_5269_cov_7.011507_2:0.0110896999)100:0.1979419589)70:0.0542842699)98:0.1237848497)97:0.0960847953,(SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.166_NODE_12401_length_7538_cov_3.691434_6:0.0000022421,sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_12401_length_7538_cov_3.691434_6:0.0000022421)100:0.4188572825)100:0.1731092376,((((((SED___FeFe__Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_36358_length_4369_cov_4.681038_3:0.0000022421,sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_36358_length_4369_cov_4.681038_3:0.0000022421)100:0.2930787929,(SED___FeFe__Group_A3__coassembly_1___semibin_refined_bins.tsv.276_sub_k127_8434485_2:0.1079755504,sediment_geneDB___FeFe__Group_A3__sediment_21550_4_NODE_11725_length_4933_cov_12.293973_4:0.1158504743)100:0.2178593928)100:0.0859635572,sediment_geneDB___FeFe__Group_A3__sediment_22084_4_contig_5062_pilon_1:0.5773046236)100:0.0909330479,SED___FeFe__Group_A3__coassembly_14___vamb_bins.tsv.002_sub_k127_5058404_84:0.3983563299)100:0.2456705966,SED___FeFe__Group_A1__coassembly_14___metabat2_refined_bins.tsv.009_k127_85363_2:0.7401315008)89:0.0910719334,((((((SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_961_length_27426_cov_12.322750_12:0.0000022421,sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_961_length_27426_cov_12.322750_12:0.0000022421)100:0.0641341467,(((SED___FeFe__Group_A3__coassembly_12___vamb_bins.tsv.056_sub_k127_2889805_1:0.0000022421,sediment_geneDB___FeFe__Group_A3__sediment_mantis_4_NODE_3679_length_6000_cov_9.266442_5:0.0000022421)98:0.0064416642,sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_19028_length_6077_cov_5.929591_5:0.0585509035)80:0.0025248155,SED___FeFe__Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_884_length_12578_cov_8.169049_8:0.0000025849)100:0.0713068987)100:0.1406013348,SED___FeFe__Group_A3__coassembly_12___semibin_refined_bins.tsv.041_k127_17069174_3:0.1527369380)100:0.2510320926,(SED___FeFe__Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_12601_length_9931_cov_7.174058_5:0.0419490380,sediment_geneDB___FeFe__Group_A3__sediment_moonsoon_4_NODE_49836_length_3066_cov_4.173364_2:0.0218864080)100:0.4222983899)100:0.1662707141,(((((SED___FeFe__Group_A3__coassembly_22___metabat2_refined_bins.tsv.006_k127_1300170_3:0.0000022421,sediment_geneDB___FeFe__Group_A3__sediment_thetford_4_NODE_1895_length_7428_cov_5.062525_6:0.0000022421)100:0.0722431362,sediment_geneDB___FeFe__Group_A3__sediment_feather_3_NODE_19875_length_7815_cov_5.958376_3:0.0560701692)100:0.1263256555,sediment_geneDB___FeFe__Group_A3__sediment_11162_4_NODE_39759_length_2942_cov_3.123311_2:0.2981689905)100:0.1911741084,sediment_geneDB___FeFe__Group_A3__sediment_davie_4_NODE_161874_length_1645_cov_2.557862_2:0.3101693063)100:0.1512759566,sediment_geneDB___FeFe__Group_A3__sediment_21550_4_NODE_85534_length_2015_cov_6.242347_2:0.5208019926)39:0.0568462349)90:0.0840910687,(((SED___FeFe__Group_A3__coassembly_0___metabat2_refined_bins.tsv.374_sub_k127_2554933_3:0.0128316047,sediment_geneDB___FeFe__Group_A3__sediment_taylor_4_NODE_22966_length_3478_cov_6.881098_1:0.0023239528)100:0.4138550177,sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_59733_length_3402_cov_6.459217_2:0.4604368255)98:0.1241209459,sediment_geneDB___FeFe__Group_A3__sediment_grub_4_NODE_101092_length_2100_cov_5.982396_2:0.4720152983)66:0.0456861588)64:0.0573524539)99:0.0866880122)99:0.0815216521,((((SED___FeFe__Group_A2__coassembly_0___semibin_refined_bins.tsv.405_sub_k127_12062158_3:0.0496791951,sediment_geneDB___FeFe__Group_A2__sediment_feather_4_NODE_683_length_9114_cov_3.967546_9:0.0445409234)99:0.0092588604,(((SED___FeFe__Group_A2__coassembly_13___metabat_sspec_bins.tsv.016_k127_847913_6:0.0000022421,sediment_geneDB___FeFe__Group_A2__sediment_feather_4_NODE_2781_length_4536_cov_12.653649_2:0.0000022421)100:0.0491868985,(SED___FeFe__Group_A2__coassembly_1___metabat2_refined_bins.tsv.104_k127_24621625_12:0.0372904562,SED___FeFe__Group_A2__coassembly_1___semibin_refined_bins.tsv.387_sub_k127_11661808_7:0.0389723476)92:0.0190358572)100:0.0293916273,(SED___FeFe__Group_A2__sandbank1_1_metabat_spec_bins.tsv.003_sub_NODE_1182_length_4061_cov_21.154518_1:0.0000022421,sediment_geneDB___FeFe__Group_A2__sediment_sandbank1_1_NODE_1182_length_4061_cov_21.154518_1:0.0000022421)100:0.0370389864)95:0.0166018278)99:0.0238422747,((SED___FeFe__Group_A2__coassembly_0___semibin_refined_bins.tsv.405_sub_k127_15211256_4:0.0345993289,SED___FeFe__Group_A2__coassembly_1___semibin_refined_bins.tsv.082_k127_22866290_2:0.0372209982)88:0.0091913886,SED___FeFe__Group_A2__coassembly_16___semibin_refined_bins.tsv.300_sub_k127_411658_1:0.0063830000)98:0.0103475556)100:0.3299900224,sediment_geneDB___FeFe__Group_A2__sediment_boult_4_NODE_4862_length_10097_cov_7.108843_3:0.3584062829)100:0.3560887244)63:0.0755771564,sediment_geneDB___FeFe__Group_A1__sediment_22084_4_contig_150_pilon_2:0.9370477478)96:0.1739596807,(seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_29615_pilon_294:0.2488877975,((seawater_geneDB___FeFe__Group_A1__seawater_agincourt1_1__contig_4892_pilon_757:0.0000028179,seawater_geneDB___FeFe__Group_A2__seawater_agincourt1_1__NODE_5277_length_11766_cov_1.023397_7:1.6008524589)100:0.0589519598,(seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__NODE_6886_length_9182_cov_0.416347_2:0.3975996743,seawater_geneDB___FeFe__Group_A1__seawater_taylor_4__contig_18881_pilon_26:0.1673773791)81:0.0128072238)100:0.2662476701)100:0.5899571305)82:0.0895036434,sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_707977_length_1007_cov_1.728992_1:3.1490108543)68:0.0994757609,((((((((seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_5331_pilon_164:0.0915199286,(((seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_34226_pilon_210:0.0647905882,seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_16172_pilon_1102:0.0709803252)76:0.0116954955,seawater_geneDB___FeFe__Group_A1__seawater_north_1__NODE_46762_length_2987_cov_5.528990_2:0.0037417732)71:0.0003411852,seawater_geneDB___FeFe__Group_A1__seawater_mcSweeney_3__NODE_15884_length_5716_cov_1.280869_3:0.0766324805)82:0.0228310339)93:0.0147876875,seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_16172_pilon_1101:0.0397861336)100:0.3816378436,((((seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_18750_pilon_233:0.0905389204,seawater_geneDB___FeFe__Group_A1__seawater_smallLagoon_4__NODE_5474_length_15383_cov_2.086313_9:0.0742480064)86:0.0256340473,seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_19717_pilon_246:0.0558483814)75:0.0011376998,((seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_18750_pilon_234:0.1614645623,seawater_geneDB___FeFe__Group_A1__seawater_davie_1__contig_32027_pilon_253:0.2352806942)99:0.0388242232,seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_23686_pilon_161:0.0250817292)100:0.0301451769)96:0.0051997293,(seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__contig_12406_pilon_294:0.0000028677,seawater_geneDB___FeFe__Group_A1__seawater_taylor_4__contig_20231_pilon_98:0.0031189167)98:0.0051676184)100:0.3348007143)93:0.0980756251,((seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_6402_pilon_161:0.0000028677,(((seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_6402_pilon_162:0.0126071253,seawater_geneDB___FeFe__Group_A1__seawater_north_1__NODE_31035_length_4112_cov_8.824994_2:0.0142889487)98:0.0219589073,(((seawater_geneDB___FeFe__Group_A1__seawater_broomfield_1__contig_28727_pilon_62:0.0174113105,seawater_geneDB___FeFe__Group_A1__seawater_masthead_4__contig_23660_pilon_272:0.0029929448)100:0.0743112809,seawater_geneDB___FeFe__Group_A1__seawater_davie_1__NODE_5627_length_11998_cov_1.908231_2:0.0053850467)100:0.0821781690,seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_16730_pilon_67:0.1465026901)95:0.0257435735)100:0.1854603263,seawater_geneDB___FeFe__Group_A1__seawater_broomfield_1__contig_28727_pilon_61:0.0873207945)100:0.1146728455)97:0.0106813724,((((seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_29971_pilon_80:0.3773662398,seawater_geneDB___FeFe__Group_A1__seawater_lagoon_1__contig_20988_pilon_192:0.0198239411)69:0.0280644931,seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_19196_pilon_43:0.1376932523)100:0.1013844246,seawater_geneDB___FeFe__Group_A1__seawater_21550_4__NODE_19220_length_3438_cov_0.468519_2:0.0707438664)69:0.0152940130,seawater_geneDB___FeFe__Group_A1__seawater_boult_4__NODE_14036_length_7813_cov_5.121681_3:0.0090922472)67:0.0164090171)100:0.2293744680)99:0.1848226422,(seawater_geneDB___FeFe__Group_A1__seawater_sanbank1_1__contig_22888_pilon_458:0.1974225997,seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_16151_pilon_567:0.0200342588)100:0.6607942526)88:0.1835355190,((seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_24139_pilon_34:0.6183095589,seawater_geneDB___FeFe__Group_A1__seawater_chicken_3__NODE_18112_length_7555_cov_0.534000_4:1.1098090800)81:0.0927428611,seawater_geneDB___FeFe__Group_A1__seawater_davie_1__contig_19061_pilon_21:1.3183177007)81:0.1343955512)77:0.1338866695,((seawater_geneDB___FeFe__Group_A1__seawater_sanbank1_1__NODE_68351_length_2775_cov_3.110294_3:0.0008462447,seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__NODE_4641_length_11073_cov_2.108277_6:0.0621350396)100:0.2959470294,((seawater_geneDB___FeFe__Group_A1__seawater_kelso_4__NODE_2602_length_18260_cov_8.285087_2:0.0345292805,seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__NODE_9371_length_10529_cov_0.894596_4:0.1884070741)100:0.0938105828,seawater_geneDB___FeFe__Group_A1__seawater_hoskyn_2__contig_12622_pilon_49:0.0179792613)100:0.4807956679)100:0.3546256302)84:0.2119387135,(seawater_geneDB___FeFe__Group_A3__seawater_erskine_4__contig_27823_pilon_90:0.8972002853,((seawater_geneDB___FeFe__Group_A3__seawater_smallLagoon_4__NODE_50971_length_4466_cov_1.181138_4:0.0191968671,seawater_geneDB___FeFe__Group_A1__seawater_lagoon_1__contig_21776_pilon_10:0.0209837230)99:0.0506024287,seawater_geneDB___FeFe__Group_A3__seawater_sanbank1_1__contig_29508_pilon_8:0.1309054242)100:0.7088792719)94:0.1704882239)99:0.7706609596)84:0.3627786774,(SEA___FeFe__Group_B__north_1__metabat2_refined_238_IMOS__P__north_1__contig_36110_pilon_p_221:0.0000022421,seawater_geneDB___FeFe__Group_B__seawater_broomfield_1__contig_12850_pilon_174:0.0000022421)100:2.8162871601)91:0.2910080339,(((SED___FeFe__Group_C1__kelso_4_semibin_refined_bins.tsv.020_NODE_7975_length_6007_cov_10.905578_6:0.0000022421,sediment_geneDB___FeFe__Group_C1__sediment_21580_4_NODE_212046_length_1815_cov_6.813636_2:0.0000022421)100:0.0229485293,sediment_geneDB___FeFe__Group_C1__sediment_masthead_3_NODE_16441_length_1088_cov_1.617619_2:0.0549416042)100:2.0776736725,seawater_geneDB___FeFe__Group_A3__seawater_lagoon_1__NODE_857_length_28513_cov_0.460609_33:1.3589766530)91:0.2543330160)98:0.2907283830,((sediment_geneDB___FeFe__Group_B__sediment_mantis_4_NODE_19520_length_2817_cov_2.951846_2:0.6520943004,sediment_geneDB___FeFe__Group_B__sediment_boult_4_NODE_100466_length_2322_cov_4.423467_2:0.4877368740)100:0.1420504265,sediment_geneDB___FeFe__Group_B__sediment_feather_3_NODE_249520_length_1862_cov_3.014388_2:0.3588404792)100:0.8992419965)100:0.4670730625,sediment_geneDB___FeFe__Group_C3__sediment_boult_4_NODE_24563_length_4640_cov_3.962050_4:1.0606248615)100:0.7054628758,(SED___FeFe__Group_C3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_8:0.0000024036,sediment_geneDB___FeFe__Group_C3__sediment_arlington_4_NODE_1087_length_15548_cov_6.084877_10:0.0168479349)100:0.3881703063)87:0.0685387790,((SED___FeFe__Group_C3__coassembly_9___semibin_refined_bins.tsv.072_k127_21794123_3:0.0000022421,sediment_geneDB___FeFe__Group_C3__sediment_davie_4_NODE_10196_length_5628_cov_5.681321_4:0.0000023208)96:0.0266663617,SED___FeFe__Group_C3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_6:0.0717420351)100:0.3866563773)88:0.1009836058,(SED___FeFe__Group_C3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_3:0.0000022421,sediment_geneDB___FeFe__Group_C3__sediment_mantis_4_NODE_439_length_18272_cov_11.224351_20:0.0000022421)100:0.6412125515)100:0.4201133680,sediment_geneDB___FeFe__Group_C3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_2:0.0000022421);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa.treefile -m "WAG+F+I{0.00523038}+R5{0.0711365,0.161104,0.170239,0.412018,0.26188,0.749612,0.3353,1.21088,0.156214,2.02339}" --length 1571
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Wed Nov 11 10:09:56 2026
+Total CPU time used: 2547.322915 seconds (0h:42m:27s)
+Total wall-clock time used: 377.4467562 seconds (0h:6m:17s)
+

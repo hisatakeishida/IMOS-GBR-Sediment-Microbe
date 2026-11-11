@@ -42,7 +42,7 @@ Raw sequencing data will be available upon publication on the IMOS-AODN reposito
 
 ### [`2_genome_centric/`](2_genome_centric/): MAG-based analyses
 
-#### [`1_genome_recovery/`](2_genome_centric/1_genome_recovery/): MAG recovery, QC, dereplication, taxonomy, and novelty ([page](2_genome_centric/1_genome_recovery/1_genome_recovery.md))
+#### [`1_genome_recovery/`](2_genome_centric/1_genome_recovery/): MAG recovery, QC, dereplication, taxonomy, and novelty ([page](1_gene_centric/1_SingleM/1_SingleM.md))
 - [`1_assembly/`](2_genome_centric/1_genome_recovery/1_assembly/): Aviary assemble, 17 hybrid and 174 Illumina-only assemblies (Table S2)
 - [`2_coassembly/`](2_genome_centric/1_genome_recovery/2_coassembly/): BinChicken coassemble, 71 co-assemblies (Table S2)
 - [`3_binning/`](2_genome_centric/1_genome_recovery/3_binning/): Aviary recover multi-sample binning
@@ -52,7 +52,7 @@ Raw sequencing data will be available upon publication on the IMOS-AODN reposito
 - [`7_phylogeny/`](2_genome_centric/1_genome_recovery/7_phylogeny/): IQ-TREE bacterial and archaeal trees, and genome features (Fig. 2a-b, 2e-g)
 - [`8_novelty/`](2_genome_centric/1_genome_recovery/8_novelty/): comparison with GTDB and public genome collections (Table 1, Fig. 2c-d)
 
-#### [`2_genome_annot/`](2_genome_centric/2_genome_annot/): MAG annotation ([page](2_genome_centric/2_genome_annot/2_genome_annot.md))
+#### [`2_genome_annot/`](2_genome_centric/2_genome_annot/): MAG annotation ([page](1_gene_centric/2_Protein/2_Protein.md))
 - [`1_DRAM/`](2_genome_centric/2_genome_annot/1_DRAM/): KOfam, Pfam, and MEROPS annotation
 - [`2_CAZymes_CGCs/`](2_genome_centric/2_genome_annot/2_CAZymes_CGCs/): run_dbcan CAZymes, CGCs, and dbCAN-PUL substrates (Fig. 4, Table S20)
 - [`3_sulphatases/`](2_genome_centric/2_genome_annot/3_sulphatases/): SulfAtlas
@@ -61,16 +61,16 @@ Raw sequencing data will be available upon publication on the IMOS-AODN reposito
 - [`6_enrichment_tests/`](2_genome_centric/2_genome_annot/6_enrichment_tests/): Mann-Whitney U tests on 796 MAGs (Tables S10 to S15, S19)
 - [`7_BGCs/`](2_genome_centric/2_genome_annot/7_BGCs/): antiSMASH, clust-o-matic GCFs, and MIBiG and BiG-FAM novelty (Fig. 5, Tables S21 and S22)
 
-#### [`3_genome_abundance/`](2_genome_centric/3_genome_abundance/): MAG abundance ([page](2_genome_centric/3_genome_abundance/3_genome_abundance.md))
+#### [`3_genome_abundance/`](2_genome_centric/3_genome_abundance/): MAG abundance ([page](1_gene_centric/3_Sylph/3_Sylph.md))
 - [`1_CoverM_mapping/`](2_genome_centric/3_genome_abundance/1_CoverM_mapping/): read mapping of each habitat to its own MAGs (MAG-based community profiles)
 - [`2_unbinned_contigs/`](2_genome_centric/3_genome_abundance/2_unbinned_contigs/): MMseqs2 taxonomy of unbinned contigs
 
-#### [`4_Mixomics/`](2_genome_centric/4_Mixomics/): reef zoning status analyses ([page](2_genome_centric/4_Mixomics/4_Mixomics.md))
+#### [`4_Mixomics/`](2_genome_centric/4_Mixomics/): reef zoning status analyses ([page](2_genome_centric/4_MAGs/4_MAG_recovery.md))
 - [`1_PERMANOVA/`](2_genome_centric/4_Mixomics/1_PERMANOVA/): sequential PERMANOVA on MAG-based profiles (Fig. S3a)
 - [`2_MINT_sPLSDA/`](2_genome_centric/4_Mixomics/2_MINT_sPLSDA/): tuning, final models, and indicator MAGs (Fig. S3b)
 - [`3_permutation_tests/`](2_genome_centric/4_Mixomics/3_permutation_tests/): reef-level permutation nulls for MAG and mOTU profiles (Fig. S3c-d)
 
-### [`3_SingleM_VS_CoverM/`](3_SingleM_VS_CoverM/): gene- vs genome-centric abundance ([page](3_SingleM_VS_CoverM/3_SingleM_VS_CoverM.md))
+### [`3_SingleM_VS_CoverM/`](3_SingleM_VS_CoverM/): gene- vs genome-centric abundance ([page](1_gene_centric/3_Sylph/3_Sylph.md))
 - Relative abundance compared across taxonomic ranks and sampling trips (Fig. S2, Tables S5 and S9)
 
 ### [`5_Rscripts/`](5_Rscripts/): statistics and visualisation

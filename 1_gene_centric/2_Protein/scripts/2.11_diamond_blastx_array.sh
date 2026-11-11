@@ -20,10 +20,10 @@
 # uses a fixed seed, so both databases are searched with the same reads.
 #
 # Run once per habitat and database, e.g.
-#   sbatch --export=ALL,HABITAT=sed,DB=catalogue --array=1-191 scripts/2.11_diamond_blastx_array.sh
-#   sbatch --export=ALL,HABITAT=sea,DB=catalogue --array=1-182 scripts/2.11_diamond_blastx_array.sh
-#   sbatch --export=ALL,HABITAT=sed,DB=singlem   --array=1-191 scripts/2.11_diamond_blastx_array.sh
-#   sbatch --export=ALL,HABITAT=sea,DB=singlem   --array=1-182 scripts/2.11_diamond_blastx_array.sh
+#   sbatch --export=ALL,HABITAT=sed,DB=catalogue --array=1-191 1_gene_centric/2_Protein/scripts/2.11_diamond_blastx_array.sh
+#   sbatch --export=ALL,HABITAT=sea,DB=catalogue --array=1-182 1_gene_centric/2_Protein/scripts/2.11_diamond_blastx_array.sh
+#   sbatch --export=ALL,HABITAT=sed,DB=singlem   --array=1-191 1_gene_centric/2_Protein/scripts/2.11_diamond_blastx_array.sh
+#   sbatch --export=ALL,HABITAT=sea,DB=singlem   --array=1-182 1_gene_centric/2_Protein/scripts/2.11_diamond_blastx_array.sh
 
 set -euo pipefail
 

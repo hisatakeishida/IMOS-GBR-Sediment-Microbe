@@ -42,7 +42,7 @@ select  <- dplyr::select
 tax_agg <- microViz::tax_agg
 
 # ---- Paths and switches ------------------------------------------------------
-singlem_xlsx <- "<path/to/IMOS_10Mseqs_SingleM_FINAL.xlsx>"
+singlem_xlsx <- "<path/to/IMOS_10Mseqs_SingleM_FINAL.xlsx>" 
 out_dir      <- "<path/to/1_SingleM_ANALYSIS>"
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
@@ -300,9 +300,9 @@ p_habitat_pca <- singlem_prok %>%
   scale_shape_manual(values = c(21, 22, 23, 24)) +
   theme_bw() +
   theme(axis.text = element_text(size = 10), axis.title = element_text(size = 10),
-        legend.position = "none") +
-  coord_fixed(xlim = c(-0.75, 0.75), ylim = c(-0.75, 0.75))
+        legend.position = "none") #+ coord_fixed(xlim = c(-0.75, 0.75), ylim = c(-0.75, 0.75))
 p_habitat_pca
+
 save_fig(p_habitat_pca, "Fig1d_PCA_habitat.pdf")
 
 # ---- Alpha diversity: family-level Shannon index -----------------------------
@@ -395,6 +395,8 @@ run_reef_level <- function(ps, label) {
   perm_reef <- adonis2(reformulate(c(zone_col, trip_col, sector_col), "d_reef"),
                        data = meta, permutations = n_perm, by = "terms")
   save_tab(perm_reef, paste0("PERMANOVA_reeflevel_", label, ".xlsx"))
+  save_fig(plot_permanova_r2(perm_reef), paste0("PERMANOVA_reeflevel_", label, ".pdf"),
+           height = 4)
   perm_reef
 }
 
@@ -405,23 +407,59 @@ reef_sea
 
 
 # ==============================================================================
-# 6. QC: SEQUENCING FACILITY CHECK (SEDIMENT)
+# 6. QC: SEQUENCING FACILITY CHECK (SEDIMENT); this is a possible issue
 # ==============================================================================
 
 # Sediment samples were sequenced at three facilities; check that samples do not
 # cluster by facility
-p_seq_check <- singlem_sed %>%
-  tax_transform(trans = "clr", rank = rank_used) %>%
-  ord_calc(method = "PCA") %>%
-  ord_plot(size = 4, colour = "SEQUENCING", fill = "SEQUENCING", shape = trip_col,
-           plot_taxa = FALSE) +
-  stat_ellipse(aes(colour = SEQUENCING), linewidth = 0.2) +
-  scale_shape_manual(values = c(21, 22, 23, 24)) +
-  scale_colour_manual(values = seq_cols) +
-  scale_fill_manual(values = seq_cols) +
-  theme_bw()
-save_fig(p_seq_check, "QC_PCA_sequencing_facility_SED.pdf")
-
+# p_seq_check <- singlem_sed %>%
+#   tax_transform(trans = "clr", rank = rank_used) %>%
+#   ord_calc(method = "PCA") %>%
+#   ord_plot(size = 4, colour = "SEQUENCING", fill = "SEQUENCING", shape = trip_col,
+#            plot_taxa = FALSE) +
+#   stat_ellipse(aes(colour = SEQUENCING), linewidth = 0.2) +
+#   scale_shape_manual(values = c(21, 22, 23, 24)) +
+#   scale_colour_manual(values = seq_cols) +
+#   scale_fill_manual(values = seq_cols) +
+#   theme_bw()
+# save_fig(p_seq_check, "QC_PCA_sequencing_facility_SED.pdf")
 
 # ==============================================================================
 sessionInfo()
+# R version 4.3.1 (2023-06-16)
+# Platform: x86_64-apple-darwin20 (64-bit)
+# Running under: macOS 15.7.9
+
+# Matrix products: default
+# BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib 
+# LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0
+
+# locale:
+# [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+# time zone: Australia/Brisbane
+# tzcode source: internal
+
+# attached base packages:
+# [1] stats     graphics  grDevices utils     datasets  methods   base     
+
+# other attached packages:
+#  [1] patchwork_1.3.1   lubridate_1.9.4   forcats_1.0.0     stringr_1.5.1     dplyr_1.1.4       purrr_1.1.0       readr_2.1.5       tidyr_1.3.1      
+#  [9] tibble_3.3.0      ggplot2_3.5.2     tidyverse_2.0.0   openxlsx_4.2.8    vegan_2.7-1       permute_0.9-8     microViz_0.12.7   phyloseq_1.46.0  
+# [17] data.table_1.17.8
+
+# loaded via a namespace (and not attached):
+#  [1] ade4_1.7-23             tidyselect_1.2.1        farver_2.1.2            Biostrings_2.70.3       bitops_1.0-9            RCurl_1.98-1.17        
+#  [7] digest_0.6.37           timechange_0.3.0        lifecycle_1.0.4         cluster_2.1.8.1         survival_3.5-5          magrittr_2.0.3         
+# [13] compiler_4.3.1          rlang_1.1.6             tools_4.3.1             utf8_1.2.6              igraph_2.1.4            labeling_0.4.3         
+# [19] plyr_1.8.9              xml2_1.3.8              RColorBrewer_1.1-3      Rtsne_0.17              withr_3.0.2             BiocGenerics_0.48.1    
+# [25] grid_4.3.1              stats4_4.3.1            multtest_2.58.0         biomformat_1.30.0       colorspace_2.1-1        Rhdf5lib_1.24.2        
+# [31] scales_1.4.0            iterators_1.0.14        MASS_7.3-60             dichromat_2.0-0.1       cli_3.6.5               crayon_1.5.3           
+# [37] ragg_1.4.0              generics_0.1.4          microbiome_1.24.0       rstudioapi_0.17.1       reshape2_1.4.4          tzdb_0.5.0             
+# [43] commonmark_2.0.0        ape_5.8-1               rhdf5_2.46.1            zlibbioc_1.48.2         splines_4.3.1           parallel_4.3.1         
+# [49] XVector_0.42.0          vctrs_0.6.5             Matrix_1.6-5            jsonlite_2.0.0          litedown_0.7            IRanges_2.36.0         
+# [55] hms_1.1.3               S4Vectors_0.40.2        systemfonts_1.2.3       foreach_1.5.2           glue_1.8.0              codetools_0.2-19       
+# [61] ggtext_0.1.2            stringi_1.8.7           gtable_0.3.6            GenomeInfoDb_1.38.8     pillar_1.11.0           rhdf5filters_1.14.1    
+# [67] GenomeInfoDbData_1.2.11 R6_2.6.1                textshaping_1.0.1       lattice_0.22-7          Biobase_2.62.0          markdown_2.0           
+# [73] gridtext_0.1.5          Rcpp_1.1.0              zip_2.3.3               nlme_3.1-162            xfun_0.52               mgcv_1.8-42            
+# [79] pkgconfig_2.0.3        

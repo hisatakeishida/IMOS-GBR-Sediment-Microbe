@@ -4,12 +4,12 @@
 
 This is a supporting analysis and is not reported in the manuscript.
 
-Scripts for this analysis are in the top-level [`scripts/`](../../scripts/) folder (`3.01` and `3.02`).
+Scripts for this analysis are in the [`scripts/`](scripts/) folder (`3.01` and `3.02`).
 
 | Step | Script | Description |
 |---|---|---|
-| 3.01 | [`scripts/3.01_sylph_profile_array.sh`](../../scripts/3.01_sylph_profile_array.sh) | `sylph profile` (with `--estimate-read-counts`) against the GTDB R10-RS226 database (`gtdb-r226-c200-dbv1.syldb`), then `sylph-tax taxprof` for GTDB taxonomy, one task per sample |
-| 3.02 | [`scripts/3.02_sylph_merge.sh`](../../scripts/3.02_sylph_merge.sh) | `sylph-tax merge` of per-sample profiles into sequence abundance and relative abundance tables |
+| 3.01 | [`scripts/3.01_sylph_profile_array.sh`](scripts/3.01_sylph_profile_array.sh) | `sylph profile` (with `--estimate-read-counts`) against the GTDB R10-RS226 database (`gtdb-r226-c200-dbv1.syldb`), then `sylph-tax taxprof` for GTDB taxonomy, one task per sample |
+| 3.02 | [`scripts/3.02_sylph_merge.sh`](scripts/3.02_sylph_merge.sh) | `sylph-tax merge` of per-sample profiles into sequence abundance and relative abundance tables |
 
 ## Sylph profiles
 Directory: [`3_Sylph/`](./)
@@ -24,12 +24,12 @@ wget http://faust.compbio.cs.cmu.edu/sylph-stuff/gtdb-r226-c200-dbv1.syldb
 sylph-tax download --download-to <path/to/sylph-tax_db>
 
 # 3.01: profile, once per habitat
-sbatch --export=ALL,HABITAT=sed --array=1-<n_sed> scripts/3.01_sylph_profile_array.sh
-sbatch --export=ALL,HABITAT=sea --array=1-<n_sea> scripts/3.01_sylph_profile_array.sh
+sbatch --export=ALL,HABITAT=sed --array=1-<n_sed> 1_gene_centric/3_Sylph/scripts/3.01_sylph_profile_array.sh
+sbatch --export=ALL,HABITAT=sea --array=1-<n_sea> 1_gene_centric/3_Sylph/scripts/3.01_sylph_profile_array.sh
 
 # 3.02: merge, once per habitat (after 3.01)
-sbatch --export=ALL,HABITAT=sed scripts/3.02_sylph_merge.sh
-sbatch --export=ALL,HABITAT=sea scripts/3.02_sylph_merge.sh
+sbatch --export=ALL,HABITAT=sed 1_gene_centric/3_Sylph/scripts/3.02_sylph_merge.sh
+sbatch --export=ALL,HABITAT=sea 1_gene_centric/3_Sylph/scripts/3.02_sylph_merge.sh
 ```
 
 ## Summary

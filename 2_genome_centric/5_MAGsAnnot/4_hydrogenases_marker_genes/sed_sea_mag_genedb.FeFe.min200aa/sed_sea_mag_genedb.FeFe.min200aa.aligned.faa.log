@@ -1,0 +1,680 @@
+IQ-TREE multicore version 2.2.2.3 COVID-edition for Linux 64-bit built May 16 2023
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    bun054 (AVX2, FMA3, 2003 GB RAM)
+Command: /usr/local/bin/iqtree -s /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa -T AUTO -m MFP -B 1000 -alrt 1000
+Seed:    155443 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Nov 11 09:38:48 2026
+Kernel:  AVX+FMA - auto-detect threads (16 CPU cores detected)
+
+Reading alignment file /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa ... Fasta format detected
+Reading fasta file: done in 0.00628251 secs using 64.18% CPU
+Alignment most likely contains protein sequences
+Constructing alignment: done in 0.00431082 secs using 229.7% CPU
+Alignment has 120 sequences with 1571 columns, 1436 distinct patterns
+995 parsimony-informative, 219 singleton sites, 357 constant sites
+WARNING: Some sequence names are changed as follows:
+SED__[FeFe]_Group_C3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_2 -> SED___FeFe__Group_C3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_2
+SED__[FeFe]_Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_3 -> SED___FeFe__Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_3
+SED__[FeFe]_Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_36358_length_4369_cov_4.681038_3 -> SED___FeFe__Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_36358_length_4369_cov_4.681038_3
+SED__[FeFe]_Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_222_length_49099_cov_16.962523_31 -> SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_222_length_49099_cov_16.962523_31
+SED__[FeFe]_Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_961_length_27426_cov_12.322750_12 -> SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_961_length_27426_cov_12.322750_12
+SED__[FeFe]_Group_A3__21580_4_metabat2_refined_bins.tsv.166_NODE_12401_length_7538_cov_3.691434_6 -> SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.166_NODE_12401_length_7538_cov_3.691434_6
+SED__[FeFe]_Group_A3__coassembly_0___metabat2_refined_bins.tsv.374_sub_k127_2554933_3 -> SED___FeFe__Group_A3__coassembly_0___metabat2_refined_bins.tsv.374_sub_k127_2554933_3
+SED__[FeFe]_Group_A2__coassembly_0___semibin_refined_bins.tsv.405_sub_k127_12062158_3 -> SED___FeFe__Group_A2__coassembly_0___semibin_refined_bins.tsv.405_sub_k127_12062158_3
+SED__[FeFe]_Group_A2__coassembly_0___semibin_refined_bins.tsv.405_sub_k127_15211256_4 -> SED___FeFe__Group_A2__coassembly_0___semibin_refined_bins.tsv.405_sub_k127_15211256_4
+SED__[FeFe]_Group_A3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_2 -> SED___FeFe__Group_A3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_2
+SED__[FeFe]_Group_C3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_3 -> SED___FeFe__Group_C3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_3
+SED__[FeFe]_Group_A3__coassembly_12___semibin_refined_bins.tsv.041_k127_17069174_3 -> SED___FeFe__Group_A3__coassembly_12___semibin_refined_bins.tsv.041_k127_17069174_3
+SED__[FeFe]_Group_A3__coassembly_12___vamb_bins.tsv.056_sub_k127_2889805_1 -> SED___FeFe__Group_A3__coassembly_12___vamb_bins.tsv.056_sub_k127_2889805_1
+SED__[FeFe]_Group_A2__coassembly_13___metabat_sspec_bins.tsv.016_k127_847913_6 -> SED___FeFe__Group_A2__coassembly_13___metabat_sspec_bins.tsv.016_k127_847913_6
+SED__[FeFe]_Group_A1__coassembly_14___metabat2_refined_bins.tsv.009_k127_85363_2 -> SED___FeFe__Group_A1__coassembly_14___metabat2_refined_bins.tsv.009_k127_85363_2
+SED__[FeFe]_Group_A3__coassembly_14___vamb_bins.tsv.002_sub_k127_5058404_84 -> SED___FeFe__Group_A3__coassembly_14___vamb_bins.tsv.002_sub_k127_5058404_84
+SED__[FeFe]_Group_A2__coassembly_16___semibin_refined_bins.tsv.300_sub_k127_411658_1 -> SED___FeFe__Group_A2__coassembly_16___semibin_refined_bins.tsv.300_sub_k127_411658_1
+SED__[FeFe]_Group_A2__coassembly_1___metabat2_refined_bins.tsv.104_k127_24621625_12 -> SED___FeFe__Group_A2__coassembly_1___metabat2_refined_bins.tsv.104_k127_24621625_12
+SED__[FeFe]_Group_A2__coassembly_1___semibin_refined_bins.tsv.082_k127_22866290_2 -> SED___FeFe__Group_A2__coassembly_1___semibin_refined_bins.tsv.082_k127_22866290_2
+SED__[FeFe]_Group_A3__coassembly_1___semibin_refined_bins.tsv.276_sub_k127_8434485_2 -> SED___FeFe__Group_A3__coassembly_1___semibin_refined_bins.tsv.276_sub_k127_8434485_2
+SED__[FeFe]_Group_A2__coassembly_1___semibin_refined_bins.tsv.387_sub_k127_11661808_7 -> SED___FeFe__Group_A2__coassembly_1___semibin_refined_bins.tsv.387_sub_k127_11661808_7
+SED__[FeFe]_Group_A3__coassembly_22___metabat2_refined_bins.tsv.006_k127_1300170_3 -> SED___FeFe__Group_A3__coassembly_22___metabat2_refined_bins.tsv.006_k127_1300170_3
+SED__[FeFe]_Group_A3__coassembly_9___semibin_refined_bins.tsv.072_k127_21794123_2 -> SED___FeFe__Group_A3__coassembly_9___semibin_refined_bins.tsv.072_k127_21794123_2
+SED__[FeFe]_Group_C3__coassembly_9___semibin_refined_bins.tsv.072_k127_21794123_3 -> SED___FeFe__Group_C3__coassembly_9___semibin_refined_bins.tsv.072_k127_21794123_3
+SED__[FeFe]_Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_7 -> SED___FeFe__Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_7
+SED__[FeFe]_Group_C3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_8 -> SED___FeFe__Group_C3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_8
+SED__[FeFe]_Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_12601_length_9931_cov_7.174058_5 -> SED___FeFe__Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_12601_length_9931_cov_7.174058_5
+SED__[FeFe]_Group_C1__kelso_4_semibin_refined_bins.tsv.020_NODE_7975_length_6007_cov_10.905578_6 -> SED___FeFe__Group_C1__kelso_4_semibin_refined_bins.tsv.020_NODE_7975_length_6007_cov_10.905578_6
+SED__[FeFe]_Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_884_length_12578_cov_8.169049_8 -> SED___FeFe__Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_884_length_12578_cov_8.169049_8
+SED__[FeFe]_Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_11151_length_3610_cov_17.220253_2 -> SED___FeFe__Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_11151_length_3610_cov_17.220253_2
+SEA__[FeFe]_Group_B__north_1__metabat2_refined_238_IMOS__P__north_1__contig_36110_pilon:p_221 -> SEA___FeFe__Group_B__north_1__metabat2_refined_238_IMOS__P__north_1__contig_36110_pilon_p_221
+SED__[FeFe]_Group_A2__sandbank1_1_metabat_spec_bins.tsv.003_sub_NODE_1182_length_4061_cov_21.154518_1 -> SED___FeFe__Group_A2__sandbank1_1_metabat_spec_bins.tsv.003_sub_NODE_1182_length_4061_cov_21.154518_1
+SED__[FeFe]_Group_A3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_5 -> SED___FeFe__Group_A3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_5
+SED__[FeFe]_Group_C3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_6 -> SED___FeFe__Group_C3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_6
+seawater_geneDB__[FeFe]_Group_A1__seawater_mantis_2__contig_5331_pilon_164 -> seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_5331_pilon_164
+sediment_geneDB__[FeFe]_Group_A3__sediment_taylor_4_NODE_6247_length_6286_cov_11.030493_5 -> sediment_geneDB___FeFe__Group_A3__sediment_taylor_4_NODE_6247_length_6286_cov_11.030493_5
+sediment_geneDB__[FeFe]_Group_A2__sediment_feather_4_NODE_2781_length_4536_cov_12.653649_2 -> sediment_geneDB___FeFe__Group_A2__sediment_feather_4_NODE_2781_length_4536_cov_12.653649_2
+seawater_geneDB__[FeFe]_Group_A1__seawater_sanbank1_1__NODE_68351_length_2775_cov_3.110294_3 -> seawater_geneDB___FeFe__Group_A1__seawater_sanbank1_1__NODE_68351_length_2775_cov_3.110294_3
+sediment_geneDB__[FeFe]_Group_A3__sediment_mantis_4_NODE_3679_length_6000_cov_9.266442_5 -> sediment_geneDB___FeFe__Group_A3__sediment_mantis_4_NODE_3679_length_6000_cov_9.266442_5
+sediment_geneDB__[FeFe]_Group_A3__sediment_21580_4_NODE_961_length_27426_cov_12.322750_12 -> sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_961_length_27426_cov_12.322750_12
+seawater_geneDB__[FeFe]_Group_A1__seawater_chinaman_3__contig_18750_pilon_233 -> seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_18750_pilon_233
+seawater_geneDB__[FeFe]_Group_A1__seawater_chinaman_3__contig_18750_pilon_234 -> seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_18750_pilon_234
+sediment_geneDB__[FeFe]_Group_A1__sediment_22084_4_contig_150_pilon_2 -> sediment_geneDB___FeFe__Group_A1__sediment_22084_4_contig_150_pilon_2
+seawater_geneDB__[FeFe]_Group_A1__seawater_erskine_4__contig_29615_pilon_294 -> seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_29615_pilon_294
+sediment_geneDB__[FeFe]_Group_A2__sediment_feather_4_NODE_683_length_9114_cov_3.967546_9 -> sediment_geneDB___FeFe__Group_A2__sediment_feather_4_NODE_683_length_9114_cov_3.967546_9
+seawater_geneDB__[FeFe]_Group_A3__seawater_erskine_4__contig_27823_pilon_90 -> seawater_geneDB___FeFe__Group_A3__seawater_erskine_4__contig_27823_pilon_90
+sediment_geneDB__[FeFe]_Group_A3__sediment_13124_4_NODE_36358_length_4369_cov_4.681038_3 -> sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_36358_length_4369_cov_4.681038_3
+sediment_geneDB__[FeFe]_Group_A3__sediment_21580_4_NODE_59733_length_3402_cov_6.459217_2 -> sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_59733_length_3402_cov_6.459217_2
+seawater_geneDB__[FeFe]_Group_A1__seawater_agincourt1_1__contig_4892_pilon_757 -> seawater_geneDB___FeFe__Group_A1__seawater_agincourt1_1__contig_4892_pilon_757
+seawater_geneDB__[FeFe]_Group_A1__seawater_13124_4__contig_24139_pilon_34 -> seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_24139_pilon_34
+seawater_geneDB__[FeFe]_Group_A3__seawater_lagoon_1__NODE_857_length_28513_cov_0.460609_33 -> seawater_geneDB___FeFe__Group_A3__seawater_lagoon_1__NODE_857_length_28513_cov_0.460609_33
+seawater_geneDB__[FeFe]_Group_A1__seawater_mantis_2__contig_6402_pilon_161 -> seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_6402_pilon_161
+seawater_geneDB__[FeFe]_Group_A1__seawater_mantis_2__contig_6402_pilon_162 -> seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_6402_pilon_162
+seawater_geneDB__[FeFe]_Group_A1__seawater_arlington_4__NODE_4641_length_11073_cov_2.108277_6 -> seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__NODE_4641_length_11073_cov_2.108277_6
+seawater_geneDB__[FeFe]_Group_A1__seawater_sanbank1_1__contig_22888_pilon_458 -> seawater_geneDB___FeFe__Group_A1__seawater_sanbank1_1__contig_22888_pilon_458
+seawater_geneDB__[FeFe]_Group_A1__seawater_broomfield_1__contig_28727_pilon_61 -> seawater_geneDB___FeFe__Group_A1__seawater_broomfield_1__contig_28727_pilon_61
+seawater_geneDB__[FeFe]_Group_A1__seawater_broomfield_1__contig_28727_pilon_62 -> seawater_geneDB___FeFe__Group_A1__seawater_broomfield_1__contig_28727_pilon_62
+seawater_geneDB__[FeFe]_Group_A2__seawater_agincourt1_1__NODE_5277_length_11766_cov_1.023397_7 -> seawater_geneDB___FeFe__Group_A2__seawater_agincourt1_1__NODE_5277_length_11766_cov_1.023397_7
+seawater_geneDB__[FeFe]_Group_A1__seawater_arlington_4__contig_12406_pilon_294 -> seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__contig_12406_pilon_294
+seawater_geneDB__[FeFe]_Group_A1__seawater_kelso_4__NODE_2602_length_18260_cov_8.285087_2 -> seawater_geneDB___FeFe__Group_A1__seawater_kelso_4__NODE_2602_length_18260_cov_8.285087_2
+sediment_geneDB__[FeFe]_Group_A3__sediment_feather_3_NODE_19875_length_7815_cov_5.958376_3 -> sediment_geneDB___FeFe__Group_A3__sediment_feather_3_NODE_19875_length_7815_cov_5.958376_3
+sediment_geneDB__[FeFe]_Group_A3__sediment_11162_4_NODE_39759_length_2942_cov_3.123311_2 -> sediment_geneDB___FeFe__Group_A3__sediment_11162_4_NODE_39759_length_2942_cov_3.123311_2
+sediment_geneDB__[FeFe]_Group_B__sediment_mantis_4_NODE_19520_length_2817_cov_2.951846_2 -> sediment_geneDB___FeFe__Group_B__sediment_mantis_4_NODE_19520_length_2817_cov_2.951846_2
+seawater_geneDB__[FeFe]_Group_A1__seawater_13124_4__contig_16730_pilon_67 -> seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_16730_pilon_67
+seawater_geneDB__[FeFe]_Group_A1__seawater_mantis_2__NODE_9371_length_10529_cov_0.894596_4 -> seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__NODE_9371_length_10529_cov_0.894596_4
+sediment_geneDB__[FeFe]_Group_B__sediment_boult_4_NODE_100466_length_2322_cov_4.423467_2 -> sediment_geneDB___FeFe__Group_B__sediment_boult_4_NODE_100466_length_2322_cov_4.423467_2
+sediment_geneDB__[FeFe]_Group_C3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_2 -> sediment_geneDB___FeFe__Group_C3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_2
+sediment_geneDB__[FeFe]_Group_A3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_3 -> sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_3
+sediment_geneDB__[FeFe]_Group_A3__sediment_mantis_4_NODE_11151_length_3610_cov_17.220253_2 -> sediment_geneDB___FeFe__Group_A3__sediment_mantis_4_NODE_11151_length_3610_cov_17.220253_2
+seawater_geneDB__[FeFe]_Group_A3__seawater_smallLagoon_4__NODE_50971_length_4466_cov_1.181138_4 -> seawater_geneDB___FeFe__Group_A3__seawater_smallLagoon_4__NODE_50971_length_4466_cov_1.181138_4
+sediment_geneDB__[FeFe]_Group_A3__sediment_21580_4_NODE_222_length_49099_cov_16.962523_31 -> sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_222_length_49099_cov_16.962523_31
+sediment_geneDB__[FeFe]_Group_A3__sediment_13124_4_NODE_707977_length_1007_cov_1.728992_1 -> sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_707977_length_1007_cov_1.728992_1
+sediment_geneDB__[FeFe]_Group_C3__sediment_arlington_4_NODE_1087_length_15548_cov_6.084877_10 -> sediment_geneDB___FeFe__Group_C3__sediment_arlington_4_NODE_1087_length_15548_cov_6.084877_10
+sediment_geneDB__[FeFe]_Group_B__sediment_feather_3_NODE_249520_length_1862_cov_3.014388_2 -> sediment_geneDB___FeFe__Group_B__sediment_feather_3_NODE_249520_length_1862_cov_3.014388_2
+sediment_geneDB__[FeFe]_Group_A3__sediment_22084_4_contig_5062_pilon_1 -> sediment_geneDB___FeFe__Group_A3__sediment_22084_4_contig_5062_pilon_1
+seawater_geneDB__[FeFe]_Group_A1__seawater_13124_4__contig_34226_pilon_210 -> seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_34226_pilon_210
+sediment_geneDB__[FeFe]_Group_C1__sediment_21580_4_NODE_212046_length_1815_cov_6.813636_2 -> sediment_geneDB___FeFe__Group_C1__sediment_21580_4_NODE_212046_length_1815_cov_6.813636_2
+sediment_geneDB__[FeFe]_Group_A3__sediment_21580_4_NODE_19028_length_6077_cov_5.929591_5 -> sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_19028_length_6077_cov_5.929591_5
+seawater_geneDB__[FeFe]_Group_A1__seawater_davie_1__contig_19061_pilon_21 -> seawater_geneDB___FeFe__Group_A1__seawater_davie_1__contig_19061_pilon_21
+seawater_geneDB__[FeFe]_Group_A1__seawater_erskine_4__contig_16172_pilon_1101 -> seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_16172_pilon_1101
+seawater_geneDB__[FeFe]_Group_A1__seawater_erskine_4__contig_16172_pilon_1102 -> seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_16172_pilon_1102
+seawater_geneDB__[FeFe]_Group_A1__seawater_north_1__NODE_31035_length_4112_cov_8.824994_2 -> seawater_geneDB___FeFe__Group_A1__seawater_north_1__NODE_31035_length_4112_cov_8.824994_2
+sediment_geneDB__[FeFe]_Group_A2__sediment_boult_4_NODE_4862_length_10097_cov_7.108843_3 -> sediment_geneDB___FeFe__Group_A2__sediment_boult_4_NODE_4862_length_10097_cov_7.108843_3
+sediment_geneDB__[FeFe]_Group_A3__sediment_taylor_4_NODE_22966_length_3478_cov_6.881098_1 -> sediment_geneDB___FeFe__Group_A3__sediment_taylor_4_NODE_22966_length_3478_cov_6.881098_1
+sediment_geneDB__[FeFe]_Group_A3__sediment_21580_4_NODE_12401_length_7538_cov_3.691434_6 -> sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_12401_length_7538_cov_3.691434_6
+sediment_geneDB__[FeFe]_Group_A2__sediment_sandbank1_1_NODE_1182_length_4061_cov_21.154518_1 -> sediment_geneDB___FeFe__Group_A2__sediment_sandbank1_1_NODE_1182_length_4061_cov_21.154518_1
+seawater_geneDB__[FeFe]_Group_A1__seawater_masthead_4__contig_23660_pilon_272 -> seawater_geneDB___FeFe__Group_A1__seawater_masthead_4__contig_23660_pilon_272
+sediment_geneDB__[FeFe]_Group_A3__sediment_21580_4_NODE_25281_length_5269_cov_7.011507_2 -> sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_25281_length_5269_cov_7.011507_2
+seawater_geneDB__[FeFe]_Group_A1__seawater_lagoon_1__contig_21776_pilon_10 -> seawater_geneDB___FeFe__Group_A1__seawater_lagoon_1__contig_21776_pilon_10
+seawater_geneDB__[FeFe]_Group_A1__seawater_21580_2__contig_29971_pilon_80 -> seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_29971_pilon_80
+sediment_geneDB__[FeFe]_Group_A3__sediment_moonsoon_4_NODE_49836_length_3066_cov_4.173364_2 -> sediment_geneDB___FeFe__Group_A3__sediment_moonsoon_4_NODE_49836_length_3066_cov_4.173364_2
+seawater_geneDB__[FeFe]_Group_A1__seawater_21580_2__contig_19717_pilon_246 -> seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_19717_pilon_246
+seawater_geneDB__[FeFe]_Group_A1__seawater_13124_4__contig_23686_pilon_161 -> seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_23686_pilon_161
+seawater_geneDB__[FeFe]_Group_A3__seawater_sanbank1_1__contig_29508_pilon_8 -> seawater_geneDB___FeFe__Group_A3__seawater_sanbank1_1__contig_29508_pilon_8
+seawater_geneDB__[FeFe]_Group_A1__seawater_mcSweeney_3__NODE_15884_length_5716_cov_1.280869_3 -> seawater_geneDB___FeFe__Group_A1__seawater_mcSweeney_3__NODE_15884_length_5716_cov_1.280869_3
+seawater_geneDB__[FeFe]_Group_A1__seawater_hoskyn_2__contig_12622_pilon_49 -> seawater_geneDB___FeFe__Group_A1__seawater_hoskyn_2__contig_12622_pilon_49
+seawater_geneDB__[FeFe]_Group_A1__seawater_chinaman_3__contig_19196_pilon_43 -> seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_19196_pilon_43
+sediment_geneDB__[FeFe]_Group_A3__sediment_grub_4_NODE_101092_length_2100_cov_5.982396_2 -> sediment_geneDB___FeFe__Group_A3__sediment_grub_4_NODE_101092_length_2100_cov_5.982396_2
+seawater_geneDB__[FeFe]_Group_A1__seawater_davie_1__contig_32027_pilon_253 -> seawater_geneDB___FeFe__Group_A1__seawater_davie_1__contig_32027_pilon_253
+seawater_geneDB__[FeFe]_Group_B__seawater_broomfield_1__contig_12850_pilon_174 -> seawater_geneDB___FeFe__Group_B__seawater_broomfield_1__contig_12850_pilon_174
+sediment_geneDB__[FeFe]_Group_C1__sediment_masthead_3_NODE_16441_length_1088_cov_1.617619_2 -> sediment_geneDB___FeFe__Group_C1__sediment_masthead_3_NODE_16441_length_1088_cov_1.617619_2
+sediment_geneDB__[FeFe]_Group_C3__sediment_davie_4_NODE_10196_length_5628_cov_5.681321_4 -> sediment_geneDB___FeFe__Group_C3__sediment_davie_4_NODE_10196_length_5628_cov_5.681321_4
+seawater_geneDB__[FeFe]_Group_A1__seawater_21580_2__contig_16151_pilon_567 -> seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_16151_pilon_567
+sediment_geneDB__[FeFe]_Group_C3__sediment_boult_4_NODE_24563_length_4640_cov_3.962050_4 -> sediment_geneDB___FeFe__Group_C3__sediment_boult_4_NODE_24563_length_4640_cov_3.962050_4
+seawater_geneDB__[FeFe]_Group_A1__seawater_north_1__NODE_46762_length_2987_cov_5.528990_2 -> seawater_geneDB___FeFe__Group_A1__seawater_north_1__NODE_46762_length_2987_cov_5.528990_2
+seawater_geneDB__[FeFe]_Group_A1__seawater_davie_1__NODE_5627_length_11998_cov_1.908231_2 -> seawater_geneDB___FeFe__Group_A1__seawater_davie_1__NODE_5627_length_11998_cov_1.908231_2
+sediment_geneDB__[FeFe]_Group_A3__sediment_davie_4_NODE_161874_length_1645_cov_2.557862_2 -> sediment_geneDB___FeFe__Group_A3__sediment_davie_4_NODE_161874_length_1645_cov_2.557862_2
+sediment_geneDB__[FeFe]_Group_A3__sediment_thetford_4_NODE_1895_length_7428_cov_5.062525_6 -> sediment_geneDB___FeFe__Group_A3__sediment_thetford_4_NODE_1895_length_7428_cov_5.062525_6
+sediment_geneDB__[FeFe]_Group_A3__sediment_21550_4_NODE_11725_length_4933_cov_12.293973_4 -> sediment_geneDB___FeFe__Group_A3__sediment_21550_4_NODE_11725_length_4933_cov_12.293973_4
+sediment_geneDB__[FeFe]_Group_A3__sediment_feather_3_NODE_7865_length_12510_cov_6.509354_7 -> sediment_geneDB___FeFe__Group_A3__sediment_feather_3_NODE_7865_length_12510_cov_6.509354_7
+seawater_geneDB__[FeFe]_Group_A1__seawater_boult_4__NODE_14036_length_7813_cov_5.121681_3 -> seawater_geneDB___FeFe__Group_A1__seawater_boult_4__NODE_14036_length_7813_cov_5.121681_3
+seawater_geneDB__[FeFe]_Group_A1__seawater_arlington_4__NODE_6886_length_9182_cov_0.416347_2 -> seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__NODE_6886_length_9182_cov_0.416347_2
+sediment_geneDB__[FeFe]_Group_A3__sediment_21550_4_NODE_85534_length_2015_cov_6.242347_2 -> sediment_geneDB___FeFe__Group_A3__sediment_21550_4_NODE_85534_length_2015_cov_6.242347_2
+seawater_geneDB__[FeFe]_Group_A1__seawater_taylor_4__contig_20231_pilon_98 -> seawater_geneDB___FeFe__Group_A1__seawater_taylor_4__contig_20231_pilon_98
+seawater_geneDB__[FeFe]_Group_A1__seawater_smallLagoon_4__NODE_5474_length_15383_cov_2.086313_9 -> seawater_geneDB___FeFe__Group_A1__seawater_smallLagoon_4__NODE_5474_length_15383_cov_2.086313_9
+seawater_geneDB__[FeFe]_Group_A1__seawater_chicken_3__NODE_18112_length_7555_cov_0.534000_4 -> seawater_geneDB___FeFe__Group_A1__seawater_chicken_3__NODE_18112_length_7555_cov_0.534000_4
+seawater_geneDB__[FeFe]_Group_A1__seawater_lagoon_1__contig_20988_pilon_192 -> seawater_geneDB___FeFe__Group_A1__seawater_lagoon_1__contig_20988_pilon_192
+seawater_geneDB__[FeFe]_Group_A1__seawater_21550_4__NODE_19220_length_3438_cov_0.468519_2 -> seawater_geneDB___FeFe__Group_A1__seawater_21550_4__NODE_19220_length_3438_cov_0.468519_2
+seawater_geneDB__[FeFe]_Group_A1__seawater_taylor_4__contig_18881_pilon_26 -> seawater_geneDB___FeFe__Group_A1__seawater_taylor_4__contig_18881_pilon_26
+sediment_geneDB__[FeFe]_Group_C3__sediment_mantis_4_NODE_439_length_18272_cov_11.224351_20 -> sediment_geneDB___FeFe__Group_C3__sediment_mantis_4_NODE_439_length_18272_cov_11.224351_20
+
+                                                                                                       Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.0121374 secs using 1375% CPU
+   1  SED___FeFe__Group_C3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_2        56.84%    passed     28.62%
+   2  SED___FeFe__Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_3        63.59%    passed     52.53%
+   3  SED___FeFe__Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_36358_length_4369_cov_4.681038_3        62.89%    passed     34.16%
+   4  SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_222_length_49099_cov_16.962523_31      63.72%    failed      0.00%
+   5  SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_961_length_27426_cov_12.322750_12      62.19%    passed      8.44%
+   6  SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.166_NODE_12401_length_7538_cov_3.691434_6       83.20%    passed      6.04%
+   7  SED___FeFe__Group_A3__coassembly_0___metabat2_refined_bins.tsv.374_sub_k127_2554933_3                   62.70%    passed     77.05%
+   8  SED___FeFe__Group_A2__coassembly_0___semibin_refined_bins.tsv.405_sub_k127_12062158_3                   60.66%    passed     68.44%
+   9  SED___FeFe__Group_A2__coassembly_0___semibin_refined_bins.tsv.405_sub_k127_15211256_4                   85.61%    passed     47.36%
+  10  SED___FeFe__Group_A3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_2                       62.57%    failed      0.00%
+  11  SED___FeFe__Group_C3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_3                       57.92%    failed      0.00%
+  12  SED___FeFe__Group_A3__coassembly_12___semibin_refined_bins.tsv.041_k127_17069174_3                      62.13%    failed      1.74%
+  13  SED___FeFe__Group_A3__coassembly_12___vamb_bins.tsv.056_sub_k127_2889805_1                              83.83%    failed      2.52%
+  14  SED___FeFe__Group_A2__coassembly_13___metabat_sspec_bins.tsv.016_k127_847913_6                          60.66%    passed     83.44%
+  15  SED___FeFe__Group_A1__coassembly_14___metabat2_refined_bins.tsv.009_k127_85363_2                        67.60%    failed      1.18%
+  16  SED___FeFe__Group_A3__coassembly_14___vamb_bins.tsv.002_sub_k127_5058404_84                             63.08%    passed     32.12%
+  17  SED___FeFe__Group_A2__coassembly_16___semibin_refined_bins.tsv.300_sub_k127_411658_1                    86.19%    passed     60.26%
+  18  SED___FeFe__Group_A2__coassembly_1___metabat2_refined_bins.tsv.104_k127_24621625_12                     83.07%    passed     68.72%
+  19  SED___FeFe__Group_A2__coassembly_1___semibin_refined_bins.tsv.082_k127_22866290_2                       60.66%    passed     78.64%
+  20  SED___FeFe__Group_A3__coassembly_1___semibin_refined_bins.tsv.276_sub_k127_8434485_2                    62.95%    passed     75.14%
+  21  SED___FeFe__Group_A2__coassembly_1___semibin_refined_bins.tsv.387_sub_k127_11661808_7                   75.30%    passed     23.34%
+  22  SED___FeFe__Group_A3__coassembly_22___metabat2_refined_bins.tsv.006_k127_1300170_3                      63.21%    passed     62.32%
+  23  SED___FeFe__Group_A3__coassembly_9___semibin_refined_bins.tsv.072_k127_21794123_2                       63.53%    passed     41.36%
+  24  SED___FeFe__Group_C3__coassembly_9___semibin_refined_bins.tsv.072_k127_21794123_3                       69.57%    passed     29.90%
+  25  SED___FeFe__Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_7     62.44%    passed     76.69%
+  26  SED___FeFe__Group_C3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_8     56.97%    passed     49.51%
+  27  SED___FeFe__Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_12601_length_9931_cov_7.174058_5     59.01%    passed     11.97%
+  28  SED___FeFe__Group_C1__kelso_4_semibin_refined_bins.tsv.020_NODE_7975_length_6007_cov_10.905578_6        78.49%    passed     36.70%
+  29  SED___FeFe__Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_884_length_12578_cov_8.169049_8       62.19%    passed     13.77%
+  30  SED___FeFe__Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_11151_length_3610_cov_17.220253_2     74.92%    failed      0.10%
+  31  SEA___FeFe__Group_B__north_1__metabat2_refined_238_IMOS__P__north_1__contig_36110_pilon_p_221           75.37%    failed      0.00%
+  32  SED___FeFe__Group_A2__sandbank1_1_metabat_spec_bins.tsv.003_sub_NODE_1182_length_4061_cov_21.154518_1   60.66%    passed     77.17%
+  33  SED___FeFe__Group_A3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_5       63.53%    passed     46.04%
+  34  SED___FeFe__Group_C3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_6       74.16%    passed     16.45%
+  35  seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_5331_pilon_164                              82.88%    failed      0.17%
+  36  sediment_geneDB___FeFe__Group_A3__sediment_taylor_4_NODE_6247_length_6286_cov_11.030493_5               63.53%    passed     46.04%
+  37  sediment_geneDB___FeFe__Group_A2__sediment_feather_4_NODE_2781_length_4536_cov_12.653649_2              60.66%    passed     83.44%
+  38  seawater_geneDB___FeFe__Group_A1__seawater_sanbank1_1__NODE_68351_length_2775_cov_3.110294_3            67.22%    failed      0.05%
+  39  sediment_geneDB___FeFe__Group_A3__sediment_mantis_4_NODE_3679_length_6000_cov_9.266442_5                62.19%    passed     15.43%
+  40  sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_961_length_27426_cov_12.322750_12               62.19%    passed      8.44%
+  41  seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_18750_pilon_233                           86.70%    failed      1.46%
+  42  seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_18750_pilon_234                           80.14%    failed      0.00%
+  43  sediment_geneDB___FeFe__Group_A1__sediment_22084_4_contig_150_pilon_2                                   78.17%    failed      0.50%
+  44  seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_29615_pilon_294                            70.02%    failed      0.00%
+  45  sediment_geneDB___FeFe__Group_A2__sediment_feather_4_NODE_683_length_9114_cov_3.967546_9                60.66%    passed     60.29%
+  46  seawater_geneDB___FeFe__Group_A3__seawater_erskine_4__contig_27823_pilon_90                             74.03%    failed      0.00%
+  47  sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_36358_length_4369_cov_4.681038_3                62.89%    passed     34.16%
+  48  sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_59733_length_3402_cov_6.459217_2                61.87%    passed     91.09%
+  49  seawater_geneDB___FeFe__Group_A1__seawater_agincourt1_1__contig_4892_pilon_757                          66.20%    failed      0.00%
+  50  seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_24139_pilon_34                               71.29%    passed     15.73%
+  51  seawater_geneDB___FeFe__Group_A3__seawater_lagoon_1__NODE_857_length_28513_cov_0.460609_33              85.11%    passed     11.75%
+  52  seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_6402_pilon_161                              87.27%    passed     10.41%
+  53  seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__contig_6402_pilon_162                              69.51%    failed      0.00%
+  54  seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__NODE_4641_length_11073_cov_2.108277_6           73.97%    failed      0.02%
+  55  seawater_geneDB___FeFe__Group_A1__seawater_sanbank1_1__contig_22888_pilon_458                           74.09%    failed      0.00%
+  56  seawater_geneDB___FeFe__Group_A1__seawater_broomfield_1__contig_28727_pilon_61                          77.34%    failed      0.00%
+  57  seawater_geneDB___FeFe__Group_A1__seawater_broomfield_1__contig_28727_pilon_62                          78.49%    failed      0.00%
+  58  seawater_geneDB___FeFe__Group_A2__seawater_agincourt1_1__NODE_5277_length_11766_cov_1.023397_7          70.78%    failed      0.00%
+  59  seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__contig_12406_pilon_294                          66.26%    failed      0.00%
+  60  seawater_geneDB___FeFe__Group_A1__seawater_kelso_4__NODE_2602_length_18260_cov_8.285087_2               85.17%    failed      4.13%
+  61  sediment_geneDB___FeFe__Group_A3__sediment_feather_3_NODE_19875_length_7815_cov_5.958376_3              63.21%    passed     88.22%
+  62  sediment_geneDB___FeFe__Group_A3__sediment_11162_4_NODE_39759_length_2942_cov_3.123311_2                71.29%    passed     70.02%
+  63  sediment_geneDB___FeFe__Group_B__sediment_mantis_4_NODE_19520_length_2817_cov_2.951846_2                69.26%    failed      0.01%
+  64  seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_16730_pilon_67                               77.28%    failed      0.00%
+  65  seawater_geneDB___FeFe__Group_A1__seawater_mantis_2__NODE_9371_length_10529_cov_0.894596_4              85.49%    failed      0.04%
+  66  sediment_geneDB___FeFe__Group_B__sediment_boult_4_NODE_100466_length_2322_cov_4.423467_2                69.76%    failed      1.47%
+  67  sediment_geneDB___FeFe__Group_C3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_2                56.84%    passed     28.62%
+  68  sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_3                63.59%    passed     52.53%
+  69  sediment_geneDB___FeFe__Group_A3__sediment_mantis_4_NODE_11151_length_3610_cov_17.220253_2              74.92%    failed      0.10%
+  70  seawater_geneDB___FeFe__Group_A3__seawater_smallLagoon_4__NODE_50971_length_4466_cov_1.181138_4         87.33%    passed     38.71%
+  71  sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_222_length_49099_cov_16.962523_31               63.72%    failed      0.00%
+  72  sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_707977_length_1007_cov_1.728992_1               86.31%    failed      0.06%
+  73  sediment_geneDB___FeFe__Group_C3__sediment_arlington_4_NODE_1087_length_15548_cov_6.084877_10           56.97%    passed     46.05%
+  74  sediment_geneDB___FeFe__Group_B__sediment_feather_3_NODE_249520_length_1862_cov_3.014388_2              69.19%    failed      0.00%
+  75  sediment_geneDB___FeFe__Group_A3__sediment_22084_4_contig_5062_pilon_1                                  85.49%    passed     42.98%
+  76  seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_34226_pilon_210                              73.97%    failed      0.03%
+  77  sediment_geneDB___FeFe__Group_C1__sediment_21580_4_NODE_212046_length_1815_cov_6.813636_2               78.49%    passed     36.70%
+  78  sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_19028_length_6077_cov_5.929591_5                76.26%    passed     29.10%
+  79  seawater_geneDB___FeFe__Group_A1__seawater_davie_1__contig_19061_pilon_21                               81.73%    failed      0.00%
+  80  seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_16172_pilon_1101                           84.66%    failed      1.57%
+  81  seawater_geneDB___FeFe__Group_A1__seawater_erskine_4__contig_16172_pilon_1102                           85.61%    failed      0.27%
+  82  seawater_geneDB___FeFe__Group_A1__seawater_north_1__NODE_31035_length_4112_cov_8.824994_2               69.83%    failed      0.00%
+  83  sediment_geneDB___FeFe__Group_A2__sediment_boult_4_NODE_4862_length_10097_cov_7.108843_3                62.13%    passed     17.93%
+  84  sediment_geneDB___FeFe__Group_A3__sediment_taylor_4_NODE_22966_length_3478_cov_6.881098_1               62.70%    passed     76.55%
+  85  sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_12401_length_7538_cov_3.691434_6                83.20%    passed      6.04%
+  86  sediment_geneDB___FeFe__Group_A2__sediment_sandbank1_1_NODE_1182_length_4061_cov_21.154518_1            60.66%    passed     77.17%
+  87  seawater_geneDB___FeFe__Group_A1__seawater_masthead_4__contig_23660_pilon_272                           65.50%    failed      0.00%
+  88  sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_25281_length_5269_cov_7.011507_2                63.46%    failed      0.09%
+  89  seawater_geneDB___FeFe__Group_A1__seawater_lagoon_1__contig_21776_pilon_10                              79.69%    failed      1.45%
+  90  seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_29971_pilon_80                               83.39%    failed      0.00%
+  91  sediment_geneDB___FeFe__Group_A3__sediment_moonsoon_4_NODE_49836_length_3066_cov_4.173364_2             59.01%    passed     19.51%
+  92  seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_19717_pilon_246                              81.09%    failed      0.19%
+  93  seawater_geneDB___FeFe__Group_A1__seawater_13124_4__contig_23686_pilon_161                              72.63%    failed      0.00%
+  94  seawater_geneDB___FeFe__Group_A3__seawater_sanbank1_1__contig_29508_pilon_8                             84.79%    passed     16.72%
+  95  seawater_geneDB___FeFe__Group_A1__seawater_mcSweeney_3__NODE_15884_length_5716_cov_1.280869_3           81.86%    failed      4.58%
+  96  seawater_geneDB___FeFe__Group_A1__seawater_hoskyn_2__contig_12622_pilon_49                              85.30%    failed      0.00%
+  97  seawater_geneDB___FeFe__Group_A1__seawater_chinaman_3__contig_19196_pilon_43                            83.51%    failed      0.00%
+  98  sediment_geneDB___FeFe__Group_A3__sediment_grub_4_NODE_101092_length_2100_cov_5.982396_2                63.40%    passed     49.51%
+  99  seawater_geneDB___FeFe__Group_A1__seawater_davie_1__contig_32027_pilon_253                              86.70%    failed      0.09%
+ 100  seawater_geneDB___FeFe__Group_B__seawater_broomfield_1__contig_12850_pilon_174                          75.37%    failed      0.00%
+ 101  sediment_geneDB___FeFe__Group_C1__sediment_masthead_3_NODE_16441_length_1088_cov_1.617619_2             82.69%    passed     16.18%
+ 102  sediment_geneDB___FeFe__Group_C3__sediment_davie_4_NODE_10196_length_5628_cov_5.681321_4                57.35%    passed     33.48%
+ 103  seawater_geneDB___FeFe__Group_A1__seawater_21580_2__contig_16151_pilon_567                              68.62%    passed      6.67%
+ 104  sediment_geneDB___FeFe__Group_C3__sediment_boult_4_NODE_24563_length_4640_cov_3.962050_4                63.02%    passed     12.41%
+ 105  seawater_geneDB___FeFe__Group_A1__seawater_north_1__NODE_46762_length_2987_cov_5.528990_2               62.32%    failed      0.29%
+ 106  seawater_geneDB___FeFe__Group_A1__seawater_davie_1__NODE_5627_length_11998_cov_1.908231_2               57.10%    failed      0.00%
+ 107  sediment_geneDB___FeFe__Group_A3__sediment_davie_4_NODE_161874_length_1645_cov_2.557862_2               83.96%    failed      0.10%
+ 108  sediment_geneDB___FeFe__Group_A3__sediment_thetford_4_NODE_1895_length_7428_cov_5.062525_6              63.21%    passed     62.32%
+ 109  sediment_geneDB___FeFe__Group_A3__sediment_21550_4_NODE_11725_length_4933_cov_12.293973_4               62.95%    passed     85.00%
+ 110  sediment_geneDB___FeFe__Group_A3__sediment_feather_3_NODE_7865_length_12510_cov_6.509354_7              62.44%    passed     76.69%
+ 111  seawater_geneDB___FeFe__Group_A1__seawater_boult_4__NODE_14036_length_7813_cov_5.121681_3               84.21%    failed      0.31%
+ 112  seawater_geneDB___FeFe__Group_A1__seawater_arlington_4__NODE_6886_length_9182_cov_0.416347_2            77.47%    failed      0.00%
+ 113  sediment_geneDB___FeFe__Group_A3__sediment_21550_4_NODE_85534_length_2015_cov_6.242347_2                62.32%    passed     48.58%
+ 114  seawater_geneDB___FeFe__Group_A1__seawater_taylor_4__contig_20231_pilon_98                              79.19%    failed      0.00%
+ 115  seawater_geneDB___FeFe__Group_A1__seawater_smallLagoon_4__NODE_5474_length_15383_cov_2.086313_9         83.83%    failed      0.01%
+ 116  seawater_geneDB___FeFe__Group_A1__seawater_chicken_3__NODE_18112_length_7555_cov_0.534000_4             86.63%    passed     23.02%
+ 117  seawater_geneDB___FeFe__Group_A1__seawater_lagoon_1__contig_20988_pilon_192                             78.74%    failed      0.00%
+ 118  seawater_geneDB___FeFe__Group_A1__seawater_21550_4__NODE_19220_length_3438_cov_0.468519_2               81.09%    failed      0.01%
+ 119  seawater_geneDB___FeFe__Group_A1__seawater_taylor_4__contig_18881_pilon_26                              83.45%    failed      1.72%
+ 120  sediment_geneDB___FeFe__Group_C3__sediment_mantis_4_NODE_439_length_18272_cov_11.224351_20              57.92%    failed      0.00%
+WARNING: 120 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                                                                   71.45%  59 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: sediment_geneDB___FeFe__Group_C3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_2 is identical to SED___FeFe__Group_C3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_2 but kept for subsequent analysis
+NOTE: sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_14729_length_6884_cov_5.897789_3 is identical to SED___FeFe__Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_14729_length_6884_cov_5.897789_3 but kept for subsequent analysis
+NOTE: sediment_geneDB___FeFe__Group_A3__sediment_13124_4_NODE_36358_length_4369_cov_4.681038_3 is identical to SED___FeFe__Group_A3__13124_4_semibin_refined_bins.tsv.129_NODE_36358_length_4369_cov_4.681038_3 but kept for subsequent analysis
+NOTE: sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_222_length_49099_cov_16.962523_31 is identical to SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_222_length_49099_cov_16.962523_31 but kept for subsequent analysis
+NOTE: sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_961_length_27426_cov_12.322750_12 is identical to SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.143_NODE_961_length_27426_cov_12.322750_12 but kept for subsequent analysis
+NOTE: sediment_geneDB___FeFe__Group_A3__sediment_21580_4_NODE_12401_length_7538_cov_3.691434_6 is identical to SED___FeFe__Group_A3__21580_4_metabat2_refined_bins.tsv.166_NODE_12401_length_7538_cov_3.691434_6 but kept for subsequent analysis
+NOTE: sediment_geneDB___FeFe__Group_C3__sediment_mantis_4_NODE_439_length_18272_cov_11.224351_20 is identical to SED___FeFe__Group_C3__coassembly_12___semibin_refined_bins.tsv.041_k127_5288460_3 but kept for subsequent analysis
+NOTE: sediment_geneDB___FeFe__Group_A2__sediment_feather_4_NODE_2781_length_4536_cov_12.653649_2 is identical to SED___FeFe__Group_A2__coassembly_13___metabat_sspec_bins.tsv.016_k127_847913_6 but kept for subsequent analysis
+NOTE: sediment_geneDB___FeFe__Group_A3__sediment_thetford_4_NODE_1895_length_7428_cov_5.062525_6 is identical to SED___FeFe__Group_A3__coassembly_22___metabat2_refined_bins.tsv.006_k127_1300170_3 but kept for subsequent analysis
+NOTE: sediment_geneDB___FeFe__Group_A3__sediment_feather_3_NODE_7865_length_12510_cov_6.509354_7 is identical to SED___FeFe__Group_A3__feather_3_metabat2_refined_bins.tsv.045_NODE_7865_length_12510_cov_6.509354_7 but kept for subsequent analysis
+NOTE: sediment_geneDB___FeFe__Group_C1__sediment_21580_4_NODE_212046_length_1815_cov_6.813636_2 is identical to SED___FeFe__Group_C1__kelso_4_semibin_refined_bins.tsv.020_NODE_7975_length_6007_cov_10.905578_6 but kept for subsequent analysis
+NOTE: sediment_geneDB___FeFe__Group_A3__sediment_mantis_4_NODE_11151_length_3610_cov_17.220253_2 is identical to SED___FeFe__Group_A3__mantis_4_metabat2_refined_bins.tsv.034_NODE_11151_length_3610_cov_17.220253_2 but kept for subsequent analysis
+NOTE: seawater_geneDB___FeFe__Group_B__seawater_broomfield_1__contig_12850_pilon_174 is identical to SEA___FeFe__Group_B__north_1__metabat2_refined_238_IMOS__P__north_1__contig_36110_pilon_p_221 but kept for subsequent analysis
+NOTE: sediment_geneDB___FeFe__Group_A2__sediment_sandbank1_1_NODE_1182_length_4061_cov_21.154518_1 is identical to SED___FeFe__Group_A2__sandbank1_1_metabat_spec_bins.tsv.003_sub_NODE_1182_length_4061_cov_21.154518_1 but kept for subsequent analysis
+NOTE: sediment_geneDB___FeFe__Group_A3__sediment_taylor_4_NODE_6247_length_6286_cov_11.030493_5 is identical to SED___FeFe__Group_A3__taylor_4_semibin_refined_bins.tsv.400_NODE_6247_length_6286_cov_11.030493_5 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.00657585 secs using 1413% CPU
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.098 seconds
+Measuring multi-threading efficiency up to 16 CPU cores
+Increase to 10 rounds for branch lengths
+4 trees examined
+Threads: 1 / Time: 16.003 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -100573
+Threads: 2 / Time: 9.397 sec / Speedup: 1.703 / Efficiency: 85% / LogL: -100573
+Threads: 3 / Time: 6.327 sec / Speedup: 2.529 / Efficiency: 84% / LogL: -100573
+Threads: 4 / Time: 6.006 sec / Speedup: 2.665 / Efficiency: 67% / LogL: -100573
+Threads: 5 / Time: 4.612 sec / Speedup: 3.470 / Efficiency: 69% / LogL: -100573
+Threads: 6 / Time: 3.900 sec / Speedup: 4.103 / Efficiency: 68% / LogL: -100573
+Threads: 7 / Time: 3.486 sec / Speedup: 4.590 / Efficiency: 66% / LogL: -100573
+Threads: 8 / Time: 3.726 sec / Speedup: 4.295 / Efficiency: 54% / LogL: -100573
+Threads: 9 / Time: 3.604 sec / Speedup: 4.440 / Efficiency: 49% / LogL: -100573
+Determining AUTO threadcount: done in 57.0744 secs using 365.7% CPU
+BEST NUMBER OF THREADS: 7
+
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Optimizing NNI: done in 1.76655 secs using 692.6% CPU
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -56882.862
+Optimal log-likelihood: -56882.073
+Proportion of invariable sites: 0.014
+Gamma shape alpha: 1.843
+Parameters optimization took 1 rounds (0.292 sec)
+Time for fast ML tree search: 3.536 seconds
+
+NOTE: ModelFinder requires 275 MB RAM!
+ModelFinder will test up to 1232 protein models (sample size: 1571) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            58245.596    237 116965.193   117049.823   118235.387
+  2  LG+I          58121.504    238 116719.009   116804.417   117994.562
+  3  LG+G4         56908.536    238 114293.071   114378.480   115568.624
+  4  LG+I+G4       56881.791    239 114241.581   114327.772   115522.494
+  5  LG+R2         57108.072    239 114694.145   114780.336   115975.057
+  6  LG+R3         56923.955    241 114329.909   114417.678   115621.541
+  7  LG+R4         56867.145    243 114220.290   114309.652   115522.641
+  8  LG+R5         56849.324    245 114188.649   114279.622   115501.718
+  9  LG+R6         56847.435    247 114188.871   114281.472   115512.659
+ 14  LG+I+R2       57059.603    240 114599.207   114686.184   115885.479
+ 15  LG+I+R3       56896.185    242 114276.369   114364.932   115573.360
+ 16  LG+I+R4       56857.931    244 114203.861   114294.027   115511.571
+ 17  LG+I+R5       56841.360    246 114174.721   114266.506   115493.150
+ 18  LG+I+R6       56839.984    248 114175.968   114269.390   115505.116
+ 30  LG+F+R5       56644.831    264 113817.662   113924.798   115232.561
+ 39  LG+F+I+R5     56638.003    265 113806.006   113914.037   115226.265
+ 52  WAG+R5        56720.371    245 113930.741   114021.715   115243.811
+ 61  WAG+I+R5      56715.480    246 113922.961   114014.746   115241.390
+ 74  WAG+F+R5      56454.242    264 113436.483   113543.620   114851.383
+ 83  WAG+F+I+R5    56449.829    265 113429.658   113537.689   114849.917
+ 96  JTT+R5        57172.446    245 114834.892   114925.865   116147.961
+105  JTT+I+R5      57167.326    246 114826.651   114918.437   116145.080
+118  JTT+F+R5      57048.810    264 114625.621   114732.757   116040.520
+127  JTT+F+I+R5    57044.459    265 114618.918   114726.948   116039.177
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+140  Q.pfam+R5     56713.073    245 113916.147   114007.120   115229.216
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+149  Q.pfam+I+R5   56701.898    246 113895.795   113987.581   115214.224
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+162  Q.pfam+F+R5   56639.708    264 113807.416   113914.552   115222.315
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+171  Q.pfam+F+I+R5 56629.621    265 113789.242   113897.272   115209.501
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+184  Q.bird+R5     58686.853    245 117863.706   117954.680   119176.776
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+193  Q.bird+I+R5   58677.031    246 117846.062   117937.847   119164.491
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+206  Q.bird+F+R5   58630.200    264 117788.399   117895.535   119203.298
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+215  Q.bird+F+I+R5 58621.370    265 117772.741   117880.771   119193.000
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+228  Q.mammal+R5   58120.296    245 116730.591   116821.565   118043.661
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+237  Q.mammal+I+R5 58111.240    246 116714.480   116806.265   118032.909
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+250  Q.mammal+F+R5 58017.154    264 116562.307   116669.443   117977.207
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+259  Q.mammal+F+I+R5 58008.895    265 116547.791   116655.822   117968.050
+272  Q.insect+R5   57540.870    245 115571.741   115662.715   116884.811
+281  Q.insect+I+R5 57532.363    246 115556.727   115648.512   116875.156
+294  Q.insect+F+R5 57016.747    264 114561.494   114668.630   115976.393
+303  Q.insect+F+I+R5 57010.632    265 114551.264   114659.294   115971.522
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+316  Q.plant+R5    58057.829    245 116605.659   116696.632   117918.728
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+325  Q.plant+I+R5  58046.356    246 116584.711   116676.497   117903.140
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+338  Q.plant+F+R5  57807.135    264 116142.269   116249.406   117557.169
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+347  Q.plant+F+I+R5 57797.999    265 116125.997   116234.028   117546.256
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+360  Q.yeast+R5    57718.178    245 115926.356   116017.329   117239.425
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+369  Q.yeast+I+R5  57708.382    246 115908.764   116000.549   117227.193
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+382  Q.yeast+F+R5  57004.964    264 114537.927   114645.064   115952.827
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+391  Q.yeast+F+I+R5 56996.861    265 114523.722   114631.752   115943.980
+404  JTTDCMut+R5   57172.631    245 114835.261   114926.235   116148.331
+413  JTTDCMut+I+R5 57167.713    246 114827.426   114919.212   116145.855
+426  JTTDCMut+F+R5 57037.148    264 114602.296   114709.432   116017.195
+435  JTTDCMut+F+I+R5 57032.941    265 114595.882   114703.913   116016.141
+448  DCMut+R5      57786.588    245 116063.176   116154.149   117376.245
+457  DCMut+I+R5    57781.950    246 116055.900   116147.685   117374.329
+470  DCMut+F+R5    57438.408    264 115404.817   115511.953   116819.716
+479  DCMut+F+I+R5  57434.143    265 115398.286   115506.316   116818.545
+492  VT+R5         56740.355    245 113970.710   114061.684   115283.780
+501  VT+I+R5       56734.672    246 113961.345   114053.130   115279.774
+514  VT+F+R5       56501.799    264 113531.599   113638.735   114946.498
+523  VT+F+I+R5     56496.770    265 113523.539   113631.570   114943.798
+536  PMB+R5        56873.775    245 114237.549   114328.523   115550.619
+545  PMB+I+R5      56868.066    246 114228.132   114319.917   115546.561
+558  PMB+F+R5      56573.490    264 113674.980   113782.116   115089.879
+567  PMB+F+I+R5    56568.557    265 113667.115   113775.145   115087.373
+580  Blosum62+R5   56932.337    245 114354.674   114445.648   115667.744
+589  Blosum62+I+R5 56926.592    246 114345.185   114436.970   115663.614
+602  Blosum62+F+R5 56601.029    264 113730.058   113837.194   115144.958
+611  Blosum62+F+I+R5 56596.193    265 113722.385   113830.416   115142.644
+624  Dayhoff+R5    57786.014    245 116062.028   116153.002   117375.098
+633  Dayhoff+I+R5  57781.458    246 116054.916   116146.702   117373.345
+646  Dayhoff+F+R5  57438.300    264 115404.601   115511.737   116819.500
+655  Dayhoff+F+I+R5 57434.125    265 115398.249   115506.280   116818.508
+668  mtREV+R5      61465.179    245 123420.359   123511.332   124733.428
+677  mtREV+I+R5    61454.507    246 123401.015   123492.800   124719.444
+690  mtREV+F+R5    58117.571    264 116763.142   116870.279   118178.042
+699  mtREV+F+I+R5  58104.501    265 116739.003   116847.033   118159.262
+712  mtART+R5      63421.745    245 127333.491   127424.464   128646.560
+721  mtART+I+R5    63393.667    246 127279.335   127371.120   128597.764
+734  mtART+F+R5    59904.481    264 120336.963   120444.099   121751.862
+743  mtART+F+I+R5  59897.395    265 120324.790   120432.821   121745.049
+756  mtZOA+R5      61059.506    245 122609.012   122699.986   123922.082
+765  mtZOA+I+R5    61047.347    246 122586.694   122678.479   123905.123
+778  mtZOA+F+R5    58633.907    264 117795.814   117902.950   119210.713
+787  mtZOA+F+I+R5  58629.972    265 117789.944   117897.974   119210.203
+800  mtMet+R5      62173.019    245 124836.038   124927.012   126149.108
+809  mtMet+I+R5    62155.672    246 124803.344   124895.129   126121.773
+822  mtMet+F+R5    58456.997    264 117441.995   117549.131   118856.894
+831  mtMet+F+I+R5  58449.959    265 117429.918   117537.948   118850.177
+844  mtVer+R5      62423.288    245 125336.577   125427.550   126649.646
+853  mtVer+I+R5    62408.405    246 125308.811   125400.596   126627.240
+866  mtVer+F+R5    59132.484    264 118792.968   118900.105   120207.868
+875  mtVer+F+I+R5  59123.515    265 118777.030   118885.061   120197.289
+888  mtInv+R5      62457.650    245 125405.300   125496.273   126718.369
+897  mtInv+I+R5    62446.229    246 125384.457   125476.243   126702.886
+910  mtInv+F+R5    57902.813    264 116333.625   116440.762   117748.525
+919  mtInv+F+I+R5  57896.691    265 116323.381   116431.412   117743.640
+932  mtMAM+R5      63451.146    245 127392.293   127483.266   128705.362
+941  mtMAM+I+R5    63432.631    246 127357.262   127449.047   128675.691
+954  mtMAM+F+R5    59952.157    264 120432.313   120539.450   121847.213
+963  mtMAM+F+I+R5  59933.782    265 120397.563   120505.594   121817.822
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+976  FLAVI+R5      60334.433    245 121158.865   121249.839   122471.935
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+985  FLAVI+I+R5    60324.842    246 121141.683   121233.469   122460.112
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+998  FLAVI+F+R5    59788.430    264 120104.860   120211.996   121519.759
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+1007  FLAVI+F+I+R5  59781.587    265 120093.174   120201.205   121513.433
+1020  HIVb+R5       58875.070    245 118240.140   118331.113   119553.209
+1029  HIVb+I+R5     58867.459    246 118226.918   118318.703   119545.347
+1042  HIVb+F+R5     58539.431    264 117606.861   117713.998   119021.761
+1051  HIVb+F+I+R5   58532.861    265 117595.722   117703.753   119015.981
+1064  HIVw+R5       61495.344    245 123480.689   123571.662   124793.758
+1073  HIVw+I+R5     61490.114    246 123472.229   123564.014   124790.658
+1086  HIVw+F+R5     60038.527    264 120605.055   120712.191   122019.954
+1095  HIVw+F+I+R5   60034.054    265 120598.107   120706.138   122018.366
+1108  FLU+R5        58779.114    245 118048.228   118139.202   119361.298
+1117  FLU+I+R5      58771.091    246 118034.182   118125.968   119352.611
+1130  FLU+F+R5      57867.166    264 116262.332   116369.468   117677.231
+1139  FLU+F+I+R5    57860.116    265 116250.232   116358.263   117670.491
+1152  rtREV+R5      57469.308    245 115428.617   115519.590   116741.686
+1161  rtREV+I+R5    57459.312    246 115410.624   115502.409   116729.053
+1174  rtREV+F+R5    56879.551    264 114287.102   114394.239   115702.002
+1183  rtREV+F+I+R5  56870.614    265 114271.228   114379.259   115691.487
+1196  cpREV+R5      57495.871    245 115481.742   115572.715   116794.811
+1205  cpREV+I+R5    57490.908    246 115473.815   115565.601   116792.244
+1218  cpREV+F+R5    57109.521    264 114747.042   114854.178   116161.941
+1227  cpREV+F+I+R5  57106.537    265 114743.075   114851.105   116163.333
+Akaike Information Criterion:           WAG+F+I+R5
+Corrected Akaike Information Criterion: WAG+F+I+R5
+Bayesian Information Criterion:         WAG+F+I+R5
+Best-fit model: WAG+F+I+R5 chosen according to BIC
+
+All model information printed to /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa.model.gz
+CPU time for ModelFinder: 10141.513 seconds (2h:49m:1s)
+Wall-clock time for ModelFinder: 1490.411 seconds (0h:24m:50s)
+Generating 1000 samples for ultrafast bootstrap (seed: 155443)...
+
+NOTE: 140 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -56449.829
+Optimal log-likelihood: -56449.804
+Proportion of invariable sites: 0.005
+Site proportion and rates:  (0.068,0.156) (0.193,0.419) (0.305,0.814) (0.317,1.314) (0.111,2.193)
+Parameters optimization took 1 rounds (1.152 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.271246 secs using 696% CPU
+Computing ML distances took 0.271495 sec (of wall-clock time) 1.888253 sec (of CPU time)
+WARNING: Some pairwise ML distances are too long (saturated)
+Setting up auxiliary I and S matrices: done in 0.00410075 secs using 605.9% CPU
+Constructing RapidNJ tree: done in 0.112051 secs using 203.3% CPU
+Computing RapidNJ tree took 0.116324 sec (of wall-clock time) 0.253853 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -57769.735
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 7.559 second
+Computing log-likelihood of 98 initial trees ... 11.819 seconds
+Current best score: -56449.804
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 0.808808 secs using 693.5% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -56447.652
+Optimizing NNI: done in 2.28926 secs using 694.3% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -56405.555
+Optimizing NNI: done in 2.63901 secs using 694.1% CPU
+Optimizing NNI: done in 3.00609 secs using 693% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 4: -56402.159
+Optimizing NNI: done in 3.28084 secs using 693.7% CPU
+Optimizing NNI: done in 3.37572 secs using 693.8% CPU
+Optimizing NNI: done in 2.91298 secs using 693.7% CPU
+Optimizing NNI: done in 2.69372 secs using 693.5% CPU
+Optimizing NNI: done in 2.98924 secs using 693.5% CPU
+Optimizing NNI: done in 2.73792 secs using 693.7% CPU
+Iteration 10 / LogL: -56405.452 / Time: 0h:0m:55s
+Optimizing NNI: done in 2.9342 secs using 693.8% CPU
+Optimizing NNI: done in 3.42985 secs using 694% CPU
+Optimizing NNI: done in 2.68486 secs using 694% CPU
+Optimizing NNI: done in 2.89724 secs using 693.7% CPU
+Optimizing NNI: done in 3.19873 secs using 693.6% CPU
+Optimizing NNI: done in 3.06672 secs using 693.9% CPU
+Optimizing NNI: done in 2.42626 secs using 693.7% CPU
+Optimizing NNI: done in 2.70055 secs using 693.2% CPU
+Optimizing NNI: done in 3.52671 secs using 694.3% CPU
+Optimizing NNI: done in 3.14174 secs using 693.6% CPU
+Iteration 20 / LogL: -56402.336 / Time: 0h:1m:26s
+Finish initializing candidate tree set (11)
+Current best tree score: -56402.159 / CPU time: 83.429
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 3.05043 secs using 694.3% CPU
+Optimizing NNI: done in 3.42183 secs using 693.9% CPU
+Optimizing NNI: done in 3.38504 secs using 693.7% CPU
+Optimizing NNI: done in 3.426 secs using 693.6% CPU
+Optimizing NNI: done in 3.14535 secs using 693.5% CPU
+Optimizing NNI: done in 3.16749 secs using 694% CPU
+Optimizing NNI: done in 3.43136 secs using 694.5% CPU
+Optimizing NNI: done in 2.78439 secs using 693.5% CPU
+Optimizing NNI: done in 2.75212 secs using 693.7% CPU
+Optimizing NNI: done in 3.48808 secs using 693.4% CPU
+Iteration 30 / LogL: -56403.951 / Time: 0h:1m:58s (0h:5m:2s left)
+Optimizing NNI: done in 3.06981 secs using 693.2% CPU
+Optimizing NNI: done in 3.3656 secs using 693.1% CPU
+Optimizing NNI: done in 2.89374 secs using 693.3% CPU
+Optimizing NNI: done in 3.94045 secs using 693.5% CPU
+Optimizing NNI: done in 3.32086 secs using 693% CPU
+Optimizing NNI: done in 3.64332 secs using 693.5% CPU
+Optimizing NNI: done in 2.94388 secs using 692.9% CPU
+Optimizing NNI: done in 2.6667 secs using 693.8% CPU
+Optimizing NNI: done in 3.33909 secs using 693.7% CPU
+Optimizing NNI: done in 3.58551 secs using 693.6% CPU
+Iteration 40 / LogL: -56405.966 / Time: 0h:2m:31s (0h:4m:8s left)
+Optimizing NNI: done in 3.25526 secs using 693.8% CPU
+Optimizing NNI: done in 3.06931 secs using 693.4% CPU
+Optimizing NNI: done in 3.21514 secs using 694% CPU
+Optimizing NNI: done in 2.62136 secs using 693.3% CPU
+Optimizing NNI: done in 3.84705 secs using 693.9% CPU
+Optimizing NNI: done in 3.58211 secs using 694.5% CPU
+Optimizing NNI: done in 3.15774 secs using 694.4% CPU
+Optimizing NNI: done in 2.9053 secs using 693% CPU
+Optimizing NNI: done in 3.5522 secs using 694% CPU
+Optimizing NNI: done in 3.44094 secs using 694% CPU
+Iteration 50 / LogL: -56402.798 / Time: 0h:3m:4s (0h:3m:23s left)
+Log-likelihood cutoff on original alignment: -56462.215
+Optimizing NNI: done in 2.88816 secs using 694.1% CPU
+Optimizing NNI: done in 2.83333 secs using 693.9% CPU
+Optimizing NNI: done in 3.69966 secs using 693.7% CPU
+Optimizing NNI: done in 3.39107 secs using 693.8% CPU
+Optimizing NNI: done in 3.1385 secs using 694% CPU
+Optimizing NNI: done in 2.48623 secs using 694% CPU
+Optimizing NNI: done in 3.65832 secs using 693.8% CPU
+Optimizing NNI: done in 3.43053 secs using 693.8% CPU
+Optimizing NNI: done in 3.45935 secs using 693.7% CPU
+Optimizing NNI: done in 2.78967 secs using 693.4% CPU
+Iteration 60 / LogL: -56402.754 / Time: 0h:3m:36s (0h:2m:41s left)
+Optimizing NNI: done in 3.1021 secs using 692.7% CPU
+Optimizing NNI: done in 3.22318 secs using 693.5% CPU
+Optimizing NNI: done in 3.31891 secs using 694% CPU
+Optimizing NNI: done in 3.39087 secs using 693.7% CPU
+Optimizing NNI: done in 3.14954 secs using 694.3% CPU
+Optimizing NNI: done in 3.19645 secs using 693.9% CPU
+Optimizing NNI: done in 3.34996 secs using 693.6% CPU
+Optimizing NNI: done in 3.0219 secs using 693.2% CPU
+Optimizing NNI: done in 2.93526 secs using 693.7% CPU
+Optimizing NNI: done in 3.00223 secs using 692.9% CPU
+Iteration 70 / LogL: -56403.714 / Time: 0h:4m:8s (0h:2m:2s left)
+Optimizing NNI: done in 2.60882 secs using 693.7% CPU
+Optimizing NNI: done in 3.26047 secs using 693.9% CPU
+Optimizing NNI: done in 3.27873 secs using 693.8% CPU
+Optimizing NNI: done in 3.05596 secs using 693.4% CPU
+Optimizing NNI: done in 2.87257 secs using 694.4% CPU
+Optimizing NNI: done in 3.05354 secs using 693.8% CPU
+Optimizing NNI: done in 2.89375 secs using 694.3% CPU
+Optimizing NNI: done in 2.97805 secs using 694% CPU
+Optimizing NNI: done in 3.3046 secs using 694.4% CPU
+Optimizing NNI: done in 3.00828 secs using 694.3% CPU
+Iteration 80 / LogL: -56406.572 / Time: 0h:4m:39s (0h:1m:24s left)
+Optimizing NNI: done in 2.9828 secs using 694.5% CPU
+Optimizing NNI: done in 2.92229 secs using 694% CPU
+Optimizing NNI: done in 2.83046 secs using 694% CPU
+Optimizing NNI: done in 3.19833 secs using 694.4% CPU
+Optimizing NNI: done in 2.84705 secs using 693.8% CPU
+Optimizing NNI: done in 2.91119 secs using 693.6% CPU
+Optimizing NNI: done in 3.17929 secs using 694% CPU
+Optimizing NNI: done in 3.15864 secs using 694.2% CPU
+Optimizing NNI: done in 3.02849 secs using 694.1% CPU
+Optimizing NNI: done in 2.71794 secs using 693.8% CPU
+Iteration 90 / LogL: -56402.213 / Time: 0h:5m:9s (0h:0m:48s left)
+Optimizing NNI: done in 3.1974 secs using 693.8% CPU
+Optimizing NNI: done in 3.41132 secs using 693.6% CPU
+Optimizing NNI: done in 2.93524 secs using 693.9% CPU
+Optimizing NNI: done in 2.70277 secs using 694% CPU
+Optimizing NNI: done in 3.34997 secs using 693.8% CPU
+Optimizing NNI: done in 2.39319 secs using 692.8% CPU
+Optimizing NNI: done in 3.61558 secs using 694.2% CPU
+Optimizing NNI: done in 2.56175 secs using 693.8% CPU
+Optimizing NNI: done in 3.59407 secs using 693.7% CPU
+Optimizing NNI: done in 2.9164 secs using 693.9% CPU
+Iteration 100 / LogL: -56402.744 / Time: 0h:5m:40s (0h:0m:13s left)
+Log-likelihood cutoff on original alignment: -56462.215
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+Optimizing NNI: done in 3.46921 secs using 693.3% CPU
+Optimizing NNI: done in 2.62356 secs using 693.2% CPU
+Optimizing NNI: done in 4.21867 secs using 693.7% CPU
+Optimizing NNI: done in 4.20284 secs using 693.8% CPU
+Optimizing NNI: done in 3.01351 secs using 694.2% CPU
+TREE SEARCH COMPLETED AFTER 105 ITERATIONS / Time: 0h:5m:58s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -56402.159
+2. Current log-likelihood: -56402.099
+3. Current log-likelihood: -56402.047
+4. Current log-likelihood: -56401.998
+5. Current log-likelihood: -56401.953
+6. Current log-likelihood: -56401.913
+7. Current log-likelihood: -56401.879
+8. Current log-likelihood: -56401.849
+9. Current log-likelihood: -56401.822
+10. Current log-likelihood: -56401.799
+11. Current log-likelihood: -56401.779
+12. Current log-likelihood: -56401.761
+13. Current log-likelihood: -56401.747
+14. Current log-likelihood: -56401.735
+Optimal log-likelihood: -56401.723
+Proportion of invariable sites: 0.005
+Site proportion and rates:  (0.071,0.161) (0.170,0.412) (0.262,0.750) (0.335,1.211) (0.156,2.023)
+Parameters optimization took 14 rounds (14.825 sec)
+BEST SCORE FOUND : -56401.723
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+1.050 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa.splits.nex
+Total tree length: 47.610
+
+Total number of iterations: 105
+CPU time used for tree search: 2419.256 sec (0h:40m:19s)
+Wall-clock time used for tree search: 355.911 sec (0h:5m:55s)
+Total CPU time used: 2547.323 sec (0h:42m:27s)
+Total wall-clock time used: 374.754 sec (0h:6m:14s)
+
+Computing bootstrap consensus tree...
+Reading input file /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa.splits.nex...
+120 taxa and 479 splits.
+Consensus tree written to /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa.contree
+Reading input trees file /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa.contree
+Log-likelihood of consensus tree: -56401.907
+
+Analysis results written to: 
+  IQ-TREE report:                /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa.iqtree
+  Maximum-likelihood tree:       /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa.treefile
+  Likelihood distances:          /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa.splits.nex
+  Consensus tree:                /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa.contree
+  Screen log file:               /scratch/temp/32577410/sed_sea_mag_genedb.FeFe.min200aa/sed_sea_mag_genedb.FeFe.min200aa.aligned.faa.log
+
+Date and Time: Wed Nov 11 10:09:56 2026

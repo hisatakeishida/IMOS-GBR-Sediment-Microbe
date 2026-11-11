@@ -14,7 +14,7 @@
 # RPKM = count / (mapped reads in sample / 1e6) / (gene length / 1e3)
 # Normalised RPKM = protein RPKM / mean RPKM of all SingleM marker genes
 #
-# Usage: Rscript scripts/2.13_protein_RPKM.R ko      # or cazy, hyddb, marker
+# Usage: Rscript 1_gene_centric/2_Protein/scripts/2.13_protein_RPKM.R ko      # or cazy, hyddb, marker
 #
 # Input : long-format counts and lengths (2.10, 2.12), annotation tables (2.8),
 #         sample metadata
