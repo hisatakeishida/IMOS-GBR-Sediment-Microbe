@@ -40,7 +40,7 @@ comp_dir <- file.path(imos_dir, "0_comp_prot_newdb")
 out_dir  <- file.path(comp_dir, "genome_centric")
 
 count_file      <- file.path(comp_dir, "genome_centric", "2077seased_MAGs_customdb.hyddb.xlsx")
-metadata_file   <- file.path(imos_dir, "imosmanuscript", "3_Sup_Table", "table_S5.xlsx")
+metadata_file   <- file.path(imos_dir, "imosmanuscript", "3_Sup_Table", "ARCH", "table_S5.xlsx")
 metadata_sheet  <- "curatedtaxonomy_Sed1201_Sea876"
 gene_names_file <- file.path(comp_dir, "genome_centric", "GeneNameUpdater.xlsx")
 gene_da_file    <- file.path(comp_dir, "gene_centric", "MAASLIN_LINDA_greeningDB_June30.xlsx")
@@ -526,12 +526,12 @@ metab_legend   <- Legend(title = "Metabolism", at = names(metab_colors),
 # -----------------------------------------------------------------------------
 # 2.10 Draw
 # -----------------------------------------------------------------------------
-svglite(file.path(out_dir, "greening_mag_heatmap.svg"), width = 20, height = 10)
+svglite(file.path(out_dir, "greening_mag_heatmap.svg"), width = 20, height = 20)
 draw(ht, heatmap_legend_side = "bottom", annotation_legend_side = "bottom",
      heatmap_legend_list = list(heatmap_legend))
 dev.off()
 
-svglite(file.path(out_dir, "greening_mag_heatmap.withlegend.svg"), width = 20, height = 10)
+svglite(file.path(out_dir, "greening_mag_heatmap.withlegend.svg"), width = 20, height = 20)
 draw(ht, heatmap_legend_side = "bottom", annotation_legend_side = "bottom",
      heatmap_legend_list    = list(heatmap_legend),
      annotation_legend_list = list(phylum_legend, pval_legend, sig_legend, metab_legend))

@@ -4,7 +4,7 @@
 
 Related manuscript content: Figs 3 to 5; Tables S10 to S22.
 
-Scripts for this analysis are in the [`scripts/`](scripts/) folder (`5.01` to `5.14`).
+Scripts for this analysis are in the [`scripts/`](scripts/) folder (`5.01` to `5.15`).
 
 | Step | Script | Description |
 |---|---|---|
@@ -21,7 +21,8 @@ Scripts for this analysis are in the [`scripts/`](scripts/) folder (`5.01` to `5
 | 5.11 | [`scripts/5.11_clustomatic.sh`](scripts/5.11_clustomatic.sh) | Gene cluster families (GCFs) with clust-o-matic (threshold 0.5), using [`clustomatic.modified.py`](scripts/clustomatic.modified.py) (output folder and threads added; reconstructed) |
 | 5.12 | [`scripts/5.12_gcf_summary.sh`](scripts/5.12_gcf_summary.sh) | GCF table per BGC, GCF x dataset count matrix, and BGCs and GCFs per dataset |
 | 5.13 | [`scripts/5.13_bigslice_gcf_distance.sh`](scripts/5.13_bigslice_gcf_distance.sh) | BiG-SLiCE features and distance of each BGC to its nearest GCF model ([`perform_l2norm_clustering.py`](scripts/perform_l2norm_clustering.py), from the OMD scripts) |
-| 5.14 | [`scripts/5.14_gcf_bigfam_distance.R`](scripts/5.14_gcf_bigfam_distance.R) | Mean distance of each GCF to BiG-FAM, novel GCFs (> 0.4), and distance histograms (Fig. 5) |
+| 5.14 | [`scripts/5.14_gcf_bigfam_distance.R`](scripts/5.14_gcf_bigfam_distance.R) | GCFs per MAG and GCF composition by BGC class for MGD-sediment, MGD-seawater, OMD, and RMD; mean distance of each GCF to BiG-FAM, novel GCFs (> 0.4), and distance histograms (Fig. 5) |
+| 5.15 | [`scripts/5.15_cgc_substrate_heatmap.R`](scripts/5.15_cgc_substrate_heatmap.R) | Heatmap of CGC substrates by habitat and order, with substrate counts per habitat and order relative abundance (Fig. 4) |
 
 ## Table of contents
 1. [DRAM](#dram)
@@ -47,7 +48,8 @@ Directory: [`2_CAZymes_CGCs/`](2_CAZymes_CGCs/)
 - run_dbcan v5.0.1 `easy_substrate`: CAZyme families, CAZyme gene clusters (CGCs), and CGC substrates inferred from similarity to polysaccharide utilisation loci (PULs) in dbCAN-PUL
 - Platform: Bash (SLURM array, one task per MAG)
 - Output: Fig. 4, Table S20
-- Script: [`5.02_dbcan_array.sh`](scripts/5.02_dbcan_array.sh)
+- Heatmap of CGC substrates per habitat and order, with substrate counts per habitat and the relative abundance of each order
+- Scripts: [`5.02_dbcan_array.sh`](scripts/5.02_dbcan_array.sh), [`5.15_cgc_substrate_heatmap.R`](scripts/5.15_cgc_substrate_heatmap.R)
 
 ## 3. Sulphatases <a name="sulphatases"></a>
 Directory: [`3_sulphatases/`](3_sulphatases/)
@@ -65,7 +67,7 @@ Directory: [`4_hydrogenases_marker_genes/`](4_hydrogenases_marker_genes/)
 - Output: Fig. 3a-b and 3d, Table S16
 - Script: [`5.04_hyddb_marker_genes_array.sh`](scripts/5.04_hyddb_marker_genes_array.sh)
 
-<p align="center">
+<p align="center" style="background-color: white;">
   <a href="./4_hydrogenases_marker_genes/FeFeHydrogenage_MLtree.svg">
     <img src="./4_hydrogenases_marker_genes/FeFeHydrogenage_MLtree.svg" alt="Maximum-likelihood tree of [FeFe] hydrogenases" width="700">
   </a>
@@ -109,6 +111,14 @@ done
 
 Rscript 2_genome_centric/5_MAGsAnnot/scripts/5.08_marker_gene_enrichment.R   # marker genes and HydDB subgroups
 ```
+<p align="center" style="background-color: white;">
+  <a href="./6_enrichment_tests/greening_mag_heatmap.withlegend.svg">
+    <img src="./6_enrichment_tests/greening_mag_heatmap.withlegend.svg" 
+    alt="Heatmap enrichment of key genes" width="700">
+  </a>
+  <br>
+  <!-- <em> Heatmap enrichment. </em> -->
+</p>
 
 ## 7. Biosynthetic gene clusters <a name="bgcs"></a>
 Directory: [`7_BGCs/`](7_BGCs/)
@@ -133,11 +143,27 @@ sbatch 2_genome_centric/5_MAGsAnnot/scripts/5.12_gcf_summary.sh
 
 <table>
   <tr>
-    <td align="center" width="50%">
+    <td align="center" width="50%" style="background-color: white;">
+      <img src="./7_BGCs/GCFs_per_MAG.svg" 
+      alt="GCF richness" width="100%"><br>
+      <b>(a)</b> GCF richness
+    </td>
+    <td align="center" width="50%" style="background-color: white;">
+      <img src="./7_BGCs/GCF_composition_proportion_withlegend.svg" 
+      alt="GCF composition"
+      width="100%"><br>
+      <b>(b)</b> GCF composition
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td align="center" width="50%" style="background-color: white;">
       <img src="./7_BGCs/GCF_dist_bigfam_sed.svg" alt="GCF distance to BiG-FAM, sediment" width="100%"><br>
       <b>(a)</b> Sediment
     </td>
-    <td align="center" width="50%">
+    <td align="center" width="50%" style="background-color: white;">
       <img src="./7_BGCs/GCF_dist_bigfam_sea.svg" alt="GCF distance to BiG-FAM, seawater" width="100%"><br>
       <b>(b)</b> Seawater
     </td>

@@ -1,23 +1,26 @@
 # ==============================================================================
 # 5.14_gcf_bigfam_distance.R
 #
-# Novelty of sediment and seawater gene cluster families (GCFs) relative to
-# BiG-FAM (Fig. 5).
+# Gene cluster families (GCFs) of sediment and seawater MAGs compared with the
+# OMD and RMD, and their novelty relative to BiG-FAM (Fig. 5).
 #   1. Setup and input
-#   2. Mean distance to BiG-FAM per GCF
-#   3. Number and percentage of novel GCFs (mean distance > 0.4)
-#   4. Histograms of mean distance per GCF, coloured by BGC class
+#   2. GCFs per MAG in each database
+#   3. GCF composition by BGC class
+#   4. Mean distance to BiG-FAM per GCF and novel GCFs (mean distance > 0.4)
+#   5. Histograms of mean distance per GCF, coloured by BGC class
 #
-# For each GCF (clust-o-matic, 5.11), the distance to BiG-FAM is the mean of
-# its BGCs' BiG-SLiCE distances to their closest BiG-FAM GCF; the GCF's BGC
-# class and phylum are those of its longest BGC.
+# GCFs are from clust-o-matic (5.11) on dereplicated datasets, BGCs >= 5,000 bp.
+# antiSMASH products are grouped into BGC classes (sheet antismash_class). For
+# each GCF, the distance to BiG-FAM is the mean of its BGCs' BiG-SLiCE distances
+# (5.13); the GCF's BGC class and phylum are those of its longest BGC.
 #
-# Input : workbook with one sheet per habitat (gcf_dist_0.4_SED,
-#         gcf_dist_0.4_SEA), one row per BGC, with columns clustomatic_gcf,
-#         bs_dist (BiG-SLiCE distance to BiG-FAM), BGC_FUNCTION (antiSMASH
-#         product), len_nt, and Phylum; and sheet antismash_class mapping
-#         antiSMASH products (Antismash) to BGC classes (Summary)
-# Output: Fig. 5 distance histograms (svg); novel GCF counts (xlsx)
+# Input : workbook BGCs_GCFs_IMOS_OMD.xlsx with sheets
+#           GCF_sum_derep    : GCFs per MAG per database (Derep, GCFs per MAG (5000 bp))
+#           COM_sum_derep    : one row per BGC (SOURCE, BGC_FUNCTION, GCF_ID)
+#           antismash_class  : antiSMASH product (Antismash) to BGC class (Summary)
+#           gcf_dist_0.4_SED, gcf_dist_0.4_SEA : one row per BGC (clustomatic_gcf,
+#             bs_dist, BGC_FUNCTION, len_nt, Phylum)
+# Output: Fig. 5 panels (svg); GCF composition and novel GCF counts (xlsx)
 # ==============================================================================
 
 
@@ -38,6 +41,12 @@ dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 novel_cutoff <- 0.4
 binlen       <- 0.05
 
+db_levels <- c("MGD_Sediment", "MGD_Seawater", "OMD", "RMD")
+db_names  <- c(IMOS_SED = "MGD_Sediment", IMOS_SEA = "MGD_Seawater",
+               OMD_DB = "OMD", `RMDv1-antismash_GBK` = "RMD")
+db_colors <- c(MGD_Sediment = "#33a02c", MGD_Seawater = "#1f78b4",
+               OMD = "#6AABC6", RMD = "#C73C74")
+
 bgc_colors <- c(
   "MIBIG"   = "#474747",
   "NRPS"    = "#B5D465",
@@ -48,23 +57,92 @@ bgc_colors <- c(
   "Terpene" = "#82BFA6"
 )
 
+rename_db <- function(x) factor(coalesce(db_names[x], x), levels = db_levels)
+
 antismash_category <- read.xlsx(infile_bs, sheet = "antismash_class")
 
-# One row per BGC, with antiSMASH products grouped into BGC classes
-read_bgcs <- function(sheet) {
-  read.xlsx(infile_bs, sheet = sheet, rowNames = TRUE) %>%
+# antiSMASH products grouped into BGC classes
+add_bgc_class <- function(df) {
+  df %>%
     left_join(antismash_category, by = c("BGC_FUNCTION" = "Antismash")) %>%
-    mutate(BGC_FUNCTION = if_else(!is.na(Summary), Summary, BGC_FUNCTION)) %>%
+    mutate(BGC_FUNCTION = coalesce(Summary, BGC_FUNCTION)) %>%
     select(-Summary)
 }
 
+save_svg <- function(plot, name, width, height) {
+  ggsave(file.path(out_dir, name), plot, width = width, height = height, bg = "white")
+}
+
+
+# ==============================================================================
+# 2. GCFs PER MAG
+# ==============================================================================
+
+gcf_summary <- read.xlsx(infile_bs, sheet = "GCF_sum_derep") %>%
+  mutate(db = rename_db(Derep))
+
+p_gcf_per_mag <- ggplot(gcf_summary, aes(db, `GCFs.per.MAG.(5000.bp)`, fill = db)) +
+  geom_col(colour = "black", linewidth = 0.3) +
+  geom_text(aes(label = sprintf("%.1f", `GCFs.per.MAG.(5000.bp)`)), vjust = -0.3, size = 4) +
+  scale_fill_manual(values = db_colors) +
+  labs(x = NULL, y = "Number of GCFs per MAG") +
+  theme_bw() +
+  theme(axis.text = element_text(size = 12),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "none")
+
+save_svg(p_gcf_per_mag, "GCFs_per_MAG.svg", width = 5, height = 5)
+
+
+# ==============================================================================
+# 3. GCF COMPOSITION BY BGC CLASS
+# ==============================================================================
+# Each GCF counted once per database and BGC class; MIBiG excluded
+
+gcf_composition <- read.xlsx(infile_bs, sheet = "COM_sum_derep") %>%
+  filter(SOURCE != "MIBIG") %>%
+  add_bgc_class() %>%
+  mutate(SOURCE = rename_db(SOURCE)) %>%
+  distinct(SOURCE, BGC_FUNCTION, GCF_ID) %>%
+  count(SOURCE, BGC_FUNCTION, name = "count") %>%
+  group_by(SOURCE) %>%
+  mutate(proportion = 100 * count / sum(count)) %>%
+  ungroup()
+
+unmapped <- setdiff(unique(gcf_composition$BGC_FUNCTION), names(bgc_colors))
+if (length(unmapped)) warning("BGC classes without a colour: ", paste(unmapped, collapse = ", "))
+
+# Stack order: most GCFs overall at the bottom
+class_order <- gcf_composition %>%
+  group_by(BGC_FUNCTION) %>%
+  summarise(total = sum(count)) %>%
+  arrange(desc(total)) %>%
+  pull(BGC_FUNCTION)
+gcf_composition <- mutate(gcf_composition, BGC_FUNCTION = factor(BGC_FUNCTION, levels = class_order))
+
+p_composition <- ggplot(gcf_composition, aes(SOURCE, proportion, fill = BGC_FUNCTION)) +
+  geom_col(colour = "black", linewidth = 0.3) +
+  geom_text(aes(label = sprintf("%.1f", proportion)), position = position_stack(vjust = 0.5), size = 4) +
+  scale_fill_manual(values = bgc_colors) +
+  labs(x = NULL, y = "Proportion (%)", fill = "BGC class") +
+  theme_bw() +
+  theme(axis.text = element_text(size = 12),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "none")
+
+save_svg(p_composition, "GCF_composition_proportion.svg", width = 5, height = 5)
+save_svg(p_composition + theme(legend.position = "right"), "GCF_composition_proportion_withlegend.svg",
+         width = 5, height = 5)
+
+
+# ==============================================================================
+# 4. MEAN DISTANCE TO BiG-FAM AND NOVEL GCFs
+# ==============================================================================
+
+read_bgcs <- function(sheet) add_bgc_class(read.xlsx(infile_bs, sheet = sheet, rowNames = TRUE))
+
 bgcs <- list(Sediment = read_bgcs("gcf_dist_0.4_SED"),
              Seawater = read_bgcs("gcf_dist_0.4_SEA"))
-
-
-# ==============================================================================
-# 2. MEAN DISTANCE TO BiG-FAM PER GCF
-# ==============================================================================
 
 gcfs <- map(bgcs, ~ .x %>%
   group_by(clustomatic_gcf) %>%
@@ -73,31 +151,27 @@ gcfs <- map(bgcs, ~ .x %>%
             Phylum       = Phylum[which.max(len_nt)],
             .groups      = "drop"))
 
-
-# ==============================================================================
-# 3. NOVEL GCFs
-# ==============================================================================
-
 novel <- imap_dfr(gcfs, ~ tibble(
-  Habitat     = .y,
-  GCFs        = n_distinct(.x$clustomatic_gcf),
-  Novel_GCFs  = sum(.x$mean_bs_dist > novel_cutoff),
-  Novel_pct   = 100 * Novel_GCFs / GCFs))
-novel
+  Habitat    = .y,
+  GCFs       = n_distinct(.x$clustomatic_gcf),
+  Novel_GCFs = sum(.x$mean_bs_dist > novel_cutoff),
+  Novel_pct  = 100 * Novel_GCFs / GCFs))
+print(novel)
 
-write.xlsx(novel, file.path(out_dir, "GCF_novelty_BiG-FAM.xlsx"))
+write.xlsx(list(GCF_composition = gcf_composition, novel_GCFs = novel),
+           file.path(out_dir, "GCF_composition_novelty_BiG-FAM.xlsx"))
 
 
 # ==============================================================================
-# 4. HISTOGRAMS
+# 5. HISTOGRAMS
 # ==============================================================================
 
 dist_hist <- function(df) {
-  ggplot(df, aes(x = mean_bs_dist, fill = BGC_FUNCTION)) +
+  ggplot(df, aes(mean_bs_dist, fill = BGC_FUNCTION)) +
     geom_histogram(binwidth = binlen, position = "stack", colour = "black", linewidth = 0.3) +
     geom_vline(xintercept = novel_cutoff) +
     scale_fill_manual(values = bgc_colors) +
-    labs(x = "Distance to BiG-FAM", y = "GCF count", fill = "GCF class") +
+    labs(x = "Distance to BiG-FAM", y = "GCF count", fill = "BGC class") +
     theme_minimal() +
     theme(axis.text    = element_text(size = 12),
           axis.title.x = element_blank(),
@@ -115,9 +189,7 @@ y_max <- max(map_dbl(plots, ~ max(layer_data(.x, 1)$ymax)))
 plots <- map(plots, ~ .x + coord_cartesian(xlim = c(0, x_max), ylim = c(0, y_max)))
 plots$Seawater <- plots$Seawater + theme(axis.title.y = element_blank())
 
-plots$Sediment | plots$Seawater
-
-ggsave(file.path(out_dir, "GCF_dist_bigfam_sed.svg"), plots$Sediment, width = 3, height = 2)
-ggsave(file.path(out_dir, "GCF_dist_bigfam_sea.svg"), plots$Seawater, width = 3, height = 2)
+save_svg(plots$Sediment, "GCF_dist_bigfam_sed.svg", width = 5, height = 5)
+save_svg(plots$Seawater, "GCF_dist_bigfam_sea.svg", width = 5, height = 5)
 
 sessionInfo()
