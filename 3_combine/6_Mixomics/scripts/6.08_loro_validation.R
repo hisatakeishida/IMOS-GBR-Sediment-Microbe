@@ -39,6 +39,7 @@ method <- if (length(args) >= 2) args[2] else "MAG"
 tag    <- paste0(hab, "_", method)
 
 in_dir  <- "<path/to/6_Mixomics>"
+profile_dir <- file.path(in_dir, "0_profiles")   # output of 6.01
 out_dir <- file.path(in_dir, "8_LORO")
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
@@ -46,7 +47,7 @@ zone_col <- "FishingStatus"
 reef_col <- "ReefName"
 n_cores  <- max(1, detectCores() - 2)
 
-inp  <- readRDS(file.path(in_dir, paste0("zoning_input_", tag, ".rds")))
+inp  <- readRDS(file.path(profile_dir, paste0("zoning_input_", tag, ".rds")))
 X    <- inp$clr
 Y    <- inp$meta[[zone_col]]
 reef <- inp$meta[[reef_col]]

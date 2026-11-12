@@ -36,6 +36,7 @@ suppressPackageStartupMessages({
 })
 
 in_dir  <- "<path/to/6_Mixomics>"
+profile_dir <- file.path(in_dir, "0_profiles")   # output of 6.01
 out_dir <- "<path/to/7_Gene_Genome_analysis/1_taxonomy>"
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
@@ -46,8 +47,8 @@ ranks    <- setNames(c("Phylum", "Class", "Order", "Family"),
 name_mag <- "MAG_CoverM"
 name_sm  <- "mOTU_SingleM"
 
-mag_sed     <- readRDS(file.path(in_dir, "profile_SED_MAG.rds"))
-singlem_sed <- readRDS(file.path(in_dir, "profile_SED_SINGLEM.rds"))
+mag_sed     <- readRDS(file.path(profile_dir, "profile_SED_MAG.rds"))
+singlem_sed <- readRDS(file.path(profile_dir, "profile_SED_SINGLEM.rds"))
 
 # merge_samples2() from speedyseq (M. McLaren) merges samples while keeping
 # categorical sample variables: remotes::install_github("mikemc/speedyseq")

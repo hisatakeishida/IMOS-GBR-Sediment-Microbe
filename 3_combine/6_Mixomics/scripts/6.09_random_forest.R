@@ -40,6 +40,7 @@ method <- if (length(args) >= 2) args[2] else "MAG"
 tag    <- paste0(hab, "_", method)
 
 in_dir  <- "<path/to/6_Mixomics>"
+profile_dir <- file.path(in_dir, "0_profiles")   # output of 6.01
 out_dir <- file.path(in_dir, "9_random_forest")
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
@@ -51,7 +52,7 @@ n_perm     <- 999
 n_top      <- 350      # top features by importance compared with MINT indicators
 n_cores    <- max(1, detectCores() - 4)
 
-inp     <- readRDS(file.path(in_dir, paste0("zoning_input_", tag, ".rds")))
+inp     <- readRDS(file.path(profile_dir, paste0("zoning_input_", tag, ".rds")))
 X       <- as.data.frame(inp$clr)
 Y       <- inp$meta[[zone_col]]
 sector  <- as.character(inp$meta[[sector_col]])

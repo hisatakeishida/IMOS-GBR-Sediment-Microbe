@@ -51,6 +51,14 @@ Directory: [`2_CAZymes_CGCs/`](2_CAZymes_CGCs/)
 - Heatmap of CGC substrates per habitat and order, with substrate counts per habitat and the relative abundance of each order
 - Scripts: [`5.02_dbcan_array.sh`](scripts/5.02_dbcan_array.sh), [`5.15_cgc_substrate_heatmap.R`](scripts/5.15_cgc_substrate_heatmap.R)
 
+<p align="center" style="background-color: white;">
+  <a href="./2_CAZymes_CGCs/derep85_mag_heatmap.substrate.combined.svg">
+    <img src="./2_CAZymes_CGCs/derep85_mag_heatmap.substrate.combined.svg" alt="CGC substrates" width="700">
+  </a>
+  <br>
+  <!-- <em>Maximum-likelihood tree of [FeFe] hydrogenases. </em> -->
+</p>
+
 ## 3. Sulphatases <a name="sulphatases"></a>
 Directory: [`3_sulphatases/`](3_sulphatases/)
 

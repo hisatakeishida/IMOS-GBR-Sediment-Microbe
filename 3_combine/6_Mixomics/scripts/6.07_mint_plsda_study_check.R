@@ -32,6 +32,7 @@ method <- if (length(args) >= 2) args[2] else "MAG"
 tag    <- paste0(hab, "_", method)
 
 in_dir  <- "<path/to/6_Mixomics>"
+profile_dir <- file.path(in_dir, "0_profiles")   # output of 6.01
 out_dir <- file.path(in_dir, "7_MINT_PLSDA_study_check")
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
@@ -39,7 +40,7 @@ zone_col   <- "FishingStatus"
 sector_col <- "GBRSector"
 trip_col   <- "TripDescription"
 
-inp    <- readRDS(file.path(in_dir, paste0("zoning_input_", tag, ".rds")))
+inp    <- readRDS(file.path(profile_dir, paste0("zoning_input_", tag, ".rds")))
 X      <- inp$clr
 Y      <- inp$meta[[zone_col]]
 sector <- factor(inp$meta[[sector_col]])

@@ -16,8 +16,8 @@
 # Input : CoverM workbook (sheets <HAB>_ENV, <HAB>_95_75_COUNT, <HAB>_TAX);
 #         SingleM workbook (sheets seased_env_RS226, seased_cov_RS226,
 #         seased_tax_RS226)
-# Output: <out_dir>/profile_<HAB>_<METHOD>.rds: phyloseq object of all samples
-#         (also used in 7.01); <out_dir>/zoning_input_<HAB>_<METHOD>.rds: list
+# Output: 0_profiles/profile_<HAB>_<METHOD>.rds: phyloseq object of all samples
+#         (also used in 7.01); 0_profiles/zoning_input_<HAB>_<METHOD>.rds: list
 #         with the phyloseq object, counts (samples x features), CLR values,
 #         and sample metadata of samples with complete design variables;
 #         HAB = SED or SEA, METHOD = MAG or SINGLEM
@@ -37,7 +37,7 @@ suppressPackageStartupMessages({
 
 mag_xlsx     <- "<path/to/1_coverm_ANI95_ALI15_MAP75_id_95_WORKING.xlsx>"
 singlem_xlsx <- "<path/to/IMOS_10Mseqs_SingleM_FINAL.xlsx>"
-out_dir      <- "<path/to/6_Mixomics>"
+out_dir      <- "<path/to/6_Mixomics>/0_profiles"
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
 # Design variables (column names in the metadata sheets)

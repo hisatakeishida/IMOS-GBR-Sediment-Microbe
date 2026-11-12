@@ -36,6 +36,7 @@ method <- if (length(args) >= 2) args[2] else "MAG"
 tag    <- paste0(hab, "_", method)
 
 in_dir   <- "<path/to/6_Mixomics>"
+profile_dir <- file.path(in_dir, "0_profiles")   # output of 6.01
 mint_dir <- file.path(in_dir, "2_MINT_sPLSDA")
 out_dir  <- file.path(in_dir, "3_permutation_tests")
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
@@ -46,7 +47,7 @@ reef_col   <- "ReefName"
 dist_used  <- "centroids.dist"
 n_perm     <- 999
 
-inp   <- readRDS(file.path(in_dir, paste0("zoning_input_", tag, ".rds")))
+inp   <- readRDS(file.path(profile_dir, paste0("zoning_input_", tag, ".rds")))
 X     <- inp$clr
 Y     <- inp$meta[[zone_col]]
 study <- factor(inp$meta[[sector_col]])
@@ -126,14 +127,29 @@ write.xlsx(list(summary = summary_tbl,
 
 # Red solid line: observed accuracy; blue dashed lines: 2.5th and 97.5th
 # percentiles of the null distribution
+lab_obs <- sprintf("Observed\n%.1f%%", 100 * observed_accuracy)
+lab_ci <- sprintf("%s\n%.1f%%", c("Null 2.5th pct", "Null 97.5th pct"), 100 * null_ci)
+
 p_hist <- ggplot(tibble(accuracy = null_accuracy), aes(accuracy)) +
   geom_histogram(bins = 30, fill = "grey70", colour = "black", alpha = 0.7) +
   geom_vline(xintercept = observed_accuracy, colour = "red3", linewidth = 1.5) +
   geom_vline(xintercept = null_ci, colour = "blue", linewidth = 0.8, linetype = "dashed") +
+  # Observed accuracy: right of the red line, at the top
+  annotate("text", x = observed_accuracy, y = Inf, label = lab_obs,
+           colour = "red3", hjust = -0.1, vjust = 1.3, size = 3.5, fontface = "bold") +
+  # Null 2.5% and 97.5% percentiles: left and right of the blue lines, a bit lower
+  annotate("text", x = null_ci, y = Inf, label = lab_ci,
+           colour = "blue", hjust = c(1.1, -0.1), vjust = 3.5, size = 3.2) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +   # headroom for the labels
+  coord_cartesian(clip = "off") +
   labs(x = "Balanced classification accuracy (LOGOCV)", y = "Frequency",
        title = paste("MINT sPLS-DA permutation test,", tag),
        subtitle = sprintf("Observed %.1f%%, p = %.3f (%d permutations)",
                           100 * observed_accuracy, p_value, length(null_accuracy))) +
-  theme_minimal()
+  theme_minimal() +
+  theme(plot.margin = margin(5.5, 30, 5.5, 5.5))                # room for a label past the last line
+
 ggsave(file.path(out_dir, paste0("permutation_mint_splsda_", tag, ".svg")),
-       p_hist, width = 7.5, height = 5)
+       p_hist, width = 7.5, height = 5, bg = "white")
+
+       

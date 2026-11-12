@@ -34,6 +34,7 @@ method <- if (length(args) >= 2) args[2] else "MAG"
 tag    <- paste0(hab, "_", method)
 
 in_dir  <- "<path/to/6_Mixomics>"
+profile_dir <- file.path(in_dir, "0_profiles")   # output of 6.01
 out_dir <- file.path(in_dir, "1_PERMANOVA")
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
@@ -43,7 +44,7 @@ reef_col   <- "ReefName"
 trip_col   <- "TripDescription"
 n_perm     <- 9999
 
-inp  <- readRDS(file.path(in_dir, paste0("zoning_input_", tag, ".rds")))
+inp  <- readRDS(file.path(profile_dir, paste0("zoning_input_", tag, ".rds")))
 meta <- inp$meta
 dist_aitchison <- dist(inp$clr)   # Euclidean distance of CLR = Aitchison distance
 

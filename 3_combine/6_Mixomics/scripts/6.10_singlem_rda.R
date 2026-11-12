@@ -32,13 +32,14 @@ args <- commandArgs(trailingOnly = TRUE)
 hab  <- if (length(args) >= 1) args[1] else "SED"
 
 in_dir  <- "<path/to/6_Mixomics>"
+profile_dir <- file.path(in_dir, "0_profiles")   # output of 6.01
 out_dir <- file.path(in_dir, "10_SingleM_RDA")
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
 rda_rank  <- "Family"
 trip_cols <- c("Trip 1" = "#f2b09e", "Trip 2" = "#5b5b5b", "Trip 3" = "#f3c789", "Trip 4" = "slateblue")
 
-ps <- readRDS(file.path(in_dir, paste0("profile_", hab, "_SINGLEM.rds")))
+ps <- readRDS(file.path(profile_dir, paste0("profile_", hab, "_SINGLEM.rds")))
 
 
 # ==============================================================================

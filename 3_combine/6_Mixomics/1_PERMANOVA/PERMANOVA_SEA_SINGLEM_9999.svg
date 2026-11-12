@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='540.00pt' height='288.00pt' viewBox='0 0 540.00 288.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1NDAuMDB8MC4wMHwyODguMDA='>
+    <rect x='0.00' y='0.00' width='540.00' height='288.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1NDAuMDB8MC4wMHwyODguMDA=)'>
+<rect x='0.00' y='0.00' width='540.00' height='288.00' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpNjkuMjJ8NTM0LjUyfDIzLjE4fDI1Ni41MA=='>
+    <rect x='69.22' y='23.18' width='465.30' height='233.33' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNjkuMjJ8NTM0LjUyfDIzLjE4fDI1Ni41MA==)'>
+<rect x='69.22' y='23.18' width='465.30' height='233.33' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='69.22' y='209.39' width='19.65' height='40.38' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
+<rect x='69.22' y='119.65' width='259.04' height='40.38' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3B3B3;' />
+<rect x='69.22' y='164.52' width='70.75' height='40.38' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3B3B3;' />
+<rect x='69.22' y='74.78' width='314.46' height='40.38' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3B3B3;' />
+<rect x='69.22' y='29.91' width='404.61' height='40.38' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B3B3B3;' />
+<text x='91.14' y='233.15' style='font-size: 9.96px; font-family: "Arial";' textLength='22.67px' lengthAdjust='spacingAndGlyphs'>1.8%</text>
+<text x='331.08' y='143.40' style='font-size: 9.96px; font-family: "Arial";' textLength='28.20px' lengthAdjust='spacingAndGlyphs'>24.2%</text>
+<text x='142.24' y='188.27' style='font-size: 9.96px; font-family: "Arial";' textLength='22.67px' lengthAdjust='spacingAndGlyphs'>6.6%</text>
+<text x='386.50' y='98.53' style='font-size: 9.96px; font-family: "Arial";' textLength='28.20px' lengthAdjust='spacingAndGlyphs'>29.4%</text>
+<text x='476.65' y='53.66' style='font-size: 9.96px; font-family: "Arial";' textLength='28.20px' lengthAdjust='spacingAndGlyphs'>37.9%</text>
+</g>
+<g clip-path='url(#cpMC4wMHw1NDAuMDB8MC4wMHwyODguMDA=)'>
+<polyline points='69.22,256.50 69.22,23.18 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<text x='64.29' y='232.73' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='53.30px' lengthAdjust='spacingAndGlyphs'>FishingStatus</text>
+<text x='64.29' y='187.86' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='44.50px' lengthAdjust='spacingAndGlyphs'>GBRSector</text>
+<text x='64.29' y='142.99' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='58.81px' lengthAdjust='spacingAndGlyphs'>TripDescription</text>
+<text x='64.29' y='98.12' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='42.05px' lengthAdjust='spacingAndGlyphs'>ReefName</text>
+<text x='64.29' y='53.25' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='34.23px' lengthAdjust='spacingAndGlyphs'>Residual</text>
+<polyline points='66.48,229.58 69.22,229.58 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='66.48,184.71 69.22,184.71 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='66.48,139.84 69.22,139.84 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='66.48,94.97 69.22,94.97 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='66.48,50.10 69.22,50.10 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='69.22,256.50 534.52,256.50 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<polyline points='69.22,259.24 69.22,256.50 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='176.07,259.24 176.07,256.50 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='282.92,259.24 282.92,256.50 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='389.78,259.24 389.78,256.50 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='496.63,259.24 496.63,256.50 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<text x='69.22' y='267.74' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='176.07' y='267.74' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='282.92' y='267.74' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text x='389.78' y='267.74' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>30</text>
+<text x='496.63' y='267.74' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>40</text>
+<text x='301.87' y='280.20' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='112.97px' lengthAdjust='spacingAndGlyphs'>Variance explained (%)</text>
+<text x='69.22' y='14.93' style='font-size: 13.20px; font-family: "Arial";' textLength='93.06px' lengthAdjust='spacingAndGlyphs'>SEA_SINGLEM</text>
+</g>
+</g>
+</svg>

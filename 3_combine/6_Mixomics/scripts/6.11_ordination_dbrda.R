@@ -34,6 +34,7 @@ method <- if (length(args) >= 2) args[2] else "MAG"
 tag    <- paste0(hab, "_", method)
 
 in_dir  <- "<path/to/6_Mixomics>"
+profile_dir <- file.path(in_dir, "0_profiles")   # output of 6.01
 out_dir <- file.path(in_dir, "5_ordination_dbRDA")
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
@@ -49,7 +50,7 @@ trip_cols <- c("Trip 1 | Nov-Dec 2019" = "#f2b09e", "Trip 2 | January 2020" = "#
 season_cols <- c("Trip 1 | Nov-Dec 2019" = "indianred", "Trip 2 | January 2020" = "indianred4",
                  "Trip 3 | February 2020" = "red3", "Trip 4 | July 2020" = "slateblue")
 
-inp  <- readRDS(file.path(in_dir, paste0("zoning_input_", tag, ".rds")))
+inp  <- readRDS(file.path(profile_dir, paste0("zoning_input_", tag, ".rds")))
 meta <- inp$meta
 ps   <- ps_mutate(inp$ps, FishingStatus = factor(FishingStatus, levels = levels(meta[[zone_col]])))
 
