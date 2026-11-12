@@ -113,6 +113,40 @@ Directory: [`3_taxonomy_novelty/`](3_taxonomy_novelty/)
 - Output: curated taxonomy of 2,077 MAGs (Fig. S1); bacterial and archaeal trees (Fig. 2a-b); MAGs per phylum (Fig. 2b); genome features (Fig. 2e-g)
 - Script: [`4.09_gtdbtk_taxonomy_phylogeny.sh`](scripts/4.09_gtdbtk_taxonomy_phylogeny.sh) (curation itself is manual), [`4.15_genome_features.R`](scripts/4.15_genome_features.R), [`4.16_phylum_counts.R`](scripts/4.16_phylum_counts.R)
 
+<p align="center">
+  <a href="./3_taxonomy_novelty/IQTREE/circleTree_Bact.svg">
+    <img src="./3_taxonomy_novelty/IQTREE/circleTree_Bact.svg"
+     alt="Maximum-likelihood tree of Archaea MAGs" width="700">
+  </a>
+  <br>
+  <em>Maximum-likelihood tree of [FeFe] hydrogenases. </em>
+</p>
+
+*Alignment within GTDB-Tk and tree inference using IQtree2*
+
+<p align="center">
+  <a href="./3_taxonomy_novelty/IQTREE/circleTree_Arch.svg">
+    <img src="./3_taxonomy_novelty/IQTREE/circleTree_Arch.svg"
+     alt="Maximum-likelihood tree of Archaea MAGs" width="700">
+  </a>
+  <br>
+  <em>Maximum-likelihood tree of [FeFe] hydrogenases. </em>
+</p>
+
+*Alignment within GTDB-Tk and tree inference using IQtree2*
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./2_MAG_QC_Dereplication/Fig2e-g_genome_features_measured.svg" alt="Genome features observed" width="100%"><br>
+      <b>a</b> Observed differences
+    </td>
+    <td align="center" width="50%">
+      <img src="./2_MAG_QC_Dereplication/Fig2e-g_genome_features_measured.svg" alt="Genome features normalised" width="100%"><br>
+      <b>b</b> Normalised by CheckM2 Completeness 
+    </td>
+  </tr>
+</table>
+
 ## 8. Novelty <a name="novelty"></a>
 Directory: [`3_taxonomy_novelty/`](3_taxonomy_novelty/)
 

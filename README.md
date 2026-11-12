@@ -10,8 +10,8 @@ This project implemented gene-centric and genome-centric analyses to investigate
 This project is part of the Great Barrier Reef Microbial Genomes Database sub-Facility within the Marine Microbiome Initiative Facility of Australia's Integrated Marine Observing System (IMOS). More details are available on the [IMOS GBR Microbial Genomic Database page](https://imos.org.au/facilities/marinemicrobiomeinitiative/gbr-microbial-genomic-database).
 
 More details for the seawater data analysed alongside sediments (MGD-seawater) are available on Dr Marko Terzin's GitHub pages and on [Zenodo](https://zenodo.org/records/20503966):
-- [Gene-centric analyses](https://github.com/mterzin/IMOS_GBR_MGD_read-centric_analysis) associated with [Terzin et al., 2025](https://doi.org/10.1038/s41586-026-10778-z)
-- [Genome-centric analyses](https://github.com/mterzin/fishy_microbes) associated with [Terzin et al., 2026](https://doi.org/10.1038/s41586-026-10778-z) and [Robbins et al., 2026](https://doi.org/10.1038/s41586-026-10778-z)
+- [Gene-centric analyses](https://github.com/mterzin/IMOS_GBR_MGD_read-centric_analysis) associated with [Terzin et al., 2025](https://doi.org/10.1186/s40168-024-01972-0)
+- [Genome-centric analyses](https://github.com/mterzin/fishy_microbes) associated with [Terzin et al., 2026](https://doi.org/10.64898/2026.07.23.740257) and [Robbins et al., 2026](https://doi.org/10.1038/s41586-026-10778-z)
 
 ## Repository structure
 Each analysis folder has its own page describing the methods, and its scripts are in a `scripts/` subfolder, numbered by analysis (e.g. `4.01` is the first step of `4_MAGs`).

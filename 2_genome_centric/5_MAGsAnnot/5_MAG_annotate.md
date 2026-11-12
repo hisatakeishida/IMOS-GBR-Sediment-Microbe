@@ -65,6 +65,16 @@ Directory: [`4_hydrogenases_marker_genes/`](4_hydrogenases_marker_genes/)
 - Output: Fig. 3a-b and 3d, Table S16
 - Script: [`5.04_hyddb_marker_genes_array.sh`](scripts/5.04_hyddb_marker_genes_array.sh)
 
+<p align="center">
+  <a href="./4_hydrogenases_marker_genes/FeFeHydrogenage_MLtree.svg">
+    <img src="./4_hydrogenases_marker_genes/FeFeHydrogenage_MLtree.svg" alt="Maximum-likelihood tree of [FeFe] hydrogenases" width="700">
+  </a>
+  <br>
+  <em>Maximum-likelihood tree of [FeFe] hydrogenases. </em>
+</p>
+
+*Minimum 200 aa. Alignment using mafft, and tree inference using IQtree2*
+
 ## 5. *amoA* <a name="amoa"></a>
 Directory: [`5_amoA/`](5_amoA/)
 
@@ -120,3 +130,17 @@ sbatch 2_genome_centric/5_MAGsAnnot/scripts/5.10_bgc_protein_sets.sh   # after 5
 sbatch 2_genome_centric/5_MAGsAnnot/scripts/5.11_clustomatic.sh
 sbatch 2_genome_centric/5_MAGsAnnot/scripts/5.12_gcf_summary.sh
 ```
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./7_BGCs/GCF_dist_bigfam_sed.svg" alt="GCF distance to BiG-FAM, sediment" width="100%"><br>
+      <b>(a)</b> Sediment
+    </td>
+    <td align="center" width="50%">
+      <img src="./7_BGCs/GCF_dist_bigfam_sea.svg" alt="GCF distance to BiG-FAM, seawater" width="100%"><br>
+      <b>(b)</b> Seawater
+    </td>
+  </tr>
+</table>
+*Mean BiG-SLiCE distance of each GCF to BiG-FAM. The dashed line marks the novelty threshold (0.4); GCFs above it are considered novel.*
