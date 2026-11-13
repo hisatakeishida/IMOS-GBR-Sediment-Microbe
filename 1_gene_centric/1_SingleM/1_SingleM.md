@@ -133,3 +133,13 @@ Directory: [`4_appraise_novelty/`](4_appraise_novelty/)
 | 10 M read pairs | Seawater | Archaea | Average | 56.1 | 86.3 |
 | 10 M read pairs | Seawater | Bacteria | Total | 42.5 | 90.7 |
 | 10 M read pairs | Seawater | Bacteria | Average | 42.2 | 90.2 |
+
+<p align="center" style="background-color: white;">
+  <a href="./4_appraise_novelty/appraise_percent_binned.png">
+    <img src="./4_appraise_novelty/appraise_percent_binned.png" 
+    alt="Fraction of mOTUs clusted at the species level with corresponding genome database" width="700">
+  </a>
+  <br>
+  <!-- <em> Heatmap enrichment. </em> -->
+</p>
+
