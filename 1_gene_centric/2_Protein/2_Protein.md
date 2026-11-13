@@ -127,6 +127,33 @@ Rscript 1_gene_centric/2_Protein/scripts/2.14_protein_annotation_objects.R
 Rscript 1_gene_centric/2_Protein/scripts/2.15_protein_ordination.R
 ```
 
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./3_read_mapping_RPKM/Fig1e_KO_pcoa.svg"
+           alt="Fig1e_KO_pcoa"
+           width="100%"><br>
+      <b>(a)</b> KO
+    </td>
+    <td align="center" width="50%">
+      <img src="./3_read_mapping_RPKM/Fig1f_CAZyme_pcoa.svg"
+           alt="Fig1f_CAZyme_pcoa"
+           width="100%"><br>
+      <b>(b)</b> CAZyme
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <a href="./3_read_mapping_RPKM/Fig_GreeningDb_hydrogenase_pcoa.svg">
+    <img src="./3_read_mapping_RPKM/Fig_GreeningDb_hydrogenase_pcoa.svg"
+         alt="Greening DB and hydrogenase PCoA"
+         width="700">
+  </a>
+  <br>
+  <b>(c)</b> Greening DB and hydrogenases
+</p>
+
 ## 5. Differential abundance <a name="diffabund"></a>
 Directory: [`4_differential_abundance/`](4_differential_abundance/)
 
@@ -138,3 +165,13 @@ Directory: [`4_differential_abundance/`](4_differential_abundance/)
 - Input: `ps_greening_hyddb.RDS` from section 4
 - Output: `MAASLIN_LINDA_greeningDB.xlsx`
 - Script: [`2.16_protein_differential_abundance.R`](scripts/2.16_protein_differential_abundance.R)
+
+<p align="center" style="background-color: white;">
+  <a href="./4_differential_abundance/greeningDB_TSS_AST_Source_TripSeason_ReefasRandom/heatmap.png">
+    <img src="./4_differential_abundance/greeningDB_TSS_AST_Source_TripSeason_ReefasRandom/heatmap.png"
+    alt="Heatmap enrichment of key genes" width="700">
+  </a>
+  <br>
+  <!-- <em> Heatmap enrichment. </em> -->
+</p>
+

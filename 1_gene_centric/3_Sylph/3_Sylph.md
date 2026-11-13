@@ -78,3 +78,21 @@ for f in sylph_<habitat>*.e; do
 done | awk '{x = $6; sum += x; sumsq += x * x; n++}
     END {mean = sum / n; printf "Count: %d\nMean: %.6f\nSD: %.6f\n", n, mean, sqrt(sumsq / n - mean * mean)}'
 ```
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="/Users/s4573340/Library/CloudStorage/OneDrive-TheUniversityofQueensland/Documents/GitHub/IMOS-GBR-Sediment-Microbe/1_gene_centric/1_SingleM/3_abundance_DA/Fig1c_class_composition.pdf"
+           alt="Fig1e_KO_pcoa"
+           width="100%"><br>
+      <b>(a)</b> KO
+    </td>
+    <td align="center" width="50%">
+      <img src="./3_read_mapping_RPKM/Fig1f_CAZyme_pcoa.svg"
+           alt="Fig1f_CAZyme_pcoa"
+           width="100%"><br>
+      <b>(b)</b> CAZyme
+    </td>
+  </tr>
+</table>
+ 

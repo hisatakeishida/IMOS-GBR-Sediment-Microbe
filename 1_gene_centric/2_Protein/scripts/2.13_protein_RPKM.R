@@ -46,7 +46,7 @@ singlem_otumat_path <- "<path/to/3_read_mapping_RPKM/summary>/singlem_counts.lon
 protein_len         <- "<path/to/3_read_mapping_RPKM/summary>/gene_catalogue_protein_length.tsv"
 singlem_len         <- "<path/to/3_read_mapping_RPKM/summary>/singlem_protein_length.tsv"
 
-genename_path       <- "<path/to/2_annotation/summary>/ko_annot.tsv"
+genename_path       <- "<path/to/2_annotation/summary>/gene_catalogue_ko_annotations.tsv"
 metadata_path       <- "<path/to/genecentric_kegg_cazy.xlsx>"
 out_dir             <- "<path/to/3_read_mapping_RPKM/RPKM>"
 fig_dir             <- file.path(out_dir, "FIG", mode)
