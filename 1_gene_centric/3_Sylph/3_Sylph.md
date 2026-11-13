@@ -82,16 +82,33 @@ done | awk '{x = $6; sum += x; sumsq += x * x; n++}
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="/Users/s4573340/Library/CloudStorage/OneDrive-TheUniversityofQueensland/Documents/GitHub/IMOS-GBR-Sediment-Microbe/1_gene_centric/1_SingleM/3_abundance_DA/Fig1c_class_composition.pdf"
-           alt="Fig1e_KO_pcoa"
+      <img src="../1_SingleM/3_abundance_DA/Fig1c_phylum_composition.png"
+           alt="signlem_class"
            width="100%"><br>
-      <b>(a)</b> KO
+      <b>(a)</b>  Phylum-level composition (singlem)
     </td>
     <td align="center" width="50%">
-      <img src="./3_read_mapping_RPKM/Fig1f_CAZyme_pcoa.svg"
-           alt="Fig1f_CAZyme_pcoa"
+      <img src="./1_summary/composition_phylum.png"
+           alt="sylph_class"
            width="100%"><br>
-      <b>(b)</b> CAZyme
+      <b>(b)</b> Phylum-level composition (sylph)
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="../1_SingleM/3_abundance_DA/Fig1c_family_composition.png"
+           alt="signlem_class"
+           width="100%"><br>
+      <b>(a)</b>  Class-level composition (singlem)
+    </td>
+    <td align="center" width="50%">
+      <img src="./1_summary/composition_class.png"
+           alt="sylph_class"
+           width="100%"><br>
+      <b>(b)</b> Class-level composition (sylph)
     </td>
   </tr>
 </table>

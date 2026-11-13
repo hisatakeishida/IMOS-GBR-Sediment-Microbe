@@ -159,6 +159,31 @@ Directory: [`3_taxonomy_novelty/`](3_taxonomy_novelty/)
 - Output: 1,182 of 1,201 sediment species without a GTDB representative, and 1,158 not clustering with any public genome (Table 1, Fig. 2c-d)
 - Scripts: [`4.10_novelty_cluster.sh`](scripts/4.10_novelty_cluster.sh), [`4.11_novelty_upset.R`](scripts/4.11_novelty_upset.R)
 
+<p align="center" style="background-color: white;">
+  <a href="./3_taxonomy_novelty/Fig2d_novelty_upset.svg"
+     style="background-color: white;">
+    <img src="./3_taxonomy_novelty/Fig2d_novelty_upset.svg"
+         alt="Novelty of MGD-sediment MAGs"
+         width="700"
+         style="background-color: white;">
+  </a>
+  <br>
+  <em>Novelty of MGD-sediment MAGs.</em>
+</p>
+
+
+<p align="center" style="background-color: white;">
+  <a href="./3_taxonomy_novelty/Fig2d_novelty_upset.all.svg"
+     style="background-color: white;">
+    <img src="./3_taxonomy_novelty/Fig2d_novelty_upset.all.svg"
+         alt="Novelty of MGD-sediment MAGs"
+         width="700"
+         style="background-color: white;">
+  </a>
+  <br>
+  <em>Novelty of MGD-sediment MAGs.</em>
+</p>
+
 ## 9. Read mapping to MAGs <a name="mapping"></a>
 Directory: [`4_read_mapping/`](4_read_mapping/)
 

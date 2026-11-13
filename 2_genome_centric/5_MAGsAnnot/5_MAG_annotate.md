@@ -168,11 +168,11 @@ sbatch 2_genome_centric/5_MAGsAnnot/scripts/5.12_gcf_summary.sh
 <table>
   <tr>
     <td align="center" width="50%" style="background-color: white;">
-      <img src="./7_BGCs/GCF_dist_bigfam_sed.svg" alt="GCF distance to BiG-FAM, sediment" width="100%"><br>
+      <img src="./7_BGCs/GCF_dist_bigfam_sed.svg" alt="GCF distance to BiG-FAM, sediment" width="120%"><br>
       <b>(a)</b> Sediment
     </td>
     <td align="center" width="50%" style="background-color: white;">
-      <img src="./7_BGCs/GCF_dist_bigfam_sea.svg" alt="GCF distance to BiG-FAM, seawater" width="100%"><br>
+      <img src="./7_BGCs/GCF_dist_bigfam_sea.svg" alt="GCF distance to BiG-FAM, seawater" width="120%"><br>
       <b>(b)</b> Seawater
     </td>
   </tr>

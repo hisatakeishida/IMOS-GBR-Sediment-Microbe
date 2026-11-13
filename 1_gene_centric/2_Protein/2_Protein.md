@@ -22,7 +22,7 @@ Scripts for this analysis are in the [`scripts/`](scripts/) folder (`2.01` to `2
 | 2.12 | [`scripts/2.12_diamond_counts.sh`](scripts/2.12_diamond_counts.sh) | Count reads per protein and per SingleM marker gene (long format) |
 | 2.13 | [`scripts/2.13_protein_RPKM.R`](scripts/2.13_protein_RPKM.R) | RPKM of catalogue proteins normalised by mean SingleM marker gene RPKM (phyloseq object with KO annotation) |
 | 2.14 | [`scripts/2.14_protein_annotation_objects.R`](scripts/2.14_protein_annotation_objects.R) | Phyloseq objects of normalised RPKM for KOs, marker genes with HydDB subgroups, and CAZyme families |
-| 2.15 | [`scripts/2.15_protein_ordination.R`](scripts/2.15_protein_ordination.R) | PCoA on Aitchison distances of normalised RPKM for KOs (Fig. 1e) and CAZymes (Fig. 1f) |
+| 2.15 | [`scripts/2.15_protein_ordination.R`](scripts/2.15_protein_ordination.R) | PCoA on Aitchison distances of normalised RPKM for KOs (Fig. 1e) and CAZymes (Fig. 1f); supporting PCoA of marker genes and Shannon diversity by habitat |
 | 2.16 | [`scripts/2.16_protein_differential_abundance.R`](scripts/2.16_protein_differential_abundance.R) | Differential abundance of metabolic marker genes (with HydDB subgroups) between sediment and seawater with MaAsLin2 and LinDA (Fig. 3c) |
 
 ## Table of contents
@@ -133,26 +133,30 @@ Rscript 1_gene_centric/2_Protein/scripts/2.15_protein_ordination.R
       <img src="./3_read_mapping_RPKM/Fig1e_KO_pcoa.svg"
            alt="Fig1e_KO_pcoa"
            width="100%"><br>
-      <b>(a)</b> KO
+      <b>(a)</b> KO PCoA
     </td>
     <td align="center" width="50%">
       <img src="./3_read_mapping_RPKM/Fig1f_CAZyme_pcoa.svg"
            alt="Fig1f_CAZyme_pcoa"
            width="100%"><br>
-      <b>(b)</b> CAZyme
+      <b>(b)</b> CAZyme PCoA
+    </td>
+  </tr>
+    <td align="center" width="50%">
+      <img src="./3_read_mapping_RPKM/Fig_GreeningDb_hydrogenase_pcoa.svg"
+           alt="Greening DB and hydrogenases"
+           width="100%"><br>
+      <b>(c)</b>  Greening DB and hydrogenases PCoA
+    </td>
+    <td align="center" width="50%">
+      <img src="./3_read_mapping_RPKM/Shannon_habitat.svg"
+           alt="Fig1f_CAZyme_pcoa"
+           width="100%"><br>
+      <b>(d)</b> Shannon diversity
     </td>
   </tr>
 </table>
 
-<p align="center">
-  <a href="./3_read_mapping_RPKM/Fig_GreeningDb_hydrogenase_pcoa.svg">
-    <img src="./3_read_mapping_RPKM/Fig_GreeningDb_hydrogenase_pcoa.svg"
-         alt="Greening DB and hydrogenase PCoA"
-         width="700">
-  </a>
-  <br>
-  <b>(c)</b> Greening DB and hydrogenases
-</p>
 
 ## 5. Differential abundance <a name="diffabund"></a>
 Directory: [`4_differential_abundance/`](4_differential_abundance/)

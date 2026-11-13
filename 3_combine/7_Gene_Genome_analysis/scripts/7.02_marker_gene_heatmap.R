@@ -47,10 +47,10 @@ q_cutoff <- 0.05
 
 # Gene names pass through make.names() so they match across tables
 # (e.g. "[NiFe]_1a" becomes "X.NiFe._1a")
-genome_genetable <- read.csv(file.path(enrich_dir, "marker_genes_countmat_UsedInEnrichment.csv"),
+genome_genetable <- read.csv(file.path(enrich_dir, "countmat_UsedInEnrichment.csv"),
                              row.names = 1, check.names = TRUE)
-genome_metadata  <- read.csv(file.path(enrich_dir, "marker_genes_maginfo_UsedInEnrichment.csv"))
-manw_result      <- read.csv(file.path(enrich_dir, "marker_genes_mannwhitney.csv")) %>%
+genome_metadata  <- read.csv(file.path(enrich_dir, "maginfo_UsedInEnrichment.csv"))
+manw_result      <- read.csv(file.path(enrich_dir, "manw_enrichment.csv")) %>%
   mutate(gene = make.names(gene))
 gene_enrichment  <- read.xlsx(da_file) %>%
   rename(gene = feature)
@@ -343,3 +343,4 @@ svglite(file.path(out_dir, "Fig3a-c_marker_gene_heatmap.withlegend.svg"), width 
 draw(ht, heatmap_legend_side = "bottom", annotation_legend_side = "bottom",
      heatmap_legend_list = list(heatmap_legend), annotation_legend_list = legends)
 dev.off()
+

@@ -34,6 +34,15 @@ Directory: [`1_taxonomy/`](1_taxonomy/)
 - Output: Fig. S2a-d (log2 fold changes), Fig. S2e-h (ranks), Fig. S2i (composition), Table S7 (TODO: confirm which table)
 - Script: [`7.01_taxonomic_comparison.R`](scripts/7.01_taxonomic_comparison.R)
 
+<p align="center" style="background-color: white;">
+  <a href="./1_taxonomy/FigS2i_class_composition.svg">
+    <img src="./1_taxonomy/FigS2i_class_composition.svg" 
+    alt="Relative abudance coverm vs singlem" width="700">
+  </a>
+  <br>
+  <em> Relative abudance coverm vs singlem </em>
+</p>
+
 ## 2. Metabolic marker genes <a name="metabolism"></a>
 Directory: [`2_metabolism/`](2_metabolism/)
 
@@ -48,3 +57,13 @@ Directory: [`2_metabolism/`](2_metabolism/)
 - Platform: R (ComplexHeatmap)
 - Output: Fig. 3a-c
 - Script: [`7.02_marker_gene_heatmap.R`](scripts/7.02_marker_gene_heatmap.R)
+
+
+<p align="center" style="background-color: white;">
+  <a href="../../2_genome_centric/5_MAGsAnnot/6_enrichment_tests/greening_mag_heatmap.withlegend.svg">
+    <img src="../../2_genome_centric/5_MAGsAnnot/6_enrichment_tests/greening_mag_heatmap.withlegend.svg" 
+    alt="Heatmap enrichment of key genes" width="700">
+  </a>
+  <br>
+  <em> Heatmap enrichment. </em>
+</p>
