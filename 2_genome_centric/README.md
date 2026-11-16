@@ -18,7 +18,7 @@ Analyses based on metagenome-assembled genomes (MAGs): recovery, quality control
 - [Taxonomy and phylogeny](4_MAGs/4_MAG_recovery.md#taxonomy): GTDB-Tk R10-RS226, PhyloRank curation, IQ-TREE trees, and genome features (Fig. 2a-b, 2e-g, Fig. S1; `4.09`, `4.15`, `4.16`)
 - [Novelty](4_MAGs/4_MAG_recovery.md#novelty): clustering with GTDB and public genome collections (Table 1, Fig. 2c-d; `4.10`, `4.11`)
 - [Read mapping to MAGs](4_MAGs/4_MAG_recovery.md#mapping): CoverM read mapping, giving MAG-based community profiles (`4.12`)
-- [Unbinned contigs](4_MAGs/4_MAG_recovery.md#unbinned): reads not mapped to MAGs, and MMseqs2 taxonomy of contigs not placed in MAGs (`4.13`, `4.14`)
+- [Unbinned contigs](4_MAGs/4_MAG_recovery.md#unbinned): MMseqs2 taxonomy of contigs not placed in MAGs, and recruitment of reads not mapped to MAGs (`4.13`, `4.14`)
 
 ## [5. MAG annotation](5_MAGsAnnot/5_MAG_annotate.md)
 Sediment (1,201) and seawater (876) MAGs; habitat comparisons use the 796 MAGs with CheckM2 completeness ≥ 85% (347 sediment, 449 seawater).

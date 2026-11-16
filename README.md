@@ -61,7 +61,7 @@ Each analysis folder has its own page describing the methods, and its scripts ar
 - [`2_MAG_QC_Dereplication/`](2_genome_centric/4_MAGs/2_MAG_QC_Dereplication/): CheckM and CheckM2, quality score ≥ 50% (2,698 MAGs; Table S7), CoverM cluster at 95% ANI (1,201 MAGs; Table S8), and genome features (Fig. 2e-g)
 - [`3_taxonomy_novelty/`](2_genome_centric/4_MAGs/3_taxonomy_novelty/): GTDB-Tk R10-RS226 and PhyloRank curation (Fig. S1), IQ-TREE bacterial and archaeal trees (Fig. 2a-b), MAGs per phylum (Fig. 2b), and comparison with GTDB and public genome collections (Table 1, Fig. 2c-d)
 - [`4_read_mapping/`](2_genome_centric/4_MAGs/4_read_mapping/): CoverM read mapping of each habitat to its own MAGs (MAG-based community profiles)
-- [`5_unbinned_contigs/`](2_genome_centric/4_MAGs/5_unbinned_contigs/): MMseqs2 taxonomy of all assembled contigs, and an exploratory analysis of unbinned contigs (not reported in the manuscript)
+- [`5_unbinned_contigs/`](2_genome_centric/4_MAGs/5_unbinned_contigs/): MMseqs2 taxonomy of unbinned contigs, and an exploratory recruitment of MAG-unmapped reads to them (not reported in the manuscript)
 
 #### [`5_MAGsAnnot/`](2_genome_centric/5_MAGsAnnot/): MAG annotation ([page](2_genome_centric/5_MAGsAnnot/5_MAG_annotate.md); scripts `5.01` to `5.14`)
 - [`1_DRAM/`](2_genome_centric/5_MAGsAnnot/1_DRAM/): KOfam, Pfam, and MEROPS annotation
