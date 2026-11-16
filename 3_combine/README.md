@@ -1,7 +1,7 @@
 # Combined gene- and genome-centric analyses
 
 Analyses that bring together the [gene-centric](../1_gene_centric/README.md) and [genome-centric](../2_genome_centric/README.md) results: the effect of reef zoning status on community structure, using both mOTU-based and MAG-based profiles, and a direct comparison of what the two approaches reveal about taxonomic composition and metabolic potential.
-
+ 
 | Section | Page | Scripts | Manuscript content |
 |---|---|---|---|
 | 6. Mixomics | [Community structure and reef zoning status](6_Mixomics/6_Mixomics.md) | [`6.01` to `6.10`](6_Mixomics/scripts/) | Fig. S3 (`6.05` onwards are supporting) |

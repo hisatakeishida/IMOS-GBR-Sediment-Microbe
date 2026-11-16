@@ -1,10 +1,12 @@
 # Zenodo data release
 
-Data files deposited on Zenodo (DOI: `TODO`) for:
+Data files deposited on Zenodo (DOI: `https://doi.org/10.5281/zenodo.24187765`) for:
 
-> Ishida, H., Robbins, S. J., Bell, S. C., Lim, J. Y., Webster, N., Bourne, D. G., Laffy, P. W., Hugenholtz, P., Yeoh, Y. K., & Chan, C. X. **Comparative metagenomics reveals diversity and metabolic heterogeneity of sediment microbes from the Great Barrier Reef.** *In preparation.*
+> Ishida, H., Robbins, S. J., Bell, S. C., Lim, J. Y.,  Terzin, M., Webster, N., Bourne, D. G., Laffy, P. W., Hugenholtz, P., Yeoh, Y. K., & Chan, C. X. **Comparative metagenomics reveals diversity and metabolic heterogeneity of sediment microbes from the Great Barrier Reef.** *In preparation.*
 
-Code that produced each file is in this repository; the step numbers below refer to its scripts. Raw reads are on IMOS-AODN (`TODO`) and ENA (`TODO`). Seawater MAGs (MGD-seawater) are available from [Zenodo record 20503966](https://zenodo.org/records/20503966).
+Code that produced each file is in this repository; the step numbers below refer to its scripts. Raw reads are on the [AIMS data repository](https://doi.org/10.25845/kkma-n127) and NCBI BioProject accession [PRJEB112104](https://www.ebi.ac.uk/ena/browser/view/PRJEB112104).
+
+Seawater MAGs (MGD-seawater) are available from Zenodo record [20503966](https://zenodo.org/records/20503966).
 
 ## Datasets
 - **Gene catalogue**: non-redundant proteins from all sediment and seawater assemblies (complete ORFs; MMseqs2 easy-linclust, 90% identity, 80% coverage)
@@ -20,7 +22,7 @@ Code that produced each file is in this repository; the step numbers below refer
 | `02_gene-catalogue_protein-lengths.tsv.gz` | Length of each catalogue protein in nucleotides (`GeneID`, `Length`) | 2.10 |
 | `03_gene-catalogue_KO-annotations.tsv.gz` | KOfam annotation (DRAM v1.5, E-value 1e-6) of catalogue proteins (`GeneID`, `ko_id`) | 2.03, 2.08 |
 | `04_gene-catalogue_other-annotations.tar.gz` | CAZyme (run_dbcan v5.0.1), HydDB, metabolic marker gene, and *amoA* annotations of catalogue proteins | 2.04 to 2.08 |
-| `05_gene-catalogue_read-counts.tsv.gz` | Reads mapped to each catalogue protein per sample, long format (`Sample`, `GeneID`, `Count`); DIAMOND blastx of 10 M R1 reads ≥ 140 bp per sample | 2.11, 2.12 |
+| `05_gene-catalogue_read-counts.tsv.gz` | Reads mapped to each catalogue protein per sample, long format (`Sample`, `GeneID`, `Count`); DIAMOND blastx of R1 reads ≥ 140 bp per sample | 2.11, 2.12 |
 | `06_singlem-markers_read-counts.tsv.gz` | Reads mapped to each SingleM marker gene per sample, long format (`Sample`, `GeneID`, `Count`); same reads as file 05 | 2.11, 2.12 |
 | `07_singlem-markers_lengths.tsv.gz` | Length of each SingleM marker gene in nucleotides (`GeneID`, `Length`) | 2.10 |
 | `08_gene-catalogue_phyloseq-objects.tar.gz` | R phyloseq objects of normalised RPKM (catalogue protein RPKM / mean SingleM marker gene RPKM per sample): `dram_ko_e6.RPKM.rds`, `ps_ko.RDS`, `ps_dbcan.RDS`, `ps_greening_hyddb.RDS` | 2.13, 2.14 |
@@ -40,8 +42,6 @@ Code that produced each file is in this repository; the step numbers below refer
 | `14_MGD-seawater_876-MAGs_1472-BGCs_proteins.faa.gz` | Proteins of 1,472 biosynthetic gene clusters (BGCs ≥ 5,000 bp) from seawater MAGs | 5.09, 5.10 |
 | `15_FeFe-hydrogenases_MAGs-and-gene-catalogue_min200aa.faa.gz` | [FeFe] hydrogenase catalytic subunits (≥ 200 aa) from sediment and seawater MAGs and the gene catalogue | 2.05, 5.04 |
 | `16_NiFe-hydrogenases_MAGs-and-gene-catalogue_min200aa.faa.gz` | [NiFe] hydrogenase large subunits (≥ 200 aa) from sediment and seawater MAGs and the gene catalogue | 2.05, 5.04 |
-
-TODO: confirm the contents listed for files 04, 08, 11, 12, 15, and 16.
 
 ## Using the files
 
@@ -69,8 +69,6 @@ MD5 checksums of all files are in `md5sums.txt`:
 md5sum -c md5sums.txt
 ```
 
-## Licence
-`TODO` (e.g. CC BY 4.0)
 
 ## Contact
 Hisatake Ishida, hisatake.ishida@uq.net.au

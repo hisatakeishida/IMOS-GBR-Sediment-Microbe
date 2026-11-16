@@ -1,7 +1,7 @@
 # Genome-centric analyses
 
 Analyses based on metagenome-assembled genomes (MAGs): recovery, quality control, dereplication, taxonomy, phylogeny, and novelty of sediment MAGs, and annotation of the metabolic and biosynthetic potential of sediment and seawater MAGs.
-
+ 
 | Section | Page | Scripts | Manuscript content |
 |---|---|---|---|
 | 4. MAG recovery | [MAG recovery](4_MAGs/4_MAG_recovery.md) | [`4.01` to `4.16`](4_MAGs/scripts/) | Fig. 1b, Fig. 2a-g, Fig. S1; Table 1, Tables S2, S7, and S8 |

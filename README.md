@@ -2,7 +2,7 @@
 
 This repository contains code and data associated with the paper:
 
-> Ishida, H., Robbins, S. J., Bell, S. C., Lim, J. Y., Webster, N., Bourne, D. G., Laffy, P. W., Hugenholtz, P., Yeoh, Y. K., & Chan, C. X. **Comparative metagenomics reveals diversity and metabolic heterogeneity of sediment microbes from the Great Barrier Reef.** *In preparation.*
+> Ishida, H., Robbins, S. J., Bell, S. C., Lim, J. Y., Terzin, M., Webster, N., Bourne, D. G., Laffy, P. W., Hugenholtz, P., Yeoh, Y. K., & Chan, C. X. **Comparative metagenomics reveals diversity and metabolic heterogeneity of sediment microbes from the Great Barrier Reef.** *In preparation.*
 
 ## Overview
 This project implemented gene-centric and genome-centric analyses to investigate the taxonomic and metabolic diversity of surface sediment microbiomes of the Great Barrier Reef (GBR), relative to microbes in the co-located surface seawater ([Robbins et al., 2026](https://doi.org/10.1038/s41586-026-10778-z)). Sediments were collected from 48 reefs (23 no-take marine reserves and 25 fished reefs) across seven GBR sectors over four sampling trips (November 2019 to July 2020), yielding 191 Illumina metagenomes (17 with ONT long reads), 2,698 metagenome-assembled genomes (MAGs), and 1,201 species-level MAGs (MGD-sediment).
@@ -86,7 +86,7 @@ Raw sequencing data and sediment MAGs will be released upon publication.
 
 ## Authors and affiliations
 
-Hisatake Ishida<sup>1</sup>, Steven J. Robbins<sup>1</sup>, Sara C. Bell<sup>2</sup>, Jin Yan Lim<sup>2</sup>, Nicole Webster<sup>1,3</sup>, David G. Bourne<sup>2,4,5</sup>, Patrick W. Laffy<sup>2,5</sup>, Philip Hugenholtz<sup>1</sup>, Yun Kit Yeoh<sup>2,5</sup>, Cheong Xin Chan<sup>1</sup>
+Hisatake Ishida<sup>1</sup>, Steven J. Robbins<sup>1</sup>, Sara C. Bell<sup>2</sup>, Jin Yan Lim<sup>2</sup>, Marko Terzin<sup>2,4,5</sup>, Nicole Webster<sup>1,3</sup>, David G. Bourne<sup>2,4,5</sup>, Patrick W. Laffy<sup>2,5</sup>, Philip Hugenholtz<sup>1</sup>, Yun Kit Yeoh<sup>2,5</sup>, Cheong Xin Chan<sup>1</sup>
 
 1. Australian Centre for Ecogenomics, School of Chemistry and Molecular Biosciences, The University of Queensland, Brisbane, QLD 4072, Australia
 2. Australian Institute of Marine Science, Townsville, QLD 4810, Australia
