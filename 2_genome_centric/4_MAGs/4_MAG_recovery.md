@@ -136,6 +136,11 @@ Directory: [`3_taxonomy_novelty/`](3_taxonomy_novelty/)
   <em>Maximum-likelihood tree of archaeal MAGs.</em>
 </p>
 *Alignment within GTDB-Tk and tree inference using IQtree2*
+
+These tree can be interactively explored using [TVBOT](https://github.com/1996xjm/TVBOT) and [TVBOT-local](https://github.com/julianzaugg/tvbot-local). 
+
+Load our JSON files ([`circleTree_Arch.json`](3_taxonomy_novelty/IQTREE/circleTree_Arch.json) and [`circleTree_Bact.json`](3_taxonomy_novelty/IQTREE/circleTree_Bact.json)) to https://www.chiplot.online/circleTree.html using "Restore drawing state".
+
 <table>
   <tr>
     <td align="center" width="50%"style="background-color: white;">

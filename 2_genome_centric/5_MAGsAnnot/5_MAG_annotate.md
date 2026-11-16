@@ -76,6 +76,15 @@ Directory: [`4_hydrogenases_marker_genes/`](4_hydrogenases_marker_genes/)
 - Script: [`5.04_hyddb_marker_genes_array.sh`](scripts/5.04_hyddb_marker_genes_array.sh)
 
 <p align="center" style="background-color: white;">
+  <a href="./4_hydrogenases_marker_genes/NiFeHydrogenage_MLtree.svg">
+    <img src="./4_hydrogenases_marker_genes/NiFeHydrogenage_MLtree.svg" alt="Maximum-likelihood tree of [NiFe] hydrogenases" width="700">
+  </a>
+  <br>
+  <em>Maximum-likelihood tree of [NiFe] hydrogenases. </em>
+</p>
+
+
+<p align="center" style="background-color: white;">
   <a href="./4_hydrogenases_marker_genes/FeFeHydrogenage_MLtree.svg">
     <img src="./4_hydrogenases_marker_genes/FeFeHydrogenage_MLtree.svg" alt="Maximum-likelihood tree of [FeFe] hydrogenases" width="700">
   </a>
@@ -83,7 +92,9 @@ Directory: [`4_hydrogenases_marker_genes/`](4_hydrogenases_marker_genes/)
   <em>Maximum-likelihood tree of [FeFe] hydrogenases. </em>
 </p>
 
-*Minimum 200 aa. Alignment using mafft, and tree inference using IQtree2*
+*Minimum 200 aa. Alignment using mafft, (trimmed for NiFe using trimAl) and tree inference using IQtree2* 
+
+These tree can be interactively explored using [TVBOT](https://github.com/1996xjm/TVBOT) and [TVBOT-local](https://github.com/julianzaugg/tvbot-local). Load our JSON files ([`FeFeHydrogenage_MLtree.JSON`](4_hydrogenases_marker_genes/FeFeHydrogenage_MLtree.JSON) and [`NiFeHydrogenage_MLtree.JSON`](4_hydrogenases_marker_genes/NiFeHydrogenage_MLtree.JSON) to https://www.chiplot.online/circleTree.html) using "Restore drawing state". 
 
 ## 5. *amoA* <a name="amoa"></a>
 Directory: [`5_amoA/`](5_amoA/)
