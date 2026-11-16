@@ -1,7 +1,7 @@
 # Gene-centric analyses
 
 Read-based analyses of sediment and seawater metagenomes, independent of genome binning: taxonomic profiles from phylogenetic marker genes (mOTUs), functional profiles from a non-redundant protein catalogue, and a k-mer-based comparison against GTDB genomes.
-
+ 
 | Section | Page | Scripts | Manuscript content |
 |---|---|---|---|
 | 1. SingleM | [mOTU-based community profiling](1_SingleM/1_SingleM.md) | [`1.01` to `1.06`](1_SingleM/scripts/) | Fig. 1c, 1d, 1g-h; Tables S4 to S6 |
