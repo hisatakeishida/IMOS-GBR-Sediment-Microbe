@@ -105,7 +105,7 @@ Hisatake Ishida<sup>1</sup>, Steven J. Robbins<sup>1</sup>, Sara C. Bell<sup>2</
 
 1. Australian Centre for Ecogenomics, School of Chemistry and Molecular Biosciences, The University of Queensland, Brisbane, QLD 4072, Australia
 2. Australian Institute of Marine Science, Townsville, QLD 4810, Australia
-3. Institute for Marine and Antarctic Studies, University of Tasmania, Hobart, TAS 7001, Australia
+3. University of Tasmania, Hobart, TAS 7001, Australia
 4. College of Science and Engineering, James Cook University, Townsville, QLD 4811, Australia
 5. AIMS@JCU, James Cook University, Townsville, QLD 4811, Australia
 
