@@ -90,11 +90,13 @@ Each analysis folder has its own page describing the methods, and its scripts ar
 ## Data availability
 
 Raw sequencing data and sediment MAGs will be released upon publication.
+Raw sequencing data will be available upon publication through the AIMS data repository () and NCBI BioProject accession PRJEB112104. 
+
 
 | Data | Location |
 |---|---|
-| Raw sequencing reads (Illumina and ONT) | IMOS-AODN (`TODO`) and ENA (`TODO`) |
-| Sediment MAGs (MGD-sediment) | Zenodo (`TODO`) |
+| Raw sequencing reads (Illumina and ONT) | AIMS data repository (<https://doi.org/10.25845/kkma-n127>) and NCBI BioProject accession PRJEB112104 (<https://www.ebi.ac.uk/ena/browser/view/PRJEB112104>) |
+| Sediment MAGs (MGD-sediment) | <https://doi.org/10.5281/zenodo.24187765> |
 | Seawater MAGs (MGD-seawater) | <https://zenodo.org/records/20503966> |
 
 ## Authors and affiliations
