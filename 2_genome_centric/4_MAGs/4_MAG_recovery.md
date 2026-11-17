@@ -213,6 +213,7 @@ Directory: [`5_unbinned_contigs/`](5_unbinned_contigs/)
   - `unbinned_contigs_taxonomic_fraction.txt`: percentage of unbinned contigs per domain per assembly (mean 91.54% Bacteria, 0.53% Archaea, 1.06% viruses, 0.44% eukaryotes)
   - `unbinned_contigs_readrecuritment.bydomain.counts.tsv` (exploratory): MAG-unmapped reads mapped to unbinned contigs per domain
   - `unbinned_contigs_readrecuritment.bydomain.relabund.tsv` (exploratory): the same as percentages of mapped reads per sample (mean 71.96% Bacteria, 0.30% Archaea, 0.58% viruses, 0.18% eukaryotes, 26.97% unclassified)
+  - This analysis does not account for length, just numbers of contigs assigned to each domain
 - Scripts: [`4.13_unmapped_reads_array.sh`](scripts/4.13_unmapped_reads_array.sh), [`4.14_unbinned_contigs_array.sh`](scripts/4.14_unbinned_contigs_array.sh)
 
 ```bash
