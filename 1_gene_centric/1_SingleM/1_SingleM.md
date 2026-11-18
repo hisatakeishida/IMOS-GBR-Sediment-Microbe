@@ -95,13 +95,13 @@ Directory: [`4_appraise_novelty/`](4_appraise_novelty/)
 ### Against GTDB R10-RS226 MAGs
 | Reads | Habitat | Domain | Value | Species (%) | Genus (%) |
 |---|---|---|---|---|---|
-| All reads | Sediment | Archaea | Total | 0.1 | 19.6 |
+| All reads | Sediment | Archaea | Total | **0.1** | 19.6 |
 | All reads | Sediment | Archaea | Average | 0.0 | 19.3 |
-| All reads | Sediment | Bacteria | Total | 1.4 | 63.7 |
+| All reads | Sediment | Bacteria | Total | **1.4** | 63.7 |
 | All reads | Sediment | Bacteria | Average | 1.4 | 59.5 |
-| All reads | Seawater | Archaea | Total | 26.7 | 87.6 |
+| All reads | Seawater | Archaea | Total | **26.7** | 87.6 |
 | All reads | Seawater | Archaea | Average | 25.0 | 82.0 |
-| All reads | Seawater | Bacteria | Total | 35.7 | 92.8 |
+| All reads | Seawater | Bacteria | Total | **35.7** | 92.8 |
 | All reads | Seawater | Bacteria | Average | 35.4 | 92.3 |
 | 10 M read pairs | Sediment | Archaea | Total | 0.0 | 18.9 |
 | 10 M read pairs | Sediment | Archaea | Average | 0.0 | 16.2 |
