@@ -4,6 +4,8 @@ This repository contains code and data associated with the paper:
 
 > Ishida, H., Robbins, S. J., Bell, S. C., Lim, J. Y., Terzin, M., Webster, N., Bourne, D. G., Laffy, P. W., Hugenholtz, P., Yeoh, Y. K., & Chan, C. X. **Comparative metagenomics reveals diversity and metabolic heterogeneity of sediment microbes from the Great Barrier Reef.** *In preparation.*
 
+Available as preprint on bioRxiv ([https://www.biorxiv.org/content/10.64898/2026.11.17.767448v1](https://www.biorxiv.org/content/10.64898/2026.11.17.767448v1))
+
 <p align="center" style="background-color: white;">
   <a href="conceptual.png"
      style="background-color: white;">
