@@ -92,16 +92,20 @@ Directory: [`4_appraise_novelty/`](4_appraise_novelty/)
 - Output: proportion of read mOTUs that match GTDB genomes at species level (sediment: 1.4% bacterial, 0.1% archaeal; seawater: 35.7% bacterial, 26.7% archaeal)
 - Script: [`scripts/1.06_singlem_appraise.sh`](scripts/1.06_singlem_appraise.sh)
 
-### Against GTDB R10-RS226 MAGs
+### Against GTDB R10-RS226 MAGs (in manuscript)
 | Reads | Habitat | Domain | Value | Species (%) | Genus (%) |
 |---|---|---|---|---|---|
 | All reads | Sediment | Archaea | Total | **0.1** | 19.6 |
-| All reads | Sediment | Archaea | Average | 0.0 | 19.3 |
 | All reads | Sediment | Bacteria | Total | **1.4** | 63.7 |
-| All reads | Sediment | Bacteria | Average | 1.4 | 59.5 |
 | All reads | Seawater | Archaea | Total | **26.7** | 87.6 |
-| All reads | Seawater | Archaea | Average | 25.0 | 82.0 |
 | All reads | Seawater | Bacteria | Total | **35.7** | 92.8 |
+
+### Against GTDB R10-RS226 MAGs (not in manuscript)
+| Reads | Habitat | Domain | Value | Species (%) | Genus (%) |
+|---|---|---|---|---|---|
+| All reads | Sediment | Archaea | Average | 0.0 | 19.3 |
+| All reads | Sediment | Bacteria | Average | 1.4 | 59.5 |
+| All reads | Seawater | Archaea | Average | 25.0 | 82.0 |
 | All reads | Seawater | Bacteria | Average | 35.4 | 92.3 |
 | 10 M read pairs | Sediment | Archaea | Total | 0.0 | 18.9 |
 | 10 M read pairs | Sediment | Archaea | Average | 0.0 | 16.2 |
