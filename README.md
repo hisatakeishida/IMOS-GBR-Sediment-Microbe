@@ -101,13 +101,13 @@ Raw sequencing data will be available upon publication through the AIMS data rep
 
 ## Authors and affiliations
 
-Hisatake Ishida<sup>1</sup>, Steven J. Robbins<sup>1</sup>, Sara C. Bell<sup>2</sup>, Jin Yan Lim<sup>2</sup>, Marko Terzin<sup>2,4,5</sup>, Nicole Webster<sup>1,3</sup>, David G. Bourne<sup>2,4,5</sup>, Patrick W. Laffy<sup>2,5</sup>, Philip Hugenholtz<sup>1</sup>, Yun Kit Yeoh<sup>2,5</sup>, Cheong Xin Chan<sup>1</sup>
+Hisatake Ishida<sup>1</sup>, Steven J. Robbins<sup>1</sup>, Sara C. Bell<sup>2</sup>, Jin Yan Lim<sup>2</sup>, Marko Terzin<sup>2,3,4</sup>, Nicole Webster<sup>1,5</sup>, David G. Bourne<sup>2,3,4</sup>, Patrick W. Laffy<sup>2,4</sup>, Philip Hugenholtz<sup>1</sup>, Yun Kit Yeoh<sup>2,4</sup>, Cheong Xin Chan<sup>1</sup>
 
 1. Australian Centre for Ecogenomics, School of Chemistry and Molecular Biosciences, The University of Queensland, Brisbane, QLD 4072, Australia
 2. Australian Institute of Marine Science, Townsville, QLD 4810, Australia
-3. University of Tasmania, Hobart, TAS 7001, Australia
-4. College of Science and Engineering, James Cook University, Townsville, QLD 4811, Australia
-5. AIMS@JCU, James Cook University, Townsville, QLD 4811, Australia
+3. College of Science and Engineering, James Cook University, Townsville, QLD 4811, Australia
+4. AIMS@JCU, James Cook University, Townsville, QLD 4811, Australia
+5. University of Tasmania, Hobart, TAS 7001, Australia 
 
 ## Questions or issues
 
